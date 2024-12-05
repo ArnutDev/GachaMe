@@ -5,10 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random</title>
+    <link rel="stylesheet" href="styles/random.css">
 </head>
 
 <body>
-    <h1>test random</h1>
+    <div class="container">
+        <h1>
+            Random Rangers
+        </h1>
+        <div class="chest" id="chest1">
+            <h2>normal chest</h2>
+            <button onclick="drawNormalChest()">Random</button>
+            <div id="normal-result"></div>
+        </div>
+
+        <div class="chest" id="chest2">
+            <h2>rate-up chest2</h2>
+            <input type="text" id="search2" placeholder="ค้นหาตัวละคร">
+            <input type="text" id="search3" placeholder="ค้นหาตัวละคร">
+            <button onclick="drawChestWithSelection(2)">random</button>
+            <div id="rate-up chest2 result"></div>
+        </div>
+
+        <div class="chest" id="chest3">
+            <h2>rate-up chest3</h2>
+            <input type="text" id="search4" placeholder="ค้นหาตัวละคร">
+            <input type="text" id="search5" placeholder="ค้นหาตัวละคร">
+            <button onclick="drawChestWithSelection(3)">random</button>
+            <div id="rate-up chest3 result"></div>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
 </body>
 
 </html>
