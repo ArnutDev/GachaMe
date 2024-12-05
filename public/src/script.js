@@ -1,24 +1,28 @@
 const characters = [
-    "Brown",
+    "Brown", //buff
     "Cony",
-    "Moon",
+    "Moon", //buff
     "Leonard",
     "KSM",
     "Boss",
-    "Sally",
-    "James"
+    "Sally", //buff
+    "James",
+    "Edwards", //buff
+    "Clara"
 ];
 
-function drawNormalChest() {
+const equalAll = Math.floor(Math.random() * characters.length);
+
+function normalGacha() {
     const randomIndex = Math.floor(Math.random() * characters.length);
     const result = characters[randomIndex];
     document.getElementById("normal-result").innerHTML = `You got: ${result}`;
 }
 
-function drawChestWithSelection(chestNumber) {
+function specialGacha(chestNumber) {
     // แก้ไขการดึงค่าจาก input box ให้ถูกต้อง
-    const selectedCharacter1 = document.getElementById(`search${chestNumber * 2 - 1}`).value.trim();
-    const selectedCharacter2 = document.getElementById(`search${chestNumber * 2}`).value.trim();
+    const selectedCharacter1 = document.getElementById(`ranger1${chestNumber * 2 - 1}`).value.trim();
+    const selectedCharacter2 = document.getElementById(`ranger2${chestNumber * 2}`).value.trim();
 
     if (!characters.includes(selectedCharacter1) || !characters.includes(selectedCharacter2)) {
         alert("กรุณาเลือกตัวละครที่มีในรายชื่อ");
@@ -32,5 +36,5 @@ function drawChestWithSelection(chestNumber) {
     const result = weightedCharacters[randomIndex];
 
     // แก้ไขการแสดงผลให้ถูกต้อง
-    document.getElementById(`chest${chestNumber}-result`).innerHTML = `คุณได้รับ: ${result}`;
+    document.getElementById(`chest1${chestNumber}-result`).innerHTML = `คุณได้รับ: ${result}`;
 }
