@@ -125,8 +125,8 @@
     {"Name": "Ranger124", "Grade": "8-ultra", "Type": "normal"},
     {"Name": "Ranger125", "Grade": "8-ultra", "Type": "normal"},
     {"Name": "Ranger126", "Grade": "8-ultra", "Type": "normal"},
-    {"Name": "Ranger127", "Grade": "8-ultra", "Type": "normal"},
-    {"Name": "Ranger128", "Grade": "8-ultra", "Type": "normal"},
-    {"Name": "Ranger129", "Grade": "8-ultra", "Type": "normal"},
-    {"Name": "Ranger130", "Grade": "8-ultra", "Type": "normal"}
+    {"Name": "Ranger127", "Grade": "8-ultra", "Type": "special"},
+    {"Name": "Ranger128", "Grade": "8-ultra", "Type": "special"},
+    {"Name": "Ranger129", "Grade": "8-ultra", "Type": "special"},
+    {"Name": "Ranger130", "Grade": "8-ultra", "Type": "special"}
 ]
