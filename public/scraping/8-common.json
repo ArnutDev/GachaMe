@@ -130,5 +130,9 @@
     {"Name": "Ranger129", "Grade": "8-common", "Type": "normal"},
     {"Name": "Ranger130", "Grade": "8-common", "Type": "normal"},
     {"Name": "Ranger131", "Grade": "8-common", "Type": "normal"},
-    {"Name": "Ranger132", "Grade": "8-common", "Type": "normal"}
+    {"Name": "Ranger132", "Grade": "8-common", "Type": "normal"},
+    {"Name": "Ranger133", "Grade": "8-common", "Type": "special"},
+    {"Name": "Ranger134", "Grade": "8-common", "Type": "special"},
+    {"Name": "Ranger135", "Grade": "8-common", "Type": "special"},
+    {"Name": "Ranger136", "Grade": "8-common", "Type": "special"}
 ]
