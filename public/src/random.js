@@ -1,3 +1,4 @@
+const count = 0;
 async function loadJSON(filePath) {
     try {
         const response = await fetch(filePath); // รอการโหลดไฟล์ JSON
