@@ -169,7 +169,7 @@ function searchNamesAutomatically(names) {
             nameElements.forEach((nameElement) => {
                 const displayedName = nameElement.textContent.trim();
 
-                if (displayedName.includes(names[index])) {
+                if (displayedName.includes(names[index])) { //?? maybe fix this one
                     found = true;
 
                     // ดึงรหัส unitCode จาก ui-sref
