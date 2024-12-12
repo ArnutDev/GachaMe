@@ -1,8 +1,8 @@
 [
     {
-      "Name": "Vagaborn Brown",
-      "Image": "",
-      "UnitCode": ""
+      "Name": "Vagabond Brown",
+      "Image": "https://rangers.lerico.net/res/u019e-brown/u019e-brown-thum.png",
+      "UnitCode": "u019e-brown"
     },
     {
       "Name": "Luxury Sheep",
@@ -36,8 +36,8 @@
     },
     {
       "Name": "HIME",
-      "Image": "",
-      "UnitCode": ""
+      "Image": "https://rangers.lerico.net/res/u1048e-hime/u1048e-hime-thum.png",
+      "UnitCode": "u1048e-hime"
     },
     {
       "Name": "Mountain Boar Moon",
@@ -70,9 +70,9 @@
       "UnitCode": "u1099e-james"
     },
     {
-      "Name": "Severin) Schooler",
-      "Image": "",
-      "UnitCode": ""
+      "Name": "Elementary Schooler Brown",
+      "Image": "https://rangers.lerico.net/res/u1118e-brown/u1118e-brown-thum.png",
+      "UnitCode": "u1118e-brown"
     },
     {
       "Name": "Correspondent Moon",
@@ -130,9 +130,9 @@
       "UnitCode": "u303e-cony"
     },
     {
-      "Name": "Marine Moon.",
-      "Image": "",
-      "UnitCode": ""
+      "Name": "Marine Moon",
+      "Image": "https://rangers.lerico.net/res/u306e-moon/u306e-moon-thum.png",
+      "UnitCode": "u306e-moon"
     },
     {
       "Name": "Mega Machine Sally",
@@ -140,9 +140,9 @@
       "UnitCode": "u319e-sally"
     },
     {
-      "Name": "Ballerina Lia wey",
-      "Image": "",
-      "UnitCode": ""
+      "Name": "Ballerina Lia",
+      "Image": "https://rangers.lerico.net/res/u364e-lia/u364e-lia-thum.png",
+      "UnitCode": "u364e-lia"
     },
     {
       "Name": "Venus Cony",

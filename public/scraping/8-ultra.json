@@ -95,6 +95,11 @@
     "UnitCode": "u1040u-sally"
   },
   {
+    "Name": "Forest Fairy Leonard",
+    "Image": "https://rangers.lerico.net/res/u1042u-leonard/u1042u-leonard-thum.png",
+    "UnitCode": "u1042u-leonard"
+  },
+  {
     "Name": "Sea God Susanoo Fishu",
     "Image": "https://rangers.lerico.net/res/u1047u-susa/u1047u-susa-thum.png",
     "UnitCode": "u1047u-susa"
@@ -265,6 +270,11 @@
     "UnitCode": "u1195u-moon"
   },
   {
+    "Name": "Nonstop Train Leonard [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1196u-leonard/u1196u-leonard-thum.png",
+    "UnitCode": "u1196u-leonard"
+  },
+  {
     "Name": "Pumpkin Candy Brown",
     "Image": "https://rangers.lerico.net/res/u1204u-brown/u1204u-brown-thum.png",
     "UnitCode": "u1204u-brown"
@@ -414,14 +424,6 @@
     "Image": "https://rangers.lerico.net/res/u409u-boss/u409u-boss-thum.png",
     "UnitCode": "u409u-boss"
   },
-
-
-  {
-    "Name": "Huge Musketeer Moon",
-    "Image": "https://rangers.lerico.net/res/u1392u-moon/u1392u-moon-thum.png",
-    "UnitCode": "u1392u-moon"
-  },
-
   {
     "Name": "Immolator Daniel",
     "Image": "https://rangers.lerico.net/res/u422u-daniel/u422u-daniel-thum.png",
@@ -526,6 +528,11 @@
     "Name": "Shape Shifter Sister Jessica",
     "Image": "https://rangers.lerico.net/res/u1446u-jessica/u1446u-jessica-thum.png",
     "UnitCode": "u1446u-jessica"
+  },
+  {
+    "Name": "Shaman Leonard [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1337u-leonard/u1337u-leonard-thum.png",
+    "UnitCode": "u1337u-leonard"
   },
   {
     "Name": "Begone Bad Mojo Cherina",

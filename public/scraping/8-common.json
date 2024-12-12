@@ -185,9 +185,9 @@
     "UnitCode": "u1119e-brown"
   },
   {
-    "Name": "Alien Edward",
-    "Image": "",
-    "UnitCode": ""
+    "Name": "Alien Edward [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1127e-edward/u1127e-edward-thum.png",
+    "UnitCode": "u1127e-edward"
   },
   {
     "Name": "Pirate Moon",
@@ -235,19 +235,14 @@
     "UnitCode": "u1163e-sally"
   },
   {
-    "Name": "Casino Dealer Sally",
-    "Image": "",
-    "UnitCode": ""
+    "Name": "Casino Dealer Sally [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1170e-sally/u1170e-sally-thum.png",
+    "UnitCode": "u1170e-sally"
   },
   {
-    "Name": "Sawed-In-Half",
-    "Image": "",
-    "UnitCode": ""
-  },
-  {
-    "Name": "Magician Moon",
-    "Image": "https://rangers.lerico.net/res/u1171e-moon/u1171e-moon-thum.png",
-    "UnitCode": "u1171e-moon"
+    "Name": "Sawed-In-Half Magician Moon",
+    "Image": "https://rangers.lerico.net/res/u1172e-moon/u1172e-moon-thum.png",
+    "UnitCode": "u1172e-moon"
   },
   {
     "Name": "Chess Queen Cony",
@@ -275,9 +270,9 @@
     "UnitCode": "u1195e-moon"
   },
   {
-    "Name": "Commuter Train Leonard",
-    "Image": "",
-    "UnitCode": ""
+    "Name": "Commuter Train Leonard [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1196e-leonard/u1196e-leonard-thum.png",
+    "UnitCode": "u1196e-leonard"
   },
   {
     "Name": "Wolf Candy Brown",
@@ -315,9 +310,9 @@
     "UnitCode": "u1230e-moon"
   },
   {
-    "Name": "Alice Cony",
-    "Image": "",
-    "UnitCode": ""
+    "Name": "Alice Cony [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1231e-cony/u1231e-cony-thum.png",
+    "UnitCode": "u1231e-cony"
   },
   {
     "Name": "Horus Sally",
@@ -395,9 +390,9 @@
     "UnitCode": "u1326e-sally"
   },
   {
-    "Name": "Little Mage Leonard",
-    "Image": "",
-    "UnitCode": ""
+    "Name": "Little Mage Leonard [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1337e-leonard/u1337e-leonard-thum.png",
+    "UnitCode": "u1337e-leonard"
   },
   {
     "Name": "Quest Hunter Moon",
