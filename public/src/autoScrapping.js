@@ -1,138 +1,60 @@
-const namesToSearch = [ //change this data for search 8 common
-    "Zeus Brown",
-    "Ares Cony",
-    "Athena Jessica",
-    "DaVinci Sally",
-    "Mozart James",
-    "Shakespeare Moon",
-    "Dino Cony",
-    "DinoBrown",
-    "Cave Sally",
-    "Mochi Apprentice Brown",
-    "Miko Cony",
-    "Daruma Sally",
-    "Liu Bei Moon",
-    "Zhang Fei Brown",
-    "Toy Soldier Moon",
-    "Chicken Car Sally",
-    "Fan Cony",
-    "Red Card Dane",
-    "Mini Mushroom Sally",
-    "Tree Spirit Leonard",
-    "Susanoo Fishu",
-    "Kushinada Hime",
-    "Kotatsu Brown",
-    "Wayward Traveler Moon",
-    "Clown Brown",
-    "Balloon Expert Cony",
-    "Big Bully Brown",
-    "Make It Rain Cony",
-    "Mariachi Moon",
-    "Percussion Sally",
-    "Croc Game Boss",
-    "Chief Mate Hunt",
-    "Jiangshi Moon",
-    "Iron Vampire James",
-    "Wooden Box Cony",
-    "Elementary Schooler Cony",
-    "Middle Schooler Brown",
-    "Alien Edward",
-    "Pirate Moon",
-    "Black Jersey Brown",
-    "Blue Jersey Moon",
-    "Coffee Maker Steve",
-    "Barista Brown",
-    "Little Red Riding Hood Sally",
-    "Apprentice Witch Cony",
-    "Board Cony",
-    "Sled Sally",
-    "Casino Dealer Sally",
-    "Sawed-In-Half",
+//add name tot search here json file
+const namesToSearch = [ //7 common
+    "Vagaborn Brown",
+    "Luxury Sheep",
+    "Invincible Honey",
+    "Rocker ALICE",
+    "Ruffian Brown",
+    "Duck Car Sally",
+    "Tree Stump Leonard",
+    "HIME",
+    "Mountain Boar Moon",
+    "Balloon Rookie Cony",
+    "Bad Boy Brown",
+    "Cactus Sally",
+    "Boatswain Hunt",
+    "Vampire James",
+    "Severin) Schooler",
+    "Correspondent Moon",
+    "Ice Sled Sally",
     "Magician Moon",
-    "Chess Queen Cony",
-    "Chess Knight Sally",
-    "Paint Gunner Moon",
-    "Paint Roller Brown",
-    "Remote Worker Moon",
-    "Commuter Train Leonard",
-    "Wolf Candy Brown",
-    "Little Devil Sally",
-    "Sweet Grape Sally",
-    "Seal Elle",
-    "Keyboardist Cony",
-    "Guitarist Moon",
-    "The Hatter Moon",
-    "Alice Cony",
-    "Horus Sally",
-    "Bastet Jessica",
-    "Indie Film Edward",
-    "Slate Sally",
-    "Tuna Brown",
-    "Spaceman Charles",
-    "Gunkan-Maki Sally",
-    "Exercise Sally",
-    "Balance Ball Boss",
-    "Catcher Moon",
-    "Batter Brown",
-    "Tycoon's Daughter Cony",
-    "Croc Prince Moon",
-    "Tin Bear Brown",
-    "Cowardly Lion & Sally",
-    "Little Mage Leonard",
-    "Quest Hunter Moon",
-    "Twins Cony",
-    "Mystery Hand & Sally",
-    "Blue Dragon & Moon",
-    "Water Thrower Cherina",
-    "Trainee Brown",
-    "Trainee Cony",
-    "Musketeer James",
-    "Musketeer Moon",
-    "Fencer Sheep",
-    "Gymnast Chichi",
-    "Sheriff Moon",
-    "Japanese Inn Daughter Cony",
-    "Sister Jessica",
-    "Sorcerer Brown",
-    "Bath Goddess Cony",
-    "Commander Moon",
-    "Ultra Machine Sally",
-    "T-Rex Sally",
-    "Unicorn Cony",
-    "Motor Boat Brown",
-    "Gladiator Moon",
-    "Watermelon Kart Dennis",
-    "Rocket Toti",
-    "Gourmet Tiger",
-    "Garrison Mike",
-    "White Mage James",
-    "Cowboy Jessica",
-    "Diver Brown",
-    "Lifeguard Cony",
-    "Martial Artist Brown",
-    "Ice Suit Brown",
-    "Heavy Metal Boss",
-    "Fighter Simon",
-    "Luck-Bringer Sally",
-    "Dumpling Cony",
-    "Electro Daniel",
-    "Choco Cake Brown",
-    "Pink Champagne Cony",
-    "Sea Crab Edward",
-    "Fire Magician Cony",
-    "Adventurer Brownie",
-    "Agent Somchai",
-    "Eye Patch Moon",
-    "Champion Bob",
-    "Senior Knight Moon",
-    "Senior Priestess Jessica",
-    "Winged Chariot James",
-    "Corn Brown",
-    "Sailor Merry",
-    "Summer Vacay Cony",
-    "Sit Back & Sea Pico"
+    "Keyboard Girl Cony",
+    "Floating Brown",
+    "Rocketeer Charles",
+    "Pink Hood Cony",
+    "Sky Rider Moon",
+    "Drillmaster Brown",
+    "Unpretty Mong",
+    "Bubbly Cony",
+    "Marine Moon.",
+    "Mega Machine Sally",
+    "Ballerina Lia wey",
+    "Venus Cony",
+    "Oak Barrel Edward",
+    "Red Raptor Sally",
+    "Duck Boat Cony",
+    "Surfer Brown",
+    "Robin Hood Moon",
+    "Apple Kart Dennis",
+    "Sentinel Mike",
+    "Mage James",
+    "Martial Artist Simon",
+    "Lucky Cat Sally",
+    "New Year Cony",
+    "Frozen Daniel",
+    "Shortcake Brown",
+    "Champagne Cony",
+    "Red Crab Edward",
+    "Collector Brownie",
+    "Novice Knight Moon",
+    "Novice Priestess Jessica",
+    "Chariot James",
+    "Marshmallow Brown",
+    "Girl Scout Merry",
+    "Splish Splash Cony",
+    "Dune Dood Pico"
 ];
-//
+
 const imageDetails = []; // อาร์เรย์เพื่อเก็บข้อมูลชื่อและ URL รูปภาพ
 
 function searchNamesAutomatically(names) {
@@ -169,12 +91,12 @@ function searchNamesAutomatically(names) {
             nameElements.forEach((nameElement) => {
                 const displayedName = nameElement.textContent.trim();
 
-                if (displayedName.includes(names[index])) { //?? maybe fix this one
+                if (displayedName === names[index]) { // ตรวจสอบชื่อแบบเป๊ะ
                     found = true;
 
                     // ดึงรหัส unitCode จาก ui-sref
                     const uiSref = nameElement.getAttribute("ui-sref");
-                    const match = uiSref.match(/unitCode:'([^']+)'/);
+                    const match = uiSref.match(/unitCode:'([^']*\d+e[^']*)'/); // ตรวจสอบ unitCode ที่มีตัวเลขตามด้วย 'e'
 
                     if (match) {
                         const unitCode = match[1];
@@ -196,6 +118,12 @@ function searchNamesAutomatically(names) {
 
             if (!found) {
                 console.log(`ไม่พบชื่อ: ${names[index]}`);
+                // เพิ่มชื่อที่ไม่พบใน JSON โดยเว้น UnitCode และ Image ไว้
+                imageDetails.push({
+                    Name: names[index],
+                    Image: "",
+                    UnitCode: ""
+                });
             }
 
             index++; // เพิ่มค่า index หลังการค้นหาเสร็จสิ้น
@@ -213,7 +141,7 @@ function saveImageDetailsToFile() {
     });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(jsonBlob);
-    link.download = "image_details.json";
+    link.download = "7-common.json"; //fix name file here
     link.click();
 
     console.log("ข้อมูลทั้งหมดถูกดาวน์โหลดเป็นไฟล์ image_details.json");
