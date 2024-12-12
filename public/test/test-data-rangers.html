@@ -4,70 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangers Ultra Gallery</title>
+    <title>JSON Data Viewer</title>
     <style>
-        /* เพิ่มสไตล์พื้นฐานเพื่อจัดการรูปภาพและข้อความ */
-        .image-container {
-            display: flex;
-            flex-wrap: wrap;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
 
-        .image-item {
-            margin: 10px;
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
             text-align: center;
+            color: #fff;
+            background-color: #343541;
+        }
+
+        th {
+            background-color: #343541;
         }
 
         img {
-            max-width: 200px;
+            max-width: 100px;
             height: auto;
         }
     </style>
 </head>
 
 <body>
-    <h1>Rangers Ultra Gallery</h1>
-    <div class="image-container" id="image-container"></div>
+    <h1>JSON Data Viewer</h1>
+    <input type="file" id="json-input" accept=".json" />
+    <table id="json-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>UnitCode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be dynamically inserted here -->
+        </tbody>
+    </table>
 
     <script>
-        async function loadAndSearchNames() {
-            try {
-                const response = await fetch(
-                'D:\\Arnut\\Github\\GachaMe\\public\\scraping\\8-common.json'); // ปรับ path ให้ตรงกับตำแหน่งไฟล์ JSON ของคุณ
-                const data = await response.json();
-                const namesToSearch = data.namesToSearch; // ดึงข้อมูล namesToSearch จากไฟล์ JSON
-                searchNamesAutomatically(namesToSearch); // เรียกใช้ฟังก์ชัน searchNamesAutomatically
-            } catch (error) {
-                console.log("เกิดข้อผิดพลาดในการโหลดไฟล์ JSON:", error);
-            }
+        // อ้างอิงตาราง
+        const tableBody = document.querySelector('#json-table tbody');
+        const fileInput = document.getElementById('json-input');
+
+        // ฟังก์ชันสำหรับแสดงข้อมูลในตาราง
+        function displayData(jsonData) {
+            tableBody.innerHTML = ""; // ล้างข้อมูลก่อนหน้า
+            jsonData.forEach(item => {
+                const row = document.createElement('tr');
+
+                // สร้างเซลล์สำหรับ Name
+                const nameCell = document.createElement('td');
+                nameCell.textContent = item.Name || "N/A";
+                row.appendChild(nameCell);
+
+                // สร้างเซลล์สำหรับ Image
+                const imageCell = document.createElement('td');
+                if (item.Image) {
+                    const img = document.createElement('img');
+                    img.src = item.Image;
+                    img.alt = item.Name || "Image";
+                    imageCell.appendChild(img);
+                } else {
+                    imageCell.textContent = "N/A";
+                }
+                row.appendChild(imageCell);
+
+                // สร้างเซลล์สำหรับ UnitCode
+                const unitCodeCell = document.createElement('td');
+                unitCodeCell.textContent = item.UnitCode || "N/A";
+                row.appendChild(unitCodeCell);
+
+                tableBody.appendChild(row);
+            });
         }
 
-        const container = document.getElementById('image-container');
+        // โหลดไฟล์ JSON เมื่อผู้ใช้เลือกไฟล์
+        fileInput.addEventListener('change', event => {
+            const file = event.target.files[0];
+            if (!file) return;
 
-        data.forEach(item => {
-            // สร้าง div สำหรับแต่ละรูปภาพ
-            const imageItem = document.createElement('div');
-            imageItem.classList.add('image-item');
-
-            // สร้างรูปภาพ
-            const img = document.createElement('img');
-            img.src = item.Image;
-            img.alt = item.Name;
-
-            // สร้างชื่อหน่วย
-            const name = document.createElement('h3');
-            name.textContent = item.Name;
-
-            // สร้าง UnitCode
-            const unitCode = document.createElement('p');
-            unitCode.textContent = `Unit Code: ${item.UnitCode}`;
-
-            // เพิ่มรูปภาพและข้อความเข้าไปใน div
-            imageItem.appendChild(img);
-            imageItem.appendChild(name);
-            imageItem.appendChild(unitCode);
-
-            // เพิ่ม div เข้าไปใน container
-            container.appendChild(imageItem);
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const jsonData = JSON.parse(e.target.result);
+                    displayData(jsonData);
+                } catch (err) {
+                    console.error("Error parsing JSON:", err);
+                }
+            };
+            reader.readAsText(file);
         });
     </script>
 </body>
