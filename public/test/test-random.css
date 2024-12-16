@@ -1,0 +1,30 @@
+/* Fix ขนาดของ Modal */
+.modal-dialog {
+    max-width: 500px;
+    /* กำหนดขนาดกว้างสุด */
+    width: 100%;
+    /* ให้มันยืดตามขนาดหน้าจอ */
+}
+
+.modal-content {
+    height: 400px;
+    /* กำหนดความสูง */
+    overflow-y: auto;
+    /* ให้เลื่อนลงได้ถ้าผลลัพธ์ยาวเกิน */
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* ให้เต็มความสูง */
+    padding: 20px;
+}
+
+.btn-random {
+    margin-top: 20px;
+    width: 30%;
+    /* ให้ปุ่มกดเต็มความกว้าง */
+}
