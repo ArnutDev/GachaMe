@@ -32,7 +32,6 @@ async function normalGacha() {
     const Grade = getRandomRangers(0.01, 100.00);
     const resultContainer = document.getElementById("normal-result");
 
-
     let rangersJson;
     if (Grade <= 3.00) {
         const subGrade = getRandomRangers(0.01, 3.00);
@@ -44,10 +43,10 @@ async function normalGacha() {
         } else {
             rangersJson = await loadJSON('scraping/8-ultra.json');
         }
-        resultContainer.innerHTML = `Grade: =★★★=`;
+        resultContainer.innerHTML = `Ultra 8 star`;
     } else if (Grade <= 8.00) {
         rangersJson = await loadJSON('scraping/7-ultra.json');
-        resultContainer.innerHTML = `Grade: =★★=`;
+        resultContainer.innerHTML = `Ultra 7 star`;
     } else if (Grade <= 30.00) {
         const subGrade = getRandomRangers(0.01, 30.00);
         if (subGrade >= 0.01 && subGrade <= 3.52) {
@@ -57,18 +56,18 @@ async function normalGacha() {
         } else {
             rangersJson = await loadJSON('scraping/8-common.json');
         }
-        resultContainer.innerHTML = `Grade: ★★★`;
+        resultContainer.innerHTML = `8 star`;
     } else {
         rangersJson = await loadJSON('scraping/7-common.json');
-        resultContainer.innerHTML = `Grade: ★★`;
+        resultContainer.innerHTML = `7 star`;
     }
 
     const randomIndex = getRandomCommonRangers(0, rangersJson.length - 1);
     const result = rangersJson[randomIndex];
     count += 1;
     // แสดงข้อมูลตัวละครในหน้าจอ
-    document.getElementById("normal-result2").innerHTML = `Name: ${result.Name}`;
-    document.getElementById("normal-result3").innerHTML = `UnitCode: ${result.UnitCode}`;
-    document.getElementById("normal-result4").innerHTML = `<img src="${result.Image}" alt="${result.Name}" style="max-width: 150px; height: auto;">`;
-    document.getElementById("normal-result5").innerHTML = `Round: ${count} , Gacha-coupon used: ${count*5}`;
+    document.getElementById("normal-result2").innerHTML = `${result.Name}`;
+    // document.getElementById("normal-result3").innerHTML = `${result.UnitCode}`;
+    document.getElementById("normal-result4").innerHTML = `<img src="${result.Image}" alt="${result.Name}" style="max-width: 150px; height: 100px;">`;
+    document.getElementById("normal-result5").innerHTML = `${count} , Gacha-coupon used: ${count*5}`;
 }
