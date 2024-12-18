@@ -18,36 +18,35 @@ function getRandomRangers(min, max) {
     return parseFloat(random.toFixed(2)); // ปัดเศษให้เป็นทศนิยม 2 ตำแหน่ง
 }
 
-function getRandomCommonRangers(min, max) {
+function getRandomPickRanger(min, max) {
     const random = Math.floor(Math.random() * (max - min + 1)) + min; // สุ่มจำนวนเต็มระหว่าง min และ max
     return random;
 }
 
-
-function getRandomNewRangers(min, max) {
-    const random = Math.floor(Math.random() * (max - min + 1)) + min; // สุ่มจำนวนเต็มระหว่าง min และ max
-    return random;
-}
 async function normalGacha() {
     const Grade = getRandomRangers(0.01, 100.00);
     const resultContainer = document.getElementById("normal-result");
 
     let rangersJson;
-
+    //test sum rangers
+    let sum = 0;
     if (Grade <= 3.00) {
         const subGrade = getRandomRangers(0.01, 3.00);
 
         if (subGrade >= 0.01 && subGrade <= 0.48) {
             // โหลดไฟล์ JSON อื่นเมื่อค่าที่สุ่มได้อยู่ระหว่าง 0.01 - 0.48
             rangersJson = await loadJSON('scraping/8-ultra-collab.json');
+
             alert('Congratulation u got collabro rangers!');
         } else {
             rangersJson = await loadJSON('scraping/8-ultra.json');
+            console.log(rangersJson.length); //full 122/122
         }
         resultContainer.innerHTML = `Ultra 8 star`;
     } else if (Grade <= 8.00) {
         rangersJson = await loadJSON('scraping/7-ultra.json');
         resultContainer.innerHTML = `Ultra 7 star`;
+        console.log(rangersJson.length); //full 7/7
     } else if (Grade <= 30.00) {
         const subGrade = getRandomRangers(0.01, 30.00);
         if (subGrade >= 0.01 && subGrade <= 3.52) {
@@ -56,14 +55,16 @@ async function normalGacha() {
             alert('Congratulation u got collabro rangers!');
         } else {
             rangersJson = await loadJSON('scraping/8-common.json');
+            console.log(rangersJson.length); // full 132/132
         }
         resultContainer.innerHTML = `8 star`;
     } else {
         rangersJson = await loadJSON('scraping/7-common.json');
         resultContainer.innerHTML = `7 star`;
+        console.log(rangersJson.length); // full 58/58
     }
 
-    const randomIndex = getRandomCommonRangers(0, rangersJson.length - 1);
+    const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
     const result = rangersJson[randomIndex];
     count += 1;
     setTimeout(() => {
