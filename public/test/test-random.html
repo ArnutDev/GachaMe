@@ -48,6 +48,7 @@
         };
 
         // ฟังก์ชันสุ่มระดับเรนเจอร์
+        // ฟังก์ชันสุ่มระดับเรนเจอร์
         function randomLevel() {
             const random = Math.random() * 100; // สุ่มตัวเลข 0-100
             let cumulativeChance = 0;
@@ -60,44 +61,21 @@
             }
         }
 
-        // ฟังก์ชันสุ่มเรนเจอร์ในระดับที่กำหนด
-        function randomRanger(level, rangersData) {
-            let filteredRangers;
-
-            // แยกเรนเจอร์ตามระดับ
-            if (level === "A") {
-                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("A"));
-            } else if (level === "B") {
-                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("B"));
-            } else if (level === "C") {
-                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("C"));
-            } else if (level === "D") {
-                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("D"));
-            } else {
-                throw new Error("Invalid level");
-            }
-
-            // ตรวจสอบว่ามีเรนเจอร์ในระดับนั้นหรือไม่
-            if (!filteredRangers || filteredRangers.length === 0) {
-                throw new Error(`No rangers found for level ${level}`);
-            }
-
-            // สุ่มเรนเจอร์จากระดับที่กรองแล้ว
-            const randomIndex = Math.floor(Math.random() * filteredRangers.length);
-            return filteredRangers[randomIndex];
-        }
-
-
+        // ฟังก์ชันโหลดข้อมูลตามระดับ
         async function loadRangersData(level) {
-            if (level === "D") {
-                const response = await fetch('scraping/7-common.json');
-            } else if (level === "C") {
-                const response = await fetch('scraping/7-ultra.json');
+            let fileName = '';
+
+            if (level === "A") {
+                fileName = 'scraping/8-ultra.json'; // ไฟล์สำหรับระดับ A
             } else if (level === "B") {
-                const response = await fetch('scraping/8-common.json');
-            } else { //A
-                const response = await fetch('scraping/8-ultra.json');
+                fileName = 'scraping/8-common.json'; // ไฟล์สำหรับระดับ B
+            } else if (level === "C") {
+                fileName = 'scraping/7-ultra.json'; // ไฟล์สำหรับระดับ C
+            } else if (level === "D") {
+                fileName = 'scraping/7-common.json'; // ไฟล์สำหรับระดับ D
             }
+
+            const response = await fetch(fileName);
 
             if (!response.ok) {
                 throw new Error("Failed to load rangers data");
@@ -105,15 +83,16 @@
             return await response.json();
         }
 
+        // ฟังก์ชันสุ่มเรนเจอร์
         async function summonRanger() {
-            const level = randomLevel(); // สุ่ม level
+            const level = randomLevel(); // สุ่มระดับ
             console.log("Selected level:", level);
 
             try {
-                const rangersData = await loadRangersData(level); // โหลดข้อมูล JSON
+                const rangersData = await loadRangersData(level); // โหลดข้อมูล JSON ตามระดับที่สุ่ม
                 console.log("Loaded data:", rangersData);
 
-                const ranger = randomRanger(level, rangersData); // สุ่มเรนเจอร์
+                const ranger = randomRanger(level, rangersData); // สุ่มเรนเจอร์จากข้อมูลที่โหลด
                 return {
                     name: ranger.Name,
                     image: ranger.Image,
@@ -125,8 +104,7 @@
             }
         }
 
-
-
+        // ฟังก์ชันแสดงผล
         async function handleSummon() {
             const resultDiv = document.getElementById("result");
             resultDiv.innerHTML = "Summoning...";

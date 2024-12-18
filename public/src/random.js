@@ -33,6 +33,7 @@ async function normalGacha() {
     const resultContainer = document.getElementById("normal-result");
 
     let rangersJson;
+
     if (Grade <= 3.00) {
         const subGrade = getRandomRangers(0.01, 3.00);
 
@@ -65,9 +66,33 @@ async function normalGacha() {
     const randomIndex = getRandomCommonRangers(0, rangersJson.length - 1);
     const result = rangersJson[randomIndex];
     count += 1;
-    // แสดงข้อมูลตัวละครในหน้าจอ
-    document.getElementById("normal-result2").innerHTML = `${result.Name}`;
-    // document.getElementById("normal-result3").innerHTML = `${result.UnitCode}`;
-    document.getElementById("normal-result4").innerHTML = `<img src="${result.Image}" alt="${result.Name}" style="max-width: 150px; height: 100px;">`;
-    document.getElementById("normal-result5").innerHTML = `${count} , Gacha-coupon used: ${count*5}`;
+    setTimeout(() => {
+        // แสดงข้อมูลตัวละครในหน้าจอหลังจาก delay
+        document.getElementById("normal-result2").innerHTML = `${result.Name}`;
+        document.getElementById("normal-result4").innerHTML = `<img src="${result.Image}" alt="${result.Name}" style="max-width: 150px; height: 100px;">`;
+        document.getElementById("normal-result5").innerHTML = `${count} , Gacha-coupon used: ${count*5}`;
+    }, 300);
 }
+
+// Function to handle modal opening after closing it
+function handleModalReopen() {
+    // Get the modal element and modal object
+    const myModalElement = document.getElementById('myModal');
+    const modal = new bootstrap.Modal(myModalElement);
+
+    // Add event listener for the "สุ่มอีกครั้ง" button
+    document.getElementById('randomButton').addEventListener('click', function () {
+        // Close the modal first
+        modal.hide();
+
+        // Immediately show the modal again after it has been hidden
+        myModalElement.addEventListener('hidden.bs.modal', function () {
+            modal.show();
+        }, {
+            once: true
+        }); // Use { once: true } to ensure it only runs once after modal is hidden
+    });
+}
+
+// Call the function to initialize the modal event
+handleModalReopen();
