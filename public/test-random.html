@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Ranger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .result img {
+            display: block;
+            margin: 10px auto;
+            max-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Ranger</h1>
+    <button onclick="handleSummon()">Summon Ranger</button>
+    <div class="result" id="result">
+        <!-- ผลลัพธ์จะแสดงที่นี่ -->
+    </div>
+
+    <script>
+        // กำหนดโอกาสสุ่มของแต่ละระดับ
+        const levelChances = {
+            A: 3, // ระดับ A 3%
+            B: 5, // ระดับ B 5%
+            C: 22, // ระดับ C 22%
+            D: 70 // ระดับ D 70%
+        };
+
+        // ฟังก์ชันสุ่มระดับเรนเจอร์
+        function randomLevel() {
+            const random = Math.random() * 100; // สุ่มตัวเลข 0-100
+            let cumulativeChance = 0;
+
+            for (const [level, chance] of Object.entries(levelChances)) {
+                cumulativeChance += chance;
+                if (random <= cumulativeChance) {
+                    return level;
+                }
+            }
+        }
+
+        // ฟังก์ชันสุ่มเรนเจอร์ในระดับที่กำหนด
+        function randomRanger(level, rangersData) {
+            let filteredRangers;
+
+            // แยกเรนเจอร์ตามระดับ
+            if (level === "A") {
+                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("A"));
+            } else if (level === "B") {
+                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("B"));
+            } else if (level === "C") {
+                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("C"));
+            } else if (level === "D") {
+                filteredRangers = rangersData.filter((r) => r.UnitCode.startsWith("D"));
+            } else {
+                throw new Error("Invalid level");
+            }
+
+            // ตรวจสอบว่ามีเรนเจอร์ในระดับนั้นหรือไม่
+            if (!filteredRangers || filteredRangers.length === 0) {
+                throw new Error(`No rangers found for level ${level}`);
+            }
+
+            // สุ่มเรนเจอร์จากระดับที่กรองแล้ว
+            const randomIndex = Math.floor(Math.random() * filteredRangers.length);
+            return filteredRangers[randomIndex];
+        }
+
+
+        async function loadRangersData(level) {
+            if (level === "D") {
+                const response = await fetch('scraping/7-common.json');
+            } else if (level === "C") {
+                const response = await fetch('scraping/7-ultra.json');
+            } else if (level === "B") {
+                const response = await fetch('scraping/8-common.json');
+            } else { //A
+                const response = await fetch('scraping/8-ultra.json');
+            }
+
+            if (!response.ok) {
+                throw new Error("Failed to load rangers data");
+            }
+            return await response.json();
+        }
+
+        async function summonRanger() {
+            const level = randomLevel(); // สุ่ม level
+            console.log("Selected level:", level);
+
+            try {
+                const rangersData = await loadRangersData(level); // โหลดข้อมูล JSON
+                console.log("Loaded data:", rangersData);
+
+                const ranger = randomRanger(level, rangersData); // สุ่มเรนเจอร์
+                return {
+                    name: ranger.Name,
+                    image: ranger.Image,
+                    level: level
+                };
+            } catch (error) {
+                console.error("Error loading rangers data:", error);
+                return null;
+            }
+        }
+
+
+
+        async function handleSummon() {
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Summoning...";
+
+            const ranger = await summonRanger();
+            if (!ranger) {
+                resultDiv.innerHTML = "Error: Unable to summon a ranger. Please try again.";
+                return;
+            }
+
+            resultDiv.innerHTML = `
+        <p>You got <strong>${ranger.name}</strong> (Level: ${ranger.level})</p>
+        <img src="${ranger.image}" alt="${ranger.name}">
+    `;
+        }
+    </script>
+</body>
+
+</html>
