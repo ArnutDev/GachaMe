@@ -76,37 +76,39 @@
             </aside>
         </div>
     </div>
-    <!-- modal -->
+    <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <!-- ส่วนหัวของ Modal -->
+                <!-- Modal Header -->
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalLabel">Result</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <!-- ส่วนเนื้อหาของ Modal -->
-                <div class="modal-body bg-success text-white p-4">
-                    <!-- แสดงข้อมูลต่าง ๆ -->
+                <!-- Modal Body -->
+                <div class="modal-body">
                     <p><strong>Grade:</strong> <span id="normal-result"></span></p>
                     <p><strong>Name:</strong> <span id="normal-result2"></span></p>
-                    <!-- <p><strong>UnitCode:</strong> <span id="normal-result3"></span></p> -->
                     <div id="normal-result4">
                         <img src="https://via.placeholder.com/150" alt="Image" class="img-fluid">
                     </div>
                 </div>
 
-                <!-- ส่วนท้ายของ Modal -->
+                <!-- Modal Footer -->
                 <div class="modal-footer">
                     <p><strong>Count:</strong> <span id="normal-result5"></span></p>
-                    <button type="button" class="btn btn-secondary" onclick="normalGacha()">สุ่มอีกครั้ง</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="randomButton"
+                        onclick="normalGacha()">สุ่มอีกครั้ง</button>
                 </div>
             </div>
         </div>
     </div>
 
+
     <script src="src/random.js"></script>
+
 </body>
 
 </html>
