@@ -35,6 +35,11 @@
       "UnitCode": "u1027e-sally"
     },
     {
+      "Name": "Yellow Card Dane",
+      "Image": "https://rangers.lerico.net/res/u1034e-dane/u1034e-dane-thum.png",
+      "UnitCode": "u1034e-dane"
+    },
+    {
       "Name": "Tree Stump Leonard",
       "Image": "https://rangers.lerico.net/res/u1041e-leonard/u1041e-leonard-thum.png",
       "UnitCode": "u1041e-leonard"
@@ -85,6 +90,11 @@
       "UnitCode": "u1135e-moon"
     },
     {
+      "Name": "Little Witch Cony",
+      "Image": "https://rangers.lerico.net/res/u1152e-cony/u1152e-cony-thum.png",
+      "UnitCode": "u1152e-cony"
+    },
+    {
       "Name": "Ice Sled Sally",
       "Image": "https://rangers.lerico.net/res/u1162e-sally/u1162e-sally-thum.png",
       "UnitCode": "u1162e-sally"
@@ -93,6 +103,11 @@
       "Name": "Magician Moon",
       "Image": "https://rangers.lerico.net/res/u1171e-moon/u1171e-moon-thum.png",
       "UnitCode": "u1171e-moon"
+    },
+    {
+      "Name": "Skeleton Candy Brown",
+      "Image": "https://rangers.lerico.net/res/u1203e-brown/u1203e-brown-thum.png",
+      "UnitCode": "u1203e-brown"
     },
     {
       "Name": "Keyboard Girl Cony",
@@ -193,6 +208,11 @@
       "Name": "Mage James",
       "Image": "https://rangers.lerico.net/res/u401e-james/u401e-james-thum.png",
       "UnitCode": "u401e-james"
+    },
+    {
+      "Name": "Native American Jessica",
+      "Image": "https://rangers.lerico.net/res/u403e-jessica/u403e-jessica-thum.png",
+      "UnitCode": "u403e-jessica"
     },
     {
       "Name": "Martial Artist Simon",
