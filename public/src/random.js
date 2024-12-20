@@ -1,79 +1,92 @@
 let count = 0;
+
 async function loadJSON(filePath) {
     try {
-        const response = await fetch(filePath); // รอการโหลดไฟล์ JSON
+        const response = await fetch(filePath);
         if (!response.ok) {
-            throw new Error(`Error fetching file: ${response.statusText}`); // หากไฟล์มีปัญหา ให้โยนข้อผิดพลาด
+            throw new Error(`Error fetching file: ${response.statusText}`);
         }
-        const data = await response.json(); // แปลง JSON String เป็น JavaScript Object
-        return data; // ส่งคืนข้อมูล JSON
+        return await response.json();
     } catch (error) {
-        console.error('Error loading JSON:', error); // แสดงข้อผิดพลาดในคอนโซล
-        throw error; // ส่งข้อผิดพลาดกลับไปให้ผู้เรียกใช้ฟังก์ชันจัดการ
+        console.error('Error loading JSON:', error);
+        throw error;
     }
 }
 
 function getRandomRangers(min, max) {
-    const random = Math.random() * (max - min) + min; // สุ่มตัวเลขระหว่าง min และ max
-    return parseFloat(random.toFixed(2)); // ปัดเศษให้เป็นทศนิยม 2 ตำแหน่ง
+    return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
 
 function getRandomPickRanger(min, max) {
-    const random = Math.floor(Math.random() * (max - min + 1)) + min; // สุ่มจำนวนเต็มระหว่าง min และ max
-    return random;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 async function normalGacha() {
-    const Grade = getRandomRangers(0.01, 100.00);
-    const resultContainer = document.getElementById("normal-result");
+    const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 7 อัน
+    divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
 
-    let rangersJson;
-    //test sum rangers
-    let sum = 0;
-    if (Grade <= 3.00) {
-        const subGrade = getRandomRangers(0.01, 3.00);
+    setTimeout(async () => {
 
-        if (subGrade >= 0.01 && subGrade <= 0.48) {
-            // โหลดไฟล์ JSON อื่นเมื่อค่าที่สุ่มได้อยู่ระหว่าง 0.01 - 0.48
-            rangersJson = await loadJSON('scraping/8-ultra-collab.json');
+        for (let i = 0; i < 7; i++) {
+            const chance = getRandomRangers(0.01, 100.00);
+            let rangersJson;
+            let result;
+            let grade;
+            let type;
+            if (chance <= 3.00) {
+                const collabGrade = getRandomRangers(0.01, 3.00);
+                if (collabGrade >= 0.01 && collabGrade <= 0.48) {
+                    rangersJson = await loadJSON('scraping/8-ultra-collab.json');
+                    type = "collab";
+                } else {
+                    rangersJson = await loadJSON('scraping/8-ultra.json');
+                }
+                grade = "Ultra 8 star";
+            } else if (chance <= 8.00) {
+                rangersJson = await loadJSON('scraping/7-ultra.json');
+                grade = "Ultra 7 star";
+            } else if (chance <= 30.00) {
+                const collabGrade = getRandomRangers(0.01, 30.00);
+                if (collabGrade >= 0.01 && collabGrade <= 3.52) {
+                    rangersJson = await loadJSON('scraping/8-common-collab.json');
+                    type = "collab";
+                } else {
+                    rangersJson = await loadJSON('scraping/8-common.json');
+                }
+                grade = "8 star";
+            } else {
+                rangersJson = await loadJSON('scraping/7-common.json');
+                grade = "7 star";
+            }
 
-            alert('Congratulation u got collabro rangers!');
-        } else {
-            rangersJson = await loadJSON('scraping/8-ultra.json');
-            console.log(rangersJson.length); //full 122/122
+            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
+            result = rangersJson[randomIndex];
+
+            // เพิ่มข้อมูลใน div
+            if (divSlots[i]) {
+                let border = ``;
+                if (type === "collab") {
+                    border = `border border-success border-5`;
+                }
+                divSlots[i].innerHTML = `
+                <div class="p-2 ${border} rounded">
+                    <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <img src="${result.Image}" alt="${result.Name}" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                    <p><strong>Grade:</strong> ${grade}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${result.Name}</p>
+                </div>
+            `;
+            }
+
         }
-        resultContainer.innerHTML = `Ultra 8 star`;
-    } else if (Grade <= 8.00) {
-        rangersJson = await loadJSON('scraping/7-ultra.json');
-        resultContainer.innerHTML = `Ultra 7 star`;
-        console.log(rangersJson.length); //full 7/7
-    } else if (Grade <= 30.00) {
-        const subGrade = getRandomRangers(0.01, 30.00);
-        if (subGrade >= 0.01 && subGrade <= 3.52) {
-            // โหลดไฟล์ JSON อื่นเมื่อค่าที่สุ่มได้อยู่ระหว่าง 0.01 -3.52
-            rangersJson = await loadJSON('scraping/8-common-collab.json');
-            alert('Congratulation u got collabro rangers!');
-        } else {
-            rangersJson = await loadJSON('scraping/8-common.json');
-            console.log(rangersJson.length); // full 132/132
-        }
-        resultContainer.innerHTML = `8 star`;
-    } else {
-        rangersJson = await loadJSON('scraping/7-common.json');
-        resultContainer.innerHTML = `7 star`;
-        console.log(rangersJson.length); // full 58/58
-    }
-
-    const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
-    const result = rangersJson[randomIndex];
-    count += 1;
-    setTimeout(() => {
-        // แสดงข้อมูลตัวละครในหน้าจอหลังจาก delay
-        document.getElementById("normal-result2").innerHTML = `${result.Name}`;
-        document.getElementById("normal-result4").innerHTML = `<img src="${result.Image}" alt="${result.Name}" style="max-width: 150px; height: 100px;">`;
-        document.getElementById("normal-result5").innerHTML = `${count} , Gacha-coupon used: ${count*5}`;
+        // อัปเดตจำนวนรวม
+        document.getElementById("normal-count").innerHTML = `Count: ${count}, Ruby used: ${count * 300}`;
     }, 300);
+    count++;
+
 }
+
 
 // Function to handle modal opening after closing it
 function handleModalReopen() {
