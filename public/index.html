@@ -13,55 +13,62 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
-            <a href="random.html" class="navbar-brand">GachaMe</a>
+            <a href="index.html" class="navbar-brand">GachaMe</a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbar1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">หน้าแรก</a>
+                        <a href="index.html" class="nav-link">หน้าแรก</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">เกี่ยวกับฉัน</a>
+                        <a href="about-me.html" class="nav-link">เกี่ยวกับฉัน</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">แหล่งที่มา</a>
+                        <a href="https://rangers.lerico.net/en/rangers-book" class="nav-link">Source</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container bg-success p-5">
+    <div class="caution text-center">
+        <p class="h4 bg-warning">จัดทำเพื่อความบันเทิงเท่านั้น อยากเปิดรัวๆแบบจุใจ
+            ไม่แสวงหาผลกำไรใดๆทั้งสิ้น <a href="https://rangers.lerico.net/en/rangers-book" target="_blank"
+                rel="noopener noreferrer">แหล่งที่มาข้อมูล: LINE Rangers Handbook</a></p>
+    </div>
+    <div class="container p-2">
         <div class="row">
-            <div class="col-md-8 bg-warning">
-                <section class="box1 bg-danger">
-                    <h1 class="name-box1">box1</h1>
-                    <div class="chest1" style="height: 300px;">
-                        <img class="box1-banner w-100 h-50 img-fluid rounded-4"
-                            src="https://m.media-amazon.com/images/S/pv-target-images/65445c41133683985b9d318a80d3ec54b97d8936dda8034debaacfe1a27626bf.jpg"
-                            alt="box1-banner bg-dark">
-                        <div class="detail mt-3 bg-success text-center">
-                            <p>เรนเจอร์ 1 2 3 4</p>
-                            <p>เรนเจอร์ 1 2 3 4</p>
+            <div class="col-md-8">
+                <section class="box1 p-3 border border-dark border-3 rounded-5">
+                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 4 ชนิด!</h1>
+                    <div class="chest1">
+                        <img class="box1-banner w-auto h-auto img-fluid rounded-4" src="assets/cover/GachaMe-banner.png"
+                            alt="box1-banner">
+                        <div class="detail mt-3 text-center">
+                            <p class="h6">Rangers:</p>
+                            <p class="h6">"Gintoki",
+                                "Kagura",
+                                "Shinpachi",
+                                "Hijikata"</p>
+                            <p class="h5">โอกาสได้รับ: Ultra 0.12% | Common 0.88% </p>
                         </div>
-                        <div class="bg-info d-flex justify-content-center align-items-center">
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal"
                                 onclick="normalGacha()">random</button>
                         </div>
                     </div>
                 </section>
-                <section class="box1 bg-danger">
-                    <h1 class="name-box1">box1</h1>
-                    <div class="chest1" style="height: 300px;">
-                        <img class="box1-banner w-100 h-50 img-fluid rounded-4"
-                            src="https://m.media-amazon.com/images/S/pv-target-images/65445c41133683985b9d318a80d3ec54b97d8936dda8034debaacfe1a27626bf.jpg"
-                            alt="box1-banner bg-dark">
-                        <div class="detail mt-3 bg-success text-center">
+                <section class="box1 p-3 mt-2 border border-dark border-3 rounded-5">
+                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 2 ชนิด! (ยังไม่เสร็จ ขก.)</h1>
+                    <div class="chest1">
+                        <img class="ตู้รวม-banner w-auto h- img-fluid rounded-4" src="assets/cover/GachaMe-banner.png"
+                            alt="box1-banner">
+                        <div class="detail mt-3 text-center">
                             <p>เรนเจอร์ 1 2 3 4</p>
                             <p>เรนเจอร์ 1 2 3 4</p>
                         </div>
-                        <div class="bg-info d-flex justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center">
                             <button class="btn btn-primary">random</button>
                         </div>
                     </div>
@@ -69,7 +76,7 @@
             </div>
             <aside class="col-md-4 bg-primary">
                 <div class="stats-container bg-info">
-                    <h1 class="text-center">Stats</h1>
+                    <h1 class="text-center">สถิติ</h1>
                     <p class="text-center">No.| name (highlight if collab)
                     </p>
                 </div>
@@ -156,9 +163,9 @@
                 <!-- Modal Footer -->
                 <div class="modal-footer">
                     <p><strong>Count:</strong> <span id="normal-count"></span></p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
                     <button type="button" class="btn btn-primary" id="randomButton"
-                        onclick="normalGacha()">สุ่มอีกครั้ง</button>
+                        onclick="normalGacha()">again</button>
                 </div>
             </div>
         </div>
