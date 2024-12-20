@@ -25,29 +25,30 @@ async function normalGacha() {
     const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 7 อัน
     divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
 
+
     setTimeout(async () => {
 
         for (let i = 0; i < 7; i++) {
-            const chance = getRandomRangers(0.01, 100.00);
+            const chance = getRandomRangers(1, 100);
             let rangersJson;
             let result;
             let grade;
             let type;
-            if (chance <= 3.00) {
-                const collabGrade = getRandomRangers(0.01, 3.00);
-                if (collabGrade >= 0.01 && collabGrade <= 0.48) {
+            if (chance <= 3) {
+                const collabGrade = getRandomRangers(0.01, 100.00);
+                if (collabGrade <= 0.48) {
                     rangersJson = await loadJSON('scraping/8-ultra-collab.json');
                     type = "collab";
                 } else {
                     rangersJson = await loadJSON('scraping/8-ultra.json');
                 }
                 grade = "Ultra 8 star";
-            } else if (chance <= 8.00) {
+            } else if (chance <= 8) {
                 rangersJson = await loadJSON('scraping/7-ultra.json');
                 grade = "Ultra 7 star";
-            } else if (chance <= 30.00) {
-                const collabGrade = getRandomRangers(0.01, 30.00);
-                if (collabGrade >= 0.01 && collabGrade <= 3.52) {
+            } else if (chance <= 30) {
+                const collabGrade = getRandomRangers(0.01, 100.00);
+                if (collabGrade <= 3.52) {
                     rangersJson = await loadJSON('scraping/8-common-collab.json');
                     type = "collab";
                 } else {
