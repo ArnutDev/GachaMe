@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        #results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gacha Simulation</h1>
+    <p>Click the button below to simulate the Gacha system and see the results.</p>
+    <button id="simulate">Run Simulation</button>
+    <div id="results">
+        <h2>Results:</h2>
+        <pre id="output">Click "Run Simulation" to see the results.</pre>
+    </div>
+
+    <script>
+        function getRandomRangers(min, max) {
+            return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+        }
+
+        async function testGacha(iterations = 10000000) {
+            const counts = {
+                "8u-Collab": 0,
+                "8u-Regular": 0,
+                "8c-Collab": 0,
+                "8c-Regular": 0,
+                "7u": 0,
+                "7c": 0
+            };
+
+            for (let i = 0; i < iterations; i++) {
+                const chance = getRandomRangers(0.01, 100.00);
+
+                if (chance <= 3.00) {
+                    const collabGrade = getRandomRangers(0.01, 3.00);
+                    if (collabGrade >= 0.01 && collabGrade <= 0.48) counts["8u-Collab"]++;
+                    else counts["8u-Regular"]++;
+                } else if (chance <= 8.00) {
+                    counts["7u"]++;
+                } else if (chance <= 30.00) {
+                    const collabGrade = getRandomRangers(0.01, 22.00);
+                    if (collabGrade >= 0.01 && collabGrade <= 3.52) counts["8c-Collab"]++;
+                    else counts["8c-Regular"]++;
+                } else {
+                    counts["7c"]++;
+                }
+            }
+
+            // คำนวณอัตราส่วน
+            const results = {};
+            for (const key in counts) {
+                results[key] = (counts[key] / iterations * 100).toFixed(2) + "%";
+            }
+            return results;
+        }
+
+        document.getElementById("simulate").addEventListener("click", async () => {
+            const output = document.getElementById("output");
+            output.textContent = "Running simulation... please wait.";
+
+            const results = await testGacha();
+            output.textContent = JSON.stringify(results, null, 2);
+        });
+    </script>
+</body>
+
+</html>
