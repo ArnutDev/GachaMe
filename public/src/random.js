@@ -7,6 +7,9 @@ let u3 = 0;
 let c3 = 0;
 let u4 = 0;
 let c4 = 0;
+const ultraCollabRate = 0.48;
+const commonCollabRate = 3.52;
+
 
 async function loadJSON(filePath) {
     try {
@@ -41,12 +44,12 @@ async function normalGacha() {
             let rangersJson;
             let result;
             let grade;
-            let type = "";
+            let collab = false;
             if (chance <= 3) {
                 const collabGrade = getRandomRangers(0.01, 100.00);
-                if (collabGrade <= /*0.48*/ 99) {
+                if (collabGrade <= ultraCollabRate /*99*/ ) {
                     rangersJson = await loadJSON('scraping/8-ultra-collab.json');
-                    type = "collab";
+                    collab = true;
                 } else {
                     rangersJson = await loadJSON('scraping/8-ultra.json');
                 }
@@ -56,9 +59,9 @@ async function normalGacha() {
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
                 const collabGrade = getRandomRangers(0.01, 100.00);
-                if (collabGrade <= /*3.52*/ 99) {
+                if (collabGrade <= commonCollabRate /*99*/ ) {
                     rangersJson = await loadJSON('scraping/8-common-collab.json');
-                    type = "collab";
+                    collab = true;
                 } else {
                     rangersJson = await loadJSON('scraping/8-common.json');
                 }
@@ -67,15 +70,19 @@ async function normalGacha() {
                 rangersJson = await loadJSON('scraping/7-common.json');
                 grade = "7 star";
             }
+            const n = 0;
+            // if (collab) {
+            //     n = 2;
+            // }
 
-            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
+            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1 - n);
             result = rangersJson[randomIndex];
 
 
             // เพิ่มข้อมูลใน div
             if (divSlots[i]) {
                 let border = ``;
-                if (type === "collab") {
+                if (collab) {
                     border = `border border-success border-5`;
                     getStat(result);
 

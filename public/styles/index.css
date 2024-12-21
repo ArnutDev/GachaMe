@@ -1,9 +1,12 @@
+.custom-bg{
+  background-color: #343541;
+}
 .modal-dialog {
     max-width: 600px; /* กำหนดความกว้างสูงสุด */
     width: 100%; /* ให้ Modal ใช้ความกว้างทั้งหมดของพื้นที่หน้าจอ */
     height: auto; /* ความสูงจะปรับอัตโนมัติตามเนื้อหาภายใน */
     margin: auto; /* ทำให้ Modal อยู่ตรงกลาง */
-  }
+}
 
 .modal-content {
     min-height: 300px; /* กำหนดความสูงขั้นต่ำ */  
