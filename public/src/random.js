@@ -70,12 +70,8 @@ async function normalGacha() {
                 rangersJson = await loadJSON('scraping/7-common.json');
                 grade = "7 star";
             }
-            const n = 0;
-            // if (collab) {
-            //     n = 2;
-            // }
 
-            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1 - n);
+            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
             result = rangersJson[randomIndex];
 
 
@@ -100,7 +96,7 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = `Count: ${count}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
 
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("c-ranger-1").innerHTML = c1;
@@ -114,6 +110,7 @@ async function normalGacha() {
     count++;
 
 }
+
 
 async function getStat(data) {
     const collabUltraJson = await loadJSON('scraping/8-ultra-collab.json');

@@ -4,11 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about me</title>
+    <title>Profile Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <h1>ยังไม่เสร็จ ขี้เกียจอยู่ๆๆ</h1>
+<body style="background-color: #343541;">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">GachaMe</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-me.html" class="nav-link">about me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="change-log.html" class="nav-link">updates</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <!-- Profile Card -->
+        <div class="card mx-auto" style="max-width: 600px;">
+            <div class="card-body text-center">
+                <!-- Profile Picture -->
+                <img src="https://avatars.githubusercontent.com/u/190331346?v=4" alt="Profile Picture"
+                    class="rounded-circle mb-3" style="width: 150px; height: 150px;">
+                <!-- Name and Title -->
+                <h3 class="card-title">Arnut</h3>
+                <p class="text-muted">Owner this website</p>
+                <!-- About Section -->
+                <p class="card-text">
+                    Hello! My name is arnut. I make this website for practice my skills
+                    and be ready for my future job. I hope you enjoy my website.
+                    However if you have any question or problem like bug you can contact me
+                    by gmail or google form below. thanks you have a good day.
+                </p>
+                <p class="h6">Email: arnut.contact@gmail.com</p>
+                <!-- Contact Info -->
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <p class="h6">Report a problem:
+                        <a href="https://forms.gle/XNHZhGq1qYZCMrNx5" target="_blank"
+                            class="ms-1 btn btn-primary">Google Form</a></p>
+                    <!-- <a href="#" class="btn btn-secondary">GitHub</a> -->
+                    <!-- <a href="mailto:email@example.com" class="btn btn-outline-dark">Email</a> -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
