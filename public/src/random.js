@@ -7,9 +7,6 @@ let u3 = 0;
 let c3 = 0;
 let u4 = 0;
 let c4 = 0;
-const ultraCollabRate = 0.48;
-const commonCollabRate = 3.52;
-
 
 async function loadJSON(filePath) {
     try {
@@ -35,7 +32,8 @@ function getRandomPickRanger(min, max) {
 async function normalGacha() {
     const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 7 อัน
     divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
-
+    const ultraCollabRate = 0.48;
+    const commonCollabRate = 3.52;
 
     setTimeout(async () => {
 
@@ -47,7 +45,7 @@ async function normalGacha() {
             let collab = false;
             if (chance <= 3) {
                 const collabGrade = getRandomRangers(0.01, 100.00);
-                if (collabGrade <= ultraCollabRate /*99*/ ) {
+                if (collabGrade <= ultraCollabRate) {
                     rangersJson = await loadJSON('scraping/8-ultra-collab.json');
                     collab = true;
                 } else {
@@ -59,7 +57,7 @@ async function normalGacha() {
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
                 const collabGrade = getRandomRangers(0.01, 100.00);
-                if (collabGrade <= commonCollabRate /*99*/ ) {
+                if (collabGrade <= commonCollabRate) {
                     rangersJson = await loadJSON('scraping/8-common-collab.json');
                     collab = true;
                 } else {
@@ -110,7 +108,83 @@ async function normalGacha() {
     count++;
 
 }
+async function rateUp1() {
+    const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 7 อัน
+    divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
+    const ultraCollabRate = 0.36;
+    const commonCollabRate = 2.64;
+    setTimeout(async () => {
 
+        for (let i = 0; i < 7; i++) {
+            const chance = getRandomRangers(1, 100);
+            let rangersJson;
+            let result;
+            let grade;
+            let collab = false;
+            if (chance <= 3) {
+                const collabGrade = getRandomRangers(0.01, 100.00);
+                if (collabGrade <= ultraCollabRate) {
+                    rangersJson = await loadJSON('scraping/rate-up1/8-ultra-collab.json');
+                    collab = true;
+                } else {
+                    rangersJson = await loadJSON('scraping/8-ultra.json');
+                }
+                grade = "Ultra 8 star";
+            } else if (chance <= 8) {
+                rangersJson = await loadJSON('scraping/7-ultra.json');
+                grade = "Ultra 7 star";
+            } else if (chance <= 30) {
+                const collabGrade = getRandomRangers(0.01, 100.00);
+                if (collabGrade <= commonCollabRate) {
+                    rangersJson = await loadJSON('scraping/rate-up1/8-common-collab.json');
+                    collab = true;
+                } else {
+                    rangersJson = await loadJSON('scraping/8-common.json');
+                }
+                grade = "8 star";
+            } else {
+                rangersJson = await loadJSON('scraping/7-common.json');
+                grade = "7 star";
+            }
+            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
+            result = rangersJson[randomIndex];
+
+
+            // เพิ่มข้อมูลใน div
+            if (divSlots[i]) {
+                let border = ``;
+                if (collab) {
+                    border = `border border-success border-5`;
+                    getStat(result);
+
+                }
+                divSlots[i].innerHTML = `
+                <div class="p-2 ${border} rounded">
+                    <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <img src="${result.Image}" alt="${result.Name}" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                    <p><strong>Grade:</strong> ${grade}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${result.Name}</p>
+                </div>
+            `;
+            }
+
+        }
+        // อัปเดตจำนวนรวม
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
+
+        document.getElementById("u-ranger-1").innerHTML = u1;
+        document.getElementById("c-ranger-1").innerHTML = c1;
+        document.getElementById("u-ranger-2").innerHTML = u2;
+        document.getElementById("c-ranger-2").innerHTML = c2;
+        document.getElementById("u-ranger-3").innerHTML = u3;
+        document.getElementById("c-ranger-3").innerHTML = c3;
+        document.getElementById("u-ranger-4").innerHTML = u4;
+        document.getElementById("c-ranger-4").innerHTML = c4;
+    }, 300);
+    count++;
+
+}
 
 async function getStat(data) {
     const collabUltraJson = await loadJSON('scraping/8-ultra-collab.json');
