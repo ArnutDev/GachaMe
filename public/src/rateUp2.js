@@ -80,7 +80,7 @@ function checkValueInRange(value, arr) {
     for (let i = 0; i < arr.length; i += 2) {
         if (value > arr[i] && value <= arr[i + 1]) {
             // ถ้าค่าอยู่ในช่วงระหว่าง arr[i] และ arr[i+1]
-            alert(`arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]} range = ${(arr[i+1] -arr[i]).toFixed(2)}`);
+            // alert(`arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]} range = ${(arr[i+1] -arr[i]).toFixed(2)}`);
             return true; // คืนค่าจริงเมื่อค่าอยู่ในช่วง
         }
     }
