@@ -74,7 +74,7 @@
                     </div>
                 </section>
                 <section class="box1 my-2 p-3 bg-light border border-dark border-3 rounded-5">
-                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 2 ชนิด! (ยังไม่เสร็จ)</h1>
+                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 2 ชนิด!</h1>
                     <div class="chest1">
                         <img class="box1-banner w-auto h-auto img-fluid rounded-4"
                             src="assets/cover/rate-up-gacha-1.jpg" alt="box1-banner">
@@ -85,13 +85,13 @@
                             <p class="h5">โอกาสได้รับ: Ultra 0.18% | Common 1.32% </p>
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal"
-                                onclick="normalGacha()">random</button>
+                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal1"
+                                onclick="rateUp1()">random</button>
                         </div>
                     </div>
                 </section>
                 <section class="box1 my-2 p-3 bg-light border border-dark border-3 rounded-5">
-                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 2 ชนิด! (ยังไม่เสร็จ)</h1>
+                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 2 ชนิด!</h1>
                     <div class="chest1">
                         <img class="box1-banner w-auto h-auto img-fluid rounded-4"
                             src="assets/cover/rate-up-gacha-2.jpg" alt="box1-banner">
@@ -102,8 +102,8 @@
                             <p class="h5">โอกาสได้รับ: Ultra 0.18% | Common 1.32% </p>
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal"
-                                onclick="normalGacha()">random</button>
+                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal2"
+                                onclick="rateUp2()">random</button>
                         </div>
                     </div>
                 </section>
@@ -274,9 +274,99 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg d-flex align-items-center justify-content-center">
+            <div class="modal-content text-center">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Result</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="container p-2 text-center justify-content-center">
+                        <div class="row">
+                            <div class="content-display1 p-2 col-md-3">
+                                <div class="image-box bg-info" id="normal-image1">
+
+                                </div>
+                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
+
+                            </div>
+                            <div class="content-display1 p-2 col-md-3">
+                                <div class="image-box" id="normal-image1">
+
+                                </div>
+                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                </p>
+
+                            </div>
+                            <div class="content-display1 p-2 col-md-3">
+                                <div class="image-box" id="normal-image1">
+
+                                </div>
+                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
+
+                            </div>
+                            <div class="content-display1 p-2 col-md-3">
+                                <div class="image-box" id="normal-image1">
+                                </div>
+                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="content-display1 p-2 col-md-4">
+                                <div class="image-box" id="normal-image1">
+
+                                </div>
+                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
+
+                            </div>
+                            <div class="content-display1 p-2 col-md-4">
+                                <div class="image-box" id="normal-image1">
+
+                                </div>
+                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
+
+                            </div>
+                            <div class="content-display1 p-2 col-md-4">
+                                <div class="image-box" id="normal-image1">
+
+                                </div>
+                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <p><strong>Count:</strong> <span id="normal-count1"></span></p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                    <button type="button" class="btn btn-primary" id="randomButton1" onclick="rateUp1()">again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <script src="src/random.js"></script>
+    <script src="src/rateUp1.js"></script>
+    <script src="src/rateUp2.js"></script>
 
 </body>
 
