@@ -47,7 +47,7 @@ async function summonRanger() {
 
     const level = randomLevel();
     const ranger = randomRanger(level, rangersData);
-    return `You got ${ranger.Name} (${level}): ${ranger.Image}`;
+    return `You got ${ranger.Name} (${level}) : ${ranger.Image}`;
 }
 
 // ตัวอย่างการสุ่ม
