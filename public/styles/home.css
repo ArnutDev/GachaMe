@@ -1,0 +1,21 @@
+.custom-bg{
+    background-color: #343541;
+}
+/* เพิ่มเอฟเฟกต์ Hover ให้ Card */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05); /* ขยายการ์ดเล็กน้อย */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูนูน */
+}
+/* ทำให้ body ใช้ Flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ให้หน้าเว็บมีความสูงเต็มหน้าจอ */
+}
+
+footer {
+    margin-top: auto; /* ดัน footer ไปด้านล่าง */
+}
