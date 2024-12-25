@@ -1,0 +1,11 @@
+//for base
+base folder is original folder not change by any gacha but change when add 
+new rangers or gears when new month coming and can use for rate-up 
+but need to copy to other folder and change folder rangers and gears 
+will keep info like name ,image ,grade in that month
+** every even month will have new rangers to add to base json file
+
+//for use
+rangers folder at rate-upN data inside json will change every month
+gears folder at rate-upN data inside json will change every month
+

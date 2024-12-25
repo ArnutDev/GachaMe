@@ -1,0 +1,622 @@
+[
+  {
+    "Name": "8 Star Ultra Leonard",
+    "Image": "https://rangers.lerico.net/res/u9-leonard/u9-leonard-thum.png",
+    "UnitCode": "srry im lazy to find this image"
+  },
+  {
+    "Name": "Allfather Zeus Brown",
+    "Image": "https://rangers.lerico.net/res/u1001u-brown/u1001u-brown-thum.png",
+    "UnitCode": "u1001u-brown"
+  },
+  {
+    "Name": "Destructor Ares Cony",
+    "Image": "https://rangers.lerico.net/res/u1002u-cony/u1002u-cony-thum.png",
+    "UnitCode": "u1002u-cony"
+  },
+  {
+    "Name": "Wise Athena Jessica",
+    "Image": "https://rangers.lerico.net/res/u1003u-jessica/u1003u-jessica-thum.png",
+    "UnitCode": "u1003u-jessica"
+  },
+  {
+    "Name": "Inventor DaVinci Sally",
+    "Image": "https://rangers.lerico.net/res/u1004u-sally/u1004u-sally-thum.png",
+    "UnitCode": "u1004u-sally"
+  },
+  {
+    "Name": "Conductor Mozart James",
+    "Image": "https://rangers.lerico.net/res/u1005u-james/u1005u-james-thum.png",
+    "UnitCode": "u1005u-james"
+  },
+  {
+    "Name": "Playwright Shakespeare Moon",
+    "Image": "https://rangers.lerico.net/res/u1006u-moon/u1006u-moon-thum.png",
+    "UnitCode": "u1006u-moon"
+  },
+  {
+    "Name": "Hip Hop Dino Cony",
+    "Image": "https://rangers.lerico.net/res/u1007u-cony/u1007u-cony-thum.png",
+    "UnitCode": "u1007u-cony"
+  },
+  {
+    "Name": "RedDinoBrown",
+    "Image": "https://rangers.lerico.net/res/u1008u-brown/u1008u-brown-thum.png",
+    "UnitCode": "u1008u-brown"
+  },
+  {
+    "Name": "Afro Cave Sally",
+    "Image": "https://rangers.lerico.net/res/u1009u-sally/u1009u-sally-thum.png",
+    "UnitCode": "u1009u-sally"
+  },
+  {
+    "Name": "Mochi Master Brown",
+    "Image": "https://rangers.lerico.net/res/u1013u-brown/u1013u-brown-thum.png",
+    "UnitCode": "u1013u-brown"
+  },
+  {
+    "Name": "Beautiful Miko Cony",
+    "Image": "https://rangers.lerico.net/res/u1014u-cony/u1014u-cony-thum.png",
+    "UnitCode": "u1014u-cony"
+  },
+  {
+    "Name": "Cutie Daruma Sally",
+    "Image": "https://rangers.lerico.net/res/u1015u-sally/u1015u-sally-thum.png",
+    "UnitCode": "u1015u-sally"
+  },
+  {
+    "Name": "Liu Bei Xuande Moon",
+    "Image": "https://rangers.lerico.net/res/u1020u-moon/u1020u-moon-thum.png",
+    "UnitCode": "u1020u-moon"
+  },
+  {
+    "Name": "Zhang Fei Yide BROWN",
+    "Image": "https://rangers.lerico.net/res/u1022u-brown/u1022u-brown-thum.png",
+    "UnitCode": "u1022u-brown"
+  },
+  {
+    "Name": "Marching Band Moon",
+    "Image": "https://rangers.lerico.net/res/u1026u-moon/u1026u-moon-thum.png",
+    "UnitCode": "u1026u-moon"
+  },
+  {
+    "Name": "Goose Car Sally",
+    "Image": "https://rangers.lerico.net/res/u1028u-sally/u1028u-sally-thum.png",
+    "UnitCode": "u1028u-sally"
+  },
+  {
+    "Name": "Fan Club President Cony",
+    "Image": "https://rangers.lerico.net/res/u1033u-cony/u1033u-cony-thum.png",
+    "UnitCode": "u1033u-cony"
+  },
+  {
+    "Name": "Ultra-Strict Ref Dane",
+    "Image": "https://rangers.lerico.net/res/u1035u-dane/u1035u-dane-thum.png",
+    "UnitCode": "u1035u-dane"
+  },
+  {
+    "Name": "Fungus Fairy Sally",
+    "Image": "https://rangers.lerico.net/res/u1040u-sally/u1040u-sally-thum.png",
+    "UnitCode": "u1040u-sally"
+  },
+  {
+    "Name": "Forest Fairy Leonard",
+    "Image": "https://rangers.lerico.net/res/u1042u-leonard/u1042u-leonard-thum.png",
+    "UnitCode": "u1042u-leonard"
+  },
+  {
+    "Name": "Sea God Susanoo Fishu",
+    "Image": "https://rangers.lerico.net/res/u1047u-susa/u1047u-susa-thum.png",
+    "UnitCode": "u1047u-susa"
+  },
+  {
+    "Name": "Earth Kushinada Hime",
+    "Image": "https://rangers.lerico.net/res/u1049u-hime/u1049u-hime-thum.png",
+    "UnitCode": "u1049u-hime"
+  },
+  {
+    "Name": "Piping Hot Brown",
+    "Image": "https://rangers.lerico.net/res/u1056u-brown/u1056u-brown-thum.png",
+    "UnitCode": "u1056u-brown"
+  },
+  {
+    "Name": "Samurai Underboss Moon",
+    "Image": "https://rangers.lerico.net/res/u1058u-moon/u1058u-moon-thum.png",
+    "UnitCode": "u1058u-moon"
+  },
+  {
+    "Name": "Showy Clown Brown",
+    "Image": "https://rangers.lerico.net/res/u1063u-brown/u1063u-brown-thum.png",
+    "UnitCode": "u1063u-brown"
+  },
+  {
+    "Name": "Balloon Master Cony",
+    "Image": "https://rangers.lerico.net/res/u1065u-cony/u1065u-cony-thum.png",
+    "UnitCode": "u1065u-cony"
+  },
+  {
+    "Name": "Big Bad Brown",
+    "Image": "https://rangers.lerico.net/res/u1073u-brown/u1073u-brown-thum.png",
+    "UnitCode": "u1073u-brown"
+  },
+  {
+    "Name": "Big Money Cony",
+    "Image": "https://rangers.lerico.net/res/u1074u-cony/u1074u-cony-thum.png",
+    "UnitCode": "u1074u-cony"
+  },
+  {
+    "Name": "Black Mariachi Moon",
+    "Image": "https://rangers.lerico.net/res/u1080u-moon/u1080u-moon-thum.png",
+    "UnitCode": "u1080u-moon"
+  },
+  {
+    "Name": "Food-Fight Sally",
+    "Image": "https://rangers.lerico.net/res/u1082u-sally/u1082u-sally-thum.png",
+    "UnitCode": "u1082u-sally"
+  },
+  {
+    "Name": "Scary Croc Game Boss",
+    "Image": "https://rangers.lerico.net/res/u1090u-boss/u1090u-boss-thum.png",
+    "UnitCode": "u1090u-boss"
+  },
+  {
+    "Name": "Pirate Hunt",
+    "Image": "https://rangers.lerico.net/res/u1092u-hunt/u1092u-hunt-thum.png",
+    "UnitCode": "u1092u-hunt"
+  },
+  {
+    "Name": "Black Magic Jiangshi Moon",
+    "Image": "https://rangers.lerico.net/res/u1098u-moon/u1098u-moon-thum.png",
+    "UnitCode": "u1098u-moon"
+  },
+  {
+    "Name": "Cursed Vampire James",
+    "Image": "https://rangers.lerico.net/res/u1100u-james/u1100u-james-thum.png",
+    "UnitCode": "u1100u-james"
+  },
+  {
+    "Name": "Pine Tree Box Cony",
+    "Image": "https://rangers.lerico.net/res/u1110u-cony/u1110u-cony-thum.png",
+    "UnitCode": "u1110u-cony"
+  },
+  {
+    "Name": "Middle Schooler Cony",
+    "Image": "https://rangers.lerico.net/res/u1117u-cony/u1117u-cony-thum.png",
+    "UnitCode": "u1117u-cony"
+  },
+  {
+    "Name": "High Schooler Brown",
+    "Image": "https://rangers.lerico.net/res/u1119u-brown/u1119u-brown-thum.png",
+    "UnitCode": "u1119u-brown"
+  },
+  {
+    "Name": "Mechanical Armor Edward [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1127u-edward/u1127u-edward-thum.png",
+    "UnitCode": "u1127u-edward"
+  },
+  {
+    "Name": "Space Pirate Moon",
+    "Image": "https://rangers.lerico.net/res/u1128u-moon/u1128u-moon-thum.png",
+    "UnitCode": "u1128u-moon"
+  },
+  {
+    "Name": "Super Dark Brown",
+    "Image": "https://rangers.lerico.net/res/u1134u-brown/u1134u-brown-thum.png",
+    "UnitCode": "u1134u-brown"
+  },
+  {
+    "Name": "Super Blue Moon",
+    "Image": "https://rangers.lerico.net/res/u1136u-moon/u1136u-moon-thum.png",
+    "UnitCode": "u1136u-moon"
+  },
+  {
+    "Name": "Megabrew Coffee Maker Steve",
+    "Image": "https://rangers.lerico.net/res/u1144u-steve/u1144u-steve-thum.png",
+    "UnitCode": "u1144u-steve"
+  },
+  {
+    "Name": "Expert Barista Brown",
+    "Image": "https://rangers.lerico.net/res/u1145u-brown/u1145u-brown-thum.png",
+    "UnitCode": "u1145u-brown"
+  },
+  {
+    "Name": "Shotgun Sally",
+    "Image": "https://rangers.lerico.net/res/u1151u-sally/u1151u-sally-thum.png",
+    "UnitCode": "u1151u-sally"
+  },
+  {
+    "Name": "Pumpkin Witch Cony",
+    "Image": "https://rangers.lerico.net/res/u1153u-cony/u1153u-cony-thum.png",
+    "UnitCode": "u1153u-cony"
+  },
+  {
+    "Name": "Snow Pro Cony",
+    "Image": "https://rangers.lerico.net/res/u1161u-cony/u1161u-cony-thum.png",
+    "UnitCode": "u1161u-cony"
+  },
+  {
+    "Name": "Samoyed Sled Sally",
+    "Image": "https://rangers.lerico.net/res/u1163u-sally/u1163u-sally-thum.png",
+    "UnitCode": "u1163u-sally"
+  },
+  {
+    "Name": "Angel Casino Dealer Sally [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1170u-sally/u1170u-sally-thum.png",
+    "UnitCode": "u1170u-sally"
+  },
+  {
+    "Name": "Lucky 7 Moon",
+    "Image": "https://rangers.lerico.net/res/u1172u-moon/u1172u-moon-thum.png",
+    "UnitCode": "u1172u-moon"
+  },
+  {
+    "Name": "White Queen Cony",
+    "Image": "https://rangers.lerico.net/res/u1180u-cony/u1180u-cony-thum.png",
+    "UnitCode": "u1180u-cony"
+  },
+  {
+    "Name": "White Knight Sally",
+    "Image": "https://rangers.lerico.net/res/u1181u-sally/u1181u-sally-thum.png",
+    "UnitCode": "u1181u-sally"
+  },
+  {
+    "Name": "Colorful Paint Moon",
+    "Image": "https://rangers.lerico.net/res/u1187u-moon/u1187u-moon-thum.png",
+    "UnitCode": "u1187u-moon"
+  },
+  {
+    "Name": "Colorful Paint Roller Brown",
+    "Image": "https://rangers.lerico.net/res/u1188u-brown/u1188u-brown-thum.png",
+    "UnitCode": "u1188u-brown"
+  },
+  {
+    "Name": "Remote Manager Moon",
+    "Image": "https://rangers.lerico.net/res/u1195u-moon/u1195u-moon-thum.png",
+    "UnitCode": "u1195u-moon"
+  },
+  {
+    "Name": "Nonstop Train Leonard [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1196u-leonard/u1196u-leonard-thum.png",
+    "UnitCode": "u1196u-leonard"
+  },
+  {
+    "Name": "Pumpkin Candy Brown",
+    "Image": "https://rangers.lerico.net/res/u1204u-brown/u1204u-brown-thum.png",
+    "UnitCode": "u1204u-brown"
+  },
+  {
+    "Name": "Little Reaper Sally",
+    "Image": "https://rangers.lerico.net/res/u1205u-sally/u1205u-sally-thum.png",
+    "UnitCode": "u1205u-sally"
+  },
+  {
+    "Name": "Choco Banana Sally",
+    "Image": "https://rangers.lerico.net/res/u1213u-sally/u1213u-sally-thum.png",
+    "UnitCode": "u1213u-sally"
+  },
+  {
+    "Name": "Penguin Elle",
+    "Image": "https://rangers.lerico.net/res/u1214u-elle/u1214u-elle-thum.png",
+    "UnitCode": "u1214u-elle"
+  },
+  {
+    "Name": "Keyboard Star Cony",
+    "Image": "https://rangers.lerico.net/res/u1222u-cony/u1222u-cony-thum.png",
+    "UnitCode": "u1222u-cony"
+  },
+  {
+    "Name": "Guitar Star Moon",
+    "Image": "https://rangers.lerico.net/res/u1223u-moon/u1223u-moon-thum.png",
+    "UnitCode": "u1223u-moon"
+  },
+  {
+    "Name": "Tea Party & The Hatter Moon",
+    "Image": "https://rangers.lerico.net/res/u1230u-moon/u1230u-moon-thum.png",
+    "UnitCode": "u1230u-moon"
+  },
+  {
+    "Name": "Ace Catcher Moon",
+    "Image": "https://rangers.lerico.net/res/u1300u-moon/u1300u-moon-thum.png",
+    "UnitCode": "u1300u-moon"
+  },
+  {
+    "Name": "Ace Fencer Sheep",
+    "Image": "https://rangers.lerico.net/res/u1414u-yang/u1414u-yang-thum.png",
+    "UnitCode": "u1414u-yang"
+  },
+  {
+    "Name": "Ace Gymnast Chichi",
+    "Image": "https://rangers.lerico.net/res/u1416u-chichi/u1416u-chichi-thum.png",
+    "UnitCode": "u1416u-chichi"
+  },
+  {
+    "Name": "Batter No. 3 Brown",
+    "Image": "https://rangers.lerico.net/res/u1301u-brown/u1301u-brown-thum.png",
+    "UnitCode": "u1301u-brown"
+  },
+  {
+    "Name": "Brave Tin Bear Brown",
+    "Image": "https://rangers.lerico.net/res/u1325u-brown/u1325u-brown-thum.png",
+    "UnitCode": "u1325u-brown"
+  },
+  {
+    "Name": "Cash Cat Sally",
+    "Image": "https://rangers.lerico.net/res/u418u-sally/u418u-sally-thum.png",
+    "UnitCode": "u418u-sally"
+  },
+  {
+    "Name": "Cheerful Lion & Sally",
+    "Image": "https://rangers.lerico.net/res/u1326u-sally/u1326u-sally-thum.png",
+    "UnitCode": "u1326u-sally"
+  },
+  {
+    "Name": "Chef Tiger",
+    "Image": "https://rangers.lerico.net/res/u398u-tiger/u398u-tiger-thum.png",
+    "UnitCode": "u398u-tiger"
+  },
+  {
+    "Name": "Coast Guard Cony",
+    "Image": "https://rangers.lerico.net/res/u406u-cony/u406u-cony-thum.png",
+    "UnitCode": "u406u-cony"
+  },
+  {
+    "Name": "Cursed Hand & Sally",
+    "Image": "https://rangers.lerico.net/res/u1350u-sally/u1350u-sally-thum.png",
+    "UnitCode": "u1350u-sally"
+  },
+  {
+    "Name": "Death Machine Sally",
+    "Image": "https://rangers.lerico.net/res/u320u-sally/u320u-sally-thum.png",
+    "UnitCode": "u320u-sally"
+  },
+  {
+    "Name": "Daughter of the West Cony",
+    "Image": "https://rangers.lerico.net/res/u1431u-cony/u1431u-cony-thum.png",
+    "UnitCode": "u1431u-cony"
+  },
+  {
+    "Name": "Devilodon Sally",
+    "Image": "https://rangers.lerico.net/res/u382u-sally/u382u-sally-thum.png",
+    "UnitCode": "u382u-sally"
+  },
+  {
+    "Name": "Drunken Fist Brown",
+    "Image": "https://rangers.lerico.net/res/u407u-brown/u407u-brown-thum.png",
+    "UnitCode": "u407u-brown"
+  },
+  {
+    "Name": "Dungeon Hunter Moon",
+    "Image": "https://rangers.lerico.net/res/u1338u-moon/u1338u-moon-thum.png",
+    "UnitCode": "u1338u-moon"
+  },
+  {
+    "Name": "Explorer Brownie",
+    "Image": "https://rangers.lerico.net/res/u437u-brownie/u437u-brownie-thum.png",
+    "UnitCode": "u437u-brownie"
+  },
+  {
+    "Name": "Festival Bazooka Cony",
+    "Image": "https://rangers.lerico.net/res/u420u-cony/u420u-cony-thum.png",
+    "UnitCode": "u420u-cony"
+  },
+  {
+    "Name": "Fire Suit Brown",
+    "Image": "https://rangers.lerico.net/res/u408u-brown/u408u-brown-thum.png",
+    "UnitCode": "u408u-brown"
+  },
+  {
+    "Name": "Giant Croc Moon",
+    "Image": "https://rangers.lerico.net/res/u1314u-moon/u1314u-moon-thum.png",
+    "UnitCode": "u1314u-moon"
+  },
+  {
+    "Name": "Goddess Jessica",
+    "Image": "https://rangers.lerico.net/res/u404u-jessica/u404u-jessica-thum.png",
+    "UnitCode": "u404u-jessica"
+  },
+  {
+    "Name": "Gold Champagne Cony",
+    "Image": "https://rangers.lerico.net/res/u431u-cony/u431u-cony-thum.png",
+    "UnitCode": "u431u-cony"
+  },
+  {
+    "Name": "Golden Goddess Cony",
+    "Image": "https://rangers.lerico.net/res/u304u-cony/u304u-cony-thum.png",
+    "UnitCode": "u304u-cony"
+  },
+  {
+    "Name": "Hard Rock Boss",
+    "Image": "https://rangers.lerico.net/res/u409u-boss/u409u-boss-thum.png",
+    "UnitCode": "u409u-boss"
+  },
+  {
+    "Name": "Immolator Daniel",
+    "Image": "https://rangers.lerico.net/res/u422u-daniel/u422u-daniel-thum.png",
+    "UnitCode": "u422u-daniel"
+  },
+  {
+    "Name": "Kickboxer Simon",
+    "Image": "https://rangers.lerico.net/res/u411u-simon/u411u-simon-thum.png",
+    "UnitCode": "u411u-simon"
+  },
+  {
+    "Name": "King Crab Edward",
+    "Image": "https://rangers.lerico.net/res/u434u-edward/u434u-edward-thum.png",
+    "UnitCode": "u434u-edward"
+  },
+  {
+    "Name": "Lemon Kart Dennis",
+    "Image": "https://rangers.lerico.net/res/u390u-awl/u390u-awl-thum.png",
+    "UnitCode": "u390u-awl"
+  },
+  {
+    "Name": "Mermaid Cony",
+    "Image": "https://rangers.lerico.net/res/u384u-cony/u384u-cony-thum.png",
+    "UnitCode": "u384u-cony"
+  },
+  {
+    "Name": "Nature Sorcerer Brown",
+    "Image": "https://rangers.lerico.net/res/u1448u-brown/u1448u-brown-thum.png",
+    "UnitCode": "u1448u-brown"
+  },
+  {
+    "Name": "Party Cake Brown",
+    "Image": "https://rangers.lerico.net/res/u429u-brown/u429u-brown-thum.png",
+    "UnitCode": "u429u-brown"
+  },
+  {
+    "Name": "Perfomer Brown",
+    "Image": "https://rangers.lerico.net/res/u1382u-brown/u1382u-brown-thum.png",
+    "UnitCode": "u1382u-brown"
+  },
+  {
+    "Name": "Pirate Captain Moon",
+    "Image": "https://rangers.lerico.net/res/u307u-moon/u307u-moon-thum.png",
+    "UnitCode": "u307u-moon"
+  },
+  {
+    "Name": "Poseidon Brown",
+    "Image": "https://rangers.lerico.net/res/u386u-brown/u386u-brown-thum.png",
+    "UnitCode": "u386u-brown"
+  },
+  {
+    "Name": "Swordsman Musketeer James",
+    "Image": "https://rangers.lerico.net/res/u1390u-james/u1390u-james-thum.png",
+    "UnitCode": "u1390u-james"
+  },
+  {
+    "Name": "Scuba Diver Brown",
+    "Image": "https://rangers.lerico.net/res/u405u-brown/u405u-brown-thum.png",
+    "UnitCode": "u405u-brown"
+  },
+  {
+    "Name": "Special Force Member Mike",
+    "Image": "https://rangers.lerico.net/res/u400u-mike/u400u-mike-thum.png",
+    "UnitCode": "u400u-mike"
+  },
+  {
+    "Name": "Sunrise Dragon & Moon",
+    "Image": "https://rangers.lerico.net/res/u1365u-moon/u1365u-moon-thum.png",
+    "UnitCode": "u1365u-moon"
+  },
+  {
+    "Name": "Snow Magician Cony",
+    "Image": "https://rangers.lerico.net/res/u435u-cony/u435u-cony-thum.png",
+    "UnitCode": "u435u-cony"
+  },
+  {
+    "Name": "Super Hero Moon",
+    "Image": "https://rangers.lerico.net/res/u388u-moon/u388u-moon-thum.png",
+    "UnitCode": "u388u-moon"
+  },
+  {
+    "Name": "Super Rocket Toti",
+    "Image": "https://rangers.lerico.net/res/u397u-toti/u397u-toti-thum.png",
+    "UnitCode": "u397u-toti"
+  },
+  {
+    "Name": "Suspicious Twins Cony",
+    "Image": "https://rangers.lerico.net/res/u1349u-cony/u1349u-cony-thum.png",
+    "UnitCode": "u1349u-cony"
+  },
+  {
+    "Name": "Village Belle Cony",
+    "Image": "https://rangers.lerico.net/res/u1313u-cony/u1313u-cony-thum.png",
+    "UnitCode": "u1313u-cony"
+  },
+  {
+    "Name": "Vocalist Cony",
+    "Image": "https://rangers.lerico.net/res/u1384u-cony/u1384u-cony-thum.png",
+    "UnitCode": "u1384u-cony"
+  },
+  {
+    "Name": "Shape Shifter Sister Jessica",
+    "Image": "https://rangers.lerico.net/res/u1446u-jessica/u1446u-jessica-thum.png",
+    "UnitCode": "u1446u-jessica"
+  },
+  {
+    "Name": "Shaman Leonard [Flyer]",
+    "Image": "https://rangers.lerico.net/res/u1337u-leonard/u1337u-leonard-thum.png",
+    "UnitCode": "u1337u-leonard"
+  },
+  {
+    "Name": "Begone Bad Mojo Cherina",
+    "Image": "https://rangers.lerico.net/res/u1367u-cherina/u1367u-cherina-thum.png",
+    "UnitCode": "u1367u-cherina"
+  },
+  {
+    "Name": "Huge Musketeer Moon",
+    "Image": "https://rangers.lerico.net/res/u1392u-moon/u1392u-moon-thum.png",
+    "UnitCode": "u1392u-moon"
+  },
+  {
+    "Name": "Sheriff of the West Moon",
+    "Image": "https://rangers.lerico.net/res/u1429u-moon/u1429u-moon-thum.png",
+    "UnitCode": "u1429u-moon"
+  },
+  {
+    "Name": "Legendary Mage James",
+    "Image": "https://rangers.lerico.net/res/u402u-james/u402u-james-thum.png",
+    "UnitCode": "u402u-james"
+  },
+  {
+    "Name": "Acolyte Jessica",
+    "Image": "https://rangers.lerico.net/res/u458u-jessica/u458u-jessica-thum.png",
+    "UnitCode": "u458u-jessica"
+  },
+  {
+    "Name": "Bodyguard Somchai",
+    "Image": "https://rangers.lerico.net/res/u438u-somchai/u438u-somchai-thum.png",
+    "UnitCode": "u438u-somchai"
+  },
+  {
+    "Name": "Beard Moon",
+    "Image": "https://rangers.lerico.net/res/u439u-moon/u439u-moon-thum.png",
+    "UnitCode": "u439u-moon"
+  },
+  {
+    "Name": "Legend Bob",
+    "Image": "https://rangers.lerico.net/res/u440u-bob/u440u-bob-thum.png",
+    "UnitCode": "u440u-bob"
+  },
+  {
+    "Name": "Paladin Moon",
+    "Image": "https://rangers.lerico.net/res/u456u-moon/u456u-moon-thum.png",
+    "UnitCode": "u456u-moon"
+  },
+  {
+    "Name": "Hero James",
+    "Image": "https://rangers.lerico.net/res/u461u-james/u461u-james-thum.png",
+    "UnitCode": "u461u-james"
+  },
+  {
+    "Name": "Navy Merry",
+    "Image": "https://rangers.lerico.net/res/u466u-merry/u466u-merry-thum.png",
+    "UnitCode": "u466u-merry"
+  },
+  {
+    "Name": "Shish Kebab Brown",
+    "Image": "https://rangers.lerico.net/res/u464u-brown/u464u-brown-thum.png",
+    "UnitCode": "u464u-brown"
+  },
+  {
+    "Name": "Shining Sea Cony",
+    "Image": "https://rangers.lerico.net/res/u471u-cony/u471u-cony-thum.png",
+    "UnitCode": "u471u-cony"
+  },
+  {
+    "Name": "Starlit Sea Pico",
+    "Image": "https://rangers.lerico.net/res/u473u-pico/u473u-pico-thum.png",
+    "UnitCode": "u473u-pico"
+  },
+  {
+    "Name": "Odd Jobs Gintoki",
+    "Image": "https://rangers.lerico.net/res/u1450u-sg/u1450u-sg-thum.png",
+    "UnitCode": "u1450u-sg"
+  },
+  {
+    "Name": "Odd Jobs Kagura",
+    "Image": "https://rangers.lerico.net/res/u1452u-ka/u1452u-ka-thum.png",
+    "UnitCode": "u1452u-ka"
+  }
+]
