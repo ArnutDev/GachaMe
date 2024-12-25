@@ -1,7 +1,7 @@
 async function loadChangelog() {
     try {
         // ดึงข้อมูล JSON
-        const response = await fetch('assets/changLog.json');
+        const response = await fetch('assets/change-log.json');
         const data = await response.json();
 
         // อ้างอิง DOM ที่จะแสดง Changelog
