@@ -111,28 +111,28 @@ async function rateUp1() {
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('scraping/rate-up1/8-ultra-collab.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8u-info-special.json');
                     collab = true;
                 } else {
-                    rangersJson = await loadJSON('scraping/rate-up1/8-ultra.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8u-info.json');
                 }
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
-                rangersJson = await loadJSON('scraping/7-ultra.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
                 let range = generateRandomRange(0.01, 22.00, 1.32);
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('scraping/rate-up1/8-common-collab.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8c-info-special.json');
                     collab = true;
                 } else {
-                    rangersJson = await loadJSON('scraping/rate-up1/8-common.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8c-info.json');
                 }
                 grade = "8 star";
             } else {
-                rangersJson = await loadJSON('scraping/7-common.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
                 grade = "7 star";
             }
 
@@ -177,8 +177,8 @@ async function rateUp1() {
 }
 
 async function getStat(data) {
-    const collabUltraJson = await loadJSON('scraping/8-ultra-collab.json');
-    const collabCommonJson = await loadJSON('scraping/8-common-collab.json');
+    const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+    const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
 
     // สร้างตัวแปรเก็บผลลัพธ์
     let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
