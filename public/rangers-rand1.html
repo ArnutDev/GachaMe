@@ -49,51 +49,310 @@
         <div class="row">
             <!-- Card 1 Rangers-->
             <div class="col-md-4 mt-4">
-                <a href="rangers-rand.html" class="text-decoration-none">
-                    <div class="card">
-                        <img src="assets/cover/rangers-banner.jpg" class="card-img-top" alt="Card Image">
-                        <div class="card-body">
-                            <h5 class="card-title text-dark">Gacha Rangers 6+1 Click!</h5>
-                            <p class="card-text mb-3 text-dark">This is a simple card with an image, title, and some
-                                text.</p>
-                            <div class="btn-container d-flex justify-content-end">
-                                <a href="rangers-rand.html" class="btn btn-primary">Click</a>
-                            </div>
+                <div class="card" data-bs-toggle="modal" data-bs-target="#myModal" onclick="normalGacha()">
+                    <img src="assets/cover/rangers-banner.jpg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Gacha Rangers 6+1 Click!</h5>
+                        <p class="card-text mb-3 text-dark">This is a simple card with an image, title, and some
+                            text.</p>
+                        <div class="btn-container d-flex justify-content-end">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"
+                                onclick="normalGacha()">random</button>
                         </div>
                     </div>
-                </a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg d-flex align-items-center justify-content-center">
+                    <div class="modal-content text-center">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Result</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <div class="container p-2 text-center justify-content-center">
+                                <div class="row">
+                                    <div class="content-display p-2 col-md-3">
+                                        <div class="image-box bg-info" id="normal-image">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display p-2 col-md-3">
+                                        <div class="image-box" id="normal-image">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display p-2 col-md-3">
+                                        <div class="image-box" id="normal-image">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display p-2 col-md-3">
+                                        <div class="image-box" id="normal-image">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="content-display p-2 col-md-4">
+                                        <div class="image-box" id="normal-image">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display p-2 col-md-4">
+                                        <div class="image-box" id="normal-image">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display p-2 col-md-4">
+                                        <div class="image-box" id="normal-image">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <p><strong>Count:</strong> <span id="normal-count"></span></p>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                            <button type="button" class="btn btn-primary" id="randomButton"
+                                onclick="normalGacha()">again</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Card 1 Rangers-->
             <div class="col-md-4 mt-4">
-                <a href="rangers-rand.html" class="text-decoration-none">
-                    <div class="card">
-                        <img src="assets/cover/rangers-banner.jpg" class="card-img-top" alt="Card Image">
-                        <div class="card-body">
-                            <h5 class="card-title text-dark">Gacha Rangers 6+1 Click!</h5>
-                            <p class="card-text mb-3 text-dark">This is a simple card with an image, title, and some
-                                text.</p>
-                            <div class="btn-container d-flex justify-content-end">
-                                <a href="rangers-rand.html" class="btn btn-primary">Click</a>
-                            </div>
+                <div class="card" data-bs-toggle="modal" data-bs-target="#myModal1" onclick="rateUp1()">
+                    <img src="assets/cover/rangers-banner.jpg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Gacha Rangers 6+1 Click!</h5>
+                        <p class="card-text mb-3 text-dark">This is a simple card with an image, title, and some
+                            text.</p>
+                        <div class="btn-container d-flex justify-content-end">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1"
+                                onclick="rateUp1()">random</button>
                         </div>
                     </div>
-                </a>
+                </div>
+            </div>
+            <!-- Modal1 -->
+            <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg d-flex align-items-center justify-content-center">
+                    <div class="modal-content text-center">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel1">Result</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <div class="container p-2 text-center justify-content-center">
+                                <div class="row">
+                                    <div class="content-display1 p-2 col-md-3">
+                                        <div class="image-box bg-info" id="normal-image1">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                        </p>
+                                    </div>
+                                    <div class="content-display1 p-2 col-md-3">
+                                        <div class="image-box" id="normal-image1">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                        </p>
+                                    </div>
+                                    <div class="content-display1 p-2 col-md-3">
+                                        <div class="image-box" id="normal-image1">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                        </p>
+                                    </div>
+                                    <div class="content-display1 p-2 col-md-3">
+                                        <div class="image-box" id="normal-image1">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="content-display1 p-2 col-md-4">
+                                        <div class="image-box" id="normal-image1">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                        </p>
+                                    </div>
+                                    <div class="content-display1 p-2 col-md-4">
+                                        <div class="image-box" id="normal-image1">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                        </p>
+                                    </div>
+                                    <div class="content-display1 p-2 col-md-4">
+                                        <div class="image-box" id="normal-image1">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <p><strong>Count:</strong> <span id="normal-count1"></span></p>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                            <button type="button" class="btn btn-primary" id="randomButton1"
+                                onclick="rateUp1()">again</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Card 1 Rangers-->
             <div class="col-md-4 mt-4">
-                <a href="rangers-rand.html" class="text-decoration-none">
-                    <div class="card">
-                        <img src="assets/cover/rangers-banner.jpg" class="card-img-top" alt="Card Image">
-                        <div class="card-body">
-                            <h5 class="card-title text-dark">Gacha Rangers 6+1 Click!</h5>
-                            <p class="card-text mb-3 text-dark">This is a simple card with an image, title, and some
-                                text.</p>
-                            <div class="btn-container d-flex justify-content-end">
-                                <a href="rangers-rand.html" class="btn btn-primary">Click</a>
-                            </div>
+                <div class="card" data-bs-toggle="modal" data-bs-target="#myModal2" onclick="rateUp2()">
+                    <img src="assets/cover/rangers-banner.jpg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Gacha Rangers 6+1 Click!</h5>
+                        <p class="card-text mb-3 text-dark">This is a simple card with an image, title, and some
+                            text.</p>
+                        <div class="btn-container d-flex justify-content-end">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2"
+                                onclick="rateUp2()">random</button>
                         </div>
                     </div>
-                </a>
+                </div>
+            </div>
+            <!-- Modal2 -->
+            <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg d-flex align-items-center justify-content-center">
+                    <div class="modal-content text-center">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel2">Result</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <div class="container p-2 text-center justify-content-center">
+                                <div class="row">
+                                    <div class="content-display2 p-2 col-md-3">
+                                        <div class="image-box bg-info" id="normal-image2">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display2 p-2 col-md-3">
+                                        <div class="image-box" id="normal-image2">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display2 p-2 col-md-3">
+                                        <div class="image-box" id="normal-image2">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display2 p-2 col-md-3">
+                                        <div class="image-box" id="normal-image2">
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="content-display2 p-2 col-md-4">
+                                        <div class="image-box" id="normal-image2">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display2 p-2 col-md-4">
+                                        <div class="image-box" id="normal-image2">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="content-display2 p-2 col-md-4">
+                                        <div class="image-box" id="normal-image2">
+
+                                        </div>
+                                        <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
+                                        <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <p><strong>Count:</strong> <span id="normal-count2"></span></p>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                            <button type="button" class="btn btn-primary" id="randomButton2"
+                                onclick="rateUp2()">again</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -105,7 +364,7 @@
                     <thead class="text-center">
                         <!-- แถวหัวที่รวม 4 คอลัมน์ -->
                         <tr>
-                            <th colspan="5" class="text-center">Statistics of Rangers</th>
+                            <th colspan="8" class="text-center">Statistics of Rangers</th>
                         </tr>
                         <!-- แถวหัวที่แยกออกเป็น 4 คอลัมน์ (แสดงเป็นแนวตั้ง) -->
                         <tr>
@@ -122,10 +381,22 @@
                     </thead>
                     <tbody class="text-center">
                         <tr>
-                            <th>Amount</th>
-                            <td>แถว 1, คอลัมน์ 1</td>
-                            <td>แถว 1, คอลัมน์ 2</td>
-                            <td>แถว 1, คอลัมน์ 3</td>
+                            <th>
+                                Amount
+                                <p>(Includes Ultra and Common)</p>
+                            </th>
+                            <td>
+                                <div class="text-center" id="u-ranger-1">0</div>
+                            </td>
+                            <td>
+                                <div class="text-center" id="u-ranger-2">0</div>
+                            </td>
+                            <td>
+                                <div class="text-center" id="u-ranger-3">0</div>
+                            </td>
+                            <!-- <td>
+                                <div class="text-center" id="u-ranger-3">0</div>
+                            </td> -->
                             <!-- <td>แถว 1, คอลัมน์ 3</td> -->
                         </tr>
                     </tbody>
@@ -133,6 +404,9 @@
             </div>
         </div>
     </footer>
+    <script src="src/rangers/rate-normal.js"></script>
+    <script src="src/rangers/rate-up1.js"></script>
+    <script src="src/rangers/rate-up2.js"></script>
 </body>
 
 </html>
