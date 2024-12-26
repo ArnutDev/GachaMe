@@ -147,6 +147,7 @@ async function rateUp1() {
                     border = `border border-success border-5`;
                     getStat(rangers);
 
+                    collab = false;
                 }
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">
@@ -164,19 +165,16 @@ async function rateUp1() {
         document.getElementById("normal-count1").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
 
         document.getElementById("u-ranger-1").innerHTML = u1;
-        document.getElementById("c-ranger-1").innerHTML = c1;
         document.getElementById("u-ranger-2").innerHTML = u2;
-        document.getElementById("c-ranger-2").innerHTML = c2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("c-ranger-3").innerHTML = c3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
-        document.getElementById("c-ranger-4").innerHTML = c4;
+        // document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
 
 }
 
 async function getStat(data) {
+    alert('yahoo1');
     const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
     const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
 
@@ -185,11 +183,10 @@ async function getStat(data) {
 
     // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
     for (let index = 0; index < collabUltraJson.length; index++) {
-        if (collabUltraJson[index].Name === data.Name) {
+        if (collabUltraJson[index].Name === data.Name || collabCommonJson[index].Name === data.Name) {
             result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
             break; // หยุดการวนลูปหากพบแล้ว
         }
-
     }
     if (result == 0) {
         u1++;
@@ -200,27 +197,6 @@ async function getStat(data) {
     } else if (result == 3) {
         u4++;
     }
-    // ถ้ายังไม่พบ ให้ตรวจสอบกับ collabCommonJson
-    if (result === -1) {
-        for (let index = 0; index < collabCommonJson.length; index++) {
-            if (collabCommonJson[index].Name === data.Name) {
-                result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
-                console.log(result);
-                break; // หยุดการวนลูปหากพบแล้ว
-
-            }
-        }
-        if (result == 0) {
-            c1++;
-        } else if (result == 1) {
-            c2++;
-        } else if (result == 2) {
-            c3++
-        } else if (result == 3) {
-            c4++
-        }
-    }
-
 }
 
 

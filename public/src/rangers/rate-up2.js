@@ -146,7 +146,7 @@ async function rateUp2() {
                 if (collab) {
                     border = `border border-success border-5`;
                     getStat(rangers);
-
+                    collab = false;
                 }
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">
@@ -164,13 +164,9 @@ async function rateUp2() {
         document.getElementById("normal-count2").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
 
         document.getElementById("u-ranger-1").innerHTML = u1;
-        document.getElementById("c-ranger-1").innerHTML = c1;
         document.getElementById("u-ranger-2").innerHTML = u2;
-        document.getElementById("c-ranger-2").innerHTML = c2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("c-ranger-3").innerHTML = c3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
-        document.getElementById("c-ranger-4").innerHTML = c4;
+        // document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
 
