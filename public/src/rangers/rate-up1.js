@@ -146,7 +146,6 @@ async function rateUp1() {
                 if (collab) {
                     border = `border border-success border-5`;
                     getStat(rangers);
-
                     collab = false;
                 }
                 divSlots[i].innerHTML = `
@@ -163,7 +162,6 @@ async function rateUp1() {
         }
         // อัปเดตจำนวนรวม
         document.getElementById("normal-count1").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
-
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
@@ -174,7 +172,6 @@ async function rateUp1() {
 }
 
 async function getStat(data) {
-    alert('yahoo1');
     const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
     const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
 

@@ -188,7 +188,6 @@ async function normalGacha() {
 }
 
 async function getStat(data) {
-    alert('yahoo-normal');
     const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
     const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
 

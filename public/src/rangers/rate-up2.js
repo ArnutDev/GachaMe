@@ -162,7 +162,6 @@ async function rateUp2() {
         }
         // อัปเดตจำนวนรวม
         document.getElementById("normal-count2").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
-
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
@@ -181,11 +180,10 @@ async function getStat(data) {
 
     // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
     for (let index = 0; index < collabUltraJson.length; index++) {
-        if (collabUltraJson[index].Name === data.Name) {
+        if (collabUltraJson[index].Name === data.Name || collabCommonJson[index].Name === data.Name) {
             result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
             break; // หยุดการวนลูปหากพบแล้ว
         }
-
     }
     if (result == 0) {
         u1++;
@@ -196,28 +194,8 @@ async function getStat(data) {
     } else if (result == 3) {
         u4++;
     }
-    // ถ้ายังไม่พบ ให้ตรวจสอบกับ collabCommonJson
-    if (result === -1) {
-        for (let index = 0; index < collabCommonJson.length; index++) {
-            if (collabCommonJson[index].Name === data.Name) {
-                result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
-                console.log(result);
-                break; // หยุดการวนลูปหากพบแล้ว
-
-            }
-        }
-        if (result == 0) {
-            c1++;
-        } else if (result == 1) {
-            c2++;
-        } else if (result == 2) {
-            c3++
-        } else if (result == 3) {
-            c4++
-        }
-    }
-
 }
+
 
 
 
