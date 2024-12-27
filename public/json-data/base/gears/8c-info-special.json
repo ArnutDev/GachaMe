@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "",
+    "Image": "",
+    "ItemCode": ""
+  },
+  {
+    "Name": "New Year's Blue Dragon Whip",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2401_wpn_08_icon.png",
+    "ItemCode": "eq_2401_wpn_08"
+  },
+  {
+    "Name": "New Year's Blue Dragon Shield",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2401_amr_08_icon.png",
+    "ItemCode": "eq_2401_amr_08"
+  },
+  {
+    "Name": "New Year's Blue Dragon Necklace",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2401_acc_08_icon.png",
+    "ItemCode": "eq_2401_acc_08"
+  }
+]
