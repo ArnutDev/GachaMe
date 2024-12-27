@@ -83,8 +83,8 @@ function generateRandomRange(min, max, eachRate) {
     }
     // ลูปแสดงผล4ช่วงค่าอาเรย์ตำแหน่งที่ 1-0, 2-3, 4-5, 6-7
     // for (let i = 0; i < arr.length; i += 2) {
-    //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
-    //     console.log(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
+    // alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
+    // console.log(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
 
     // }
 
@@ -112,7 +112,7 @@ function getRandomPickGear(min, max) {
 }
 
 async function normalGacha() {
-    const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 7 อัน
+    const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 6 อัน
     divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
 
     setTimeout(async () => {
@@ -123,7 +123,7 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 1) { //8 star
-                let range = generateRandomRange(0.01, 1.00, 0.20);
+                let range = generateRandomRange(0.01, 1.00, 0.12);
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
@@ -189,15 +189,14 @@ async function normalGacha() {
 }
 
 async function getStat(data) {
-    const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
-    const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+    const collabCommonJson = await loadJSON('json-data/gears/rate-normal/8c-info-special.json');
 
     // สร้างตัวแปรเก็บผลลัพธ์
     let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
 
     // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
     for (let index = 0; index < collabUltraJson.length; index++) {
-        if (collabUltraJson[index].Name === data.Name || collabCommonJson[index].Name === data.Name) {
+        if (collabCommonJson[index].Name === data.Name) {
             result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
             break; // หยุดการวนลูปหากพบแล้ว
         }
