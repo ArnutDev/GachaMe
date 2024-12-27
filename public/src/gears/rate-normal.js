@@ -94,12 +94,12 @@ function checkValueInRange(value, arr) {
     for (let i = 0; i < arr.length; i += 2) {
         if (value > arr[i] && value <= arr[i + 1]) {
             // ถ้าค่าอยู่ในช่วงระหว่าง arr[i] และ arr[i+1]
-            alert(`Value ${value} is within the range of arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]}`);
+            // alert(`Value ${value} is within the range of arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]}`);
             return true; // คืนค่าจริงเมื่อค่าอยู่ในช่วง
         }
     }
     // // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
-    alert(`Value ${value} is not within any range.`);
+    // alert(`Value ${value} is not within any range.`);
     return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
 }
 
@@ -115,13 +115,14 @@ async function normalGacha() {
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 1; i++) {
-            const chance = getRandomGears(1, 1); ///
+        for (let i = 0; i < 6; i++) {
+            const chance = getRandomGears(0, 100); ///
             let gearsJson;
             let grade;
             let special = false;
             if (chance <= 1) { //8 star
-                let range = generateRandomRange(0.01, 1.00, 0.20);
+                let eachRate = 0.20;
+                let range = generateRandomRange(0.01, 1.00, eachRate);
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
@@ -132,7 +133,8 @@ async function normalGacha() {
                 }
                 grade = "8 star";
             } else if (chance <= 3) { //7 star
-                let range = generateRandomRange(0.01, 2.00, 0.50);
+                let eachRate = 0.33;
+                let range = generateRandomRange(0.01, 2.00, eachRate);
                 let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
@@ -151,14 +153,14 @@ async function normalGacha() {
             }
 
             const randomIndex = getRandomPickGear(0, gearsJson.length - 1);
-            let rangers = gearsJson[randomIndex];
+            let gears = gearsJson[randomIndex];
 
 
             // เพิ่มข้อมูลใน div
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
-                    if (await getStat(rangers)) { //when use async function dont forget await
+                    if (await getStat(gears)) { //when use async function dont forget await
                         border = `border border-success border-5`;
                         special = false;
                     }
@@ -166,10 +168,10 @@ async function normalGacha() {
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">
                     <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
-                        <img src="${rangers.Image}" alt="${rangers.Name}" class="img-fluid" style="max-height: 80px;">
+                        <img src="${gears.Image}" alt="${gears.Name}" class="img-fluid" style="max-height: 80px;">
                     </div>
                     <p><strong>Grade:</strong> ${grade}</p>
-                    <p class="mt-2"><strong>Name:</strong> ${rangers.Name}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${gears.Name}</p>
                 </div>
             `;
             }
