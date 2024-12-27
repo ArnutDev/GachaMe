@@ -17,7 +17,7 @@ async function loadJSON(filePath) {
     }
 }
 
-function getRandomRangers(min, max) {
+function getRandomGears(min, max) {
     return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
 
@@ -30,7 +30,7 @@ function generateRandomRange(min, max, eachRate) {
     }
 
     // ฟังก์ชันตรวจสอบและสุ่มค่าที่ไม่เกินช่วง
-    function getValidPair() {
+    function getValidPair() { //range 0.32,0.52,0.8,1
         let num1 = getValidRandomValue();
         let num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
         num2 = parseFloat(num2);
@@ -48,7 +48,6 @@ function generateRandomRange(min, max, eachRate) {
             num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
             num2 = parseFloat(num2);
         }
-
         return [num1, num2];
     }
 
@@ -82,10 +81,11 @@ function generateRandomRange(min, max, eachRate) {
             }
         }
     }
-
-    // ลูปแสดงผลค่าอาเรย์ตำแหน่งที่ 1-0, 2-3, 4-5, 6-7
+    // ลูปแสดงผล4ช่วงค่าอาเรย์ตำแหน่งที่ 1-0, 2-3, 4-5, 6-7
     // for (let i = 0; i < arr.length; i += 2) {
     //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
+    //     console.log(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
+
     // }
 
     return arr;
@@ -107,7 +107,7 @@ function checkValueInRange(value, arr) {
 
 
 
-function getRandomPickRanger(min, max) {
+function getRandomPickGear(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -117,43 +117,43 @@ async function normalGacha() {
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 7; i++) {
-            const chance = getRandomRangers(0, 100); ///
-            let rangersJson;
+        for (let i = 0; i < 1; i++) {
+            const chance = getRandomGears(1, 1); ///
+            let gearsJson;
             let grade;
             let special = false;
-            if (chance <= 3) {
-                let range = generateRandomRange(0.01, 3.00, 0.12);
-                let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
+            if (chance <= 1) { //8 star
+                let range = generateRandomRange(0.01, 1.00, 0.20);
+                let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info-special.json');
                     special = true;
                 } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                }
-                grade = "Ultra 8 star";
-            } else if (chance <= 8) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
-                grade = "Ultra 7 star";
-            } else if (chance <= 30) {
-                let range = generateRandomRange(0.01, 22.00, 0.12);
-                let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
                 }
                 grade = "8 star";
-            } else {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
+            } else if (chance <= 3) { //7 star
+                let range = generateRandomRange(0.01, 2.00, 0.50);
+                let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
+                let result = checkValueInRange(value, range);
+                if (result) {
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info-special.json');
+                    special = true;
+                } else {
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
+                }
                 grade = "7 star";
+            } else if (chance <= 50) { //6 star
+                gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
+                grade = "6 star";
+            } else { //5 star
+                gearsJson = await loadJSON('json-data/gears/rate-normal/5c-info.json');
+                grade = "5 star";
             }
 
-            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
-            let rangers = rangersJson[randomIndex];
+            const randomIndex = getRandomPickGear(0, gearsJson.length - 1);
+            let rangers = gearsJson[randomIndex];
 
 
             // เพิ่มข้อมูลใน div
@@ -182,7 +182,7 @@ async function normalGacha() {
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        // document.getElementById("u-ranger-4").innerHTML = u4;
+        document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
 
