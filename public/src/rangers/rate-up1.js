@@ -105,17 +105,17 @@ async function rateUp1() {
             const chance = getRandomRangers(0, 100); ///
             let rangersJson;
             let grade;
-            let collab = false;
+            let special = false;
             if (chance <= 3) {
                 let range = generateRandomRange(0.01, 3.00, 0.18);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up1/8u-info-special.json');
-                    collab = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-up1/8u-info.json');
                 }
+                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
@@ -126,10 +126,10 @@ async function rateUp1() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up1/8c-info-special.json');
-                    collab = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-up1/8c-info.json');
                 }
+                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -143,10 +143,11 @@ async function rateUp1() {
             // เพิ่มข้อมูลใน div
             if (divSlots[i]) {
                 let border = ``;
-                if (collab) {
-                    border = `border border-success border-5`;
-                    getStat(rangers);
-                    collab = false;
+                if (special) {
+                    if (getStat(rangers)) {
+                        border = `border border-success border-5`;
+                    }
+                    special = false;
                 }
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">
@@ -193,7 +194,10 @@ async function getStat(data) {
         u3++;
     } else if (result == 3) {
         u4++;
+    } else {
+        return false;
     }
+    return true;
 }
 
 
