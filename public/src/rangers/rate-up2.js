@@ -112,10 +112,10 @@ async function rateUp2() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info-special.json');
-                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info.json');
                 }
+                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
@@ -126,10 +126,10 @@ async function rateUp2() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info-special.json');
-                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info.json');
                 }
+                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -144,9 +144,10 @@ async function rateUp2() {
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
-                    border = `border border-success border-5`;
-                    getStat(rangers);
-                    special = false;
+                    if (await getStat(rangers)) { //when use async function dont forget await
+                        border = `border border-success border-5`;
+                        special = false;
+                    }
                 }
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">

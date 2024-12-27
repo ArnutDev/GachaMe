@@ -160,9 +160,10 @@ async function normalGacha() {
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
-                    border = `border border-success border-5`;
-                    getStat(rangers);
-                    special = false;
+                    if (await getStat(rangers)) { //when use async function dont forget await
+                        border = `border border-success border-5`;
+                        special = false;
+                    }
                 }
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">
@@ -209,7 +210,10 @@ async function getStat(data) {
         u3++;
     } else if (result == 3) {
         u4++;
+    } else {
+        return false;
     }
+    return true;
 }
 
 
