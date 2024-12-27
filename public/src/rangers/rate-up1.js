@@ -171,33 +171,6 @@ async function rateUp1() {
 
 }
 
-// async function getStat(data) {
-//     const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
-//     const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-
-//     // สร้างตัวแปรเก็บผลลัพธ์
-//     let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
-
-//     // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
-//     for (let index = 0; index < collabUltraJson.length; index++) {
-//         if (collabUltraJson[index].Name === data.Name || collabCommonJson[index].Name === data.Name) {
-//             result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
-//             break; // หยุดการวนลูปหากพบแล้ว
-//         }
-//     }
-//     if (result == 0) {
-//         u1++;
-//     } else if (result == 1) {
-//         u2++;
-//     } else if (result == 2) {
-//         u3++;
-//     } else if (result == 3) {
-//         u4++;
-//     }
-// }
-
-
-
 // Function to handle modal opening after closing it
 function handleModalReopen() {
     // Get the modal element and modal object
