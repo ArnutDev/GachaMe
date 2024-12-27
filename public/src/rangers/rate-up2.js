@@ -112,10 +112,10 @@ async function rateUp2() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info-special.json');
+                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info.json');
                 }
-                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
@@ -126,10 +126,10 @@ async function rateUp2() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info-special.json');
+                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info.json');
                 }
-                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -144,9 +144,8 @@ async function rateUp2() {
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
-                    if (getStat(rangers)) {
-                        border = `border border-success border-5`;
-                    }
+                    border = `border border-success border-5`;
+                    getStat(rangers);
                     special = false;
                 }
                 divSlots[i].innerHTML = `
@@ -180,7 +179,7 @@ async function getStat(data) {
     let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
 
     // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
-    for (let index = 0; index < collabUltraJson.length; index++) { // even month will out of bound
+    for (let index = 0; index < collabUltraJson.length; index++) {
         if (collabUltraJson[index].Name === data.Name || collabCommonJson[index].Name === data.Name) {
             result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
             break; // หยุดการวนลูปหากพบแล้ว
@@ -194,10 +193,7 @@ async function getStat(data) {
         u3++;
     } else if (result == 3) {
         u4++;
-    } else {
-        return false;
     }
-    return true;
 }
 
 

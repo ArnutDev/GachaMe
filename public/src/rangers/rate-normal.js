@@ -128,10 +128,10 @@ async function normalGacha() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
                 }
-                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
@@ -142,11 +142,10 @@ async function normalGacha() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-
+                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
                 }
-                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -161,9 +160,8 @@ async function normalGacha() {
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
-                    if (getStat(rangers)) {
-                        border = `border border-success border-5`;
-                    }
+                    border = `border border-success border-5`;
+                    getStat(rangers);
                     special = false;
                 }
                 divSlots[i].innerHTML = `
@@ -211,10 +209,7 @@ async function getStat(data) {
         u3++;
     } else if (result == 3) {
         u4++;
-    } else {
-        return false;
     }
-    return true;
 }
 
 
