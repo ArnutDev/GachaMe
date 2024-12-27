@@ -102,7 +102,7 @@ function checkValueInRange(value, arr) {
     }
     // // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
     // alert(`Value ${value} is not within any range.`);
-    // return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
+    return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
 }
 
 
