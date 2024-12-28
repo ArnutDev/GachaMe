@@ -17,6 +17,15 @@
                 "Add 2 rate-up gacha",
                 "Update UI"
             ]
+        },
+        {
+            "version": "1.2.0",
+            "date": "2024-12-31",
+            "changes": [
+                "Update new UI",
+                "Add january rangers gacha",
+                "Add january gears gacha (beta)"
+            ]
         }
     ]
 }
