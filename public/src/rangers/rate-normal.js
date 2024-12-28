@@ -126,7 +126,7 @@ async function normalGacha() {
                 let range = generateRandomRange(0.01, 3.00, 0.12);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
-                if (result) {
+                if (result) { //how about rate-up of light power???
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
                     special = true;
                 } else {

@@ -1,22 +1,12 @@
 [
     {
-      "Name": "Odd Jobs Gintoki",
-      "Image": "https://rangers.lerico.net/res/u1450u-sg/u1450u-sg-thum.png",
-      "UnitCode": "u1450u-sg"
+      "Name": "Ace Short Track Moon",
+      "Image": "https://rangers.lerico.net/res/u1465u-moon/u1465u-moon-thum.png",
+      "UnitCode": "u1465u-moon"
     },
     {
-      "Name": "Odd Jobs Kagura",
-      "Image": "https://rangers.lerico.net/res/u1452u-ka/u1452u-ka-thum.png",
-      "UnitCode": "u1452u-ka"
-    },
-    {
-      "Name": "Odd Jobs Shinpachi",
-      "Image": "https://rangers.lerico.net/res/u1454u-ss/u1454u-ss-thum.png",
-      "UnitCode": "u1454u-ss"
-    },
-    {
-      "Name": "Shinsengumi VC Hijikata",
-      "Image": "https://rangers.lerico.net/res/u1456u-ht/u1456u-ht-thum.png",
-      "UnitCode": "u1456u-ht"
+      "Name": "Ace Biathlon Crush",
+      "Image": "https://rangers.lerico.net/res/u1463u-crush/u1463u-crush-thum.png",
+      "UnitCode": "u1463u-crush"
     }
   ]
