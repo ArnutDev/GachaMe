@@ -51,26 +51,21 @@ function generateRandomRange(min, max, eachRate) {
     arr[0] = pair1[0];
     arr[1] = pair1[1];
 
-    // สุ่มค่าของ arr[2], arr[3]
-    let pair2 = getValidPair();
-    arr[2] = pair2[0];
-    arr[3] = pair2[1];
-
     // ตรวจสอบว่าแต่ละช่วงไม่ทับกันและห่างกันไม่เกิน eachRate
-    for (let i = 0; i < arr.length; i += 2) {
-        for (let j = i + 2; j < arr.length; j += 2) {
-            // ตรวจสอบว่าช่วงทับกันหรือล้ำกัน
-            if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
-                // ถ้าช่วงทับกันหรือห่างเกิน eachRate ให้สุ่มใหม่
-                return generateRandomRange(min, max, eachRate);
-            }
-        }
-    }
+    // for (let i = 0; i < arr.length; i += 2) {
+    //     for (let j = i + 2; j < arr.length; j += 2) {
+    //         // ตรวจสอบว่าช่วงทับกันหรือล้ำกัน
+    //         if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
+    //             // ถ้าช่วงทับกันหรือห่างเกิน eachRate ให้สุ่มใหม่
+    //             return generateRandomRange(min, max, eachRate);
+    //         }
+    //     }
+    // }
 
     // ลูปแสดงผลค่าอาเรย์ตำแหน่งที่ 0-1, 2-3
-    for (let i = 0; i < arr.length; i += 2) {
-        alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]} = ${(arr[i + 1] - arr[i]).toFixed(2)}`);
-    }
+    // for (let i = 0; i < arr.length; i += 2) {
+    //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]} = ${(arr[i + 1] - arr[i]).toFixed(2)}`);
+    // }
 
     return arr;
 }
@@ -80,12 +75,12 @@ function checkValueInRange(value, arr) {
     for (let i = 0; i < arr.length; i += 2) {
         if (value > arr[i] && value <= arr[i + 1]) {
             // ถ้าค่าอยู่ในช่วงระหว่าง arr[i] และ arr[i+1]
-            alert(`arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]} range = ${(arr[i+1] -arr[i]).toFixed(2)}`);
+            // alert(`arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]} range = ${(arr[i+1] -arr[i]).toFixed(2)}`);
             return true; // คืนค่าจริงเมื่อค่าอยู่ในช่วง
         }
     }
     // // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
-    alert(`Value ${value} is not within any range.`);
+    // alert(`Value ${value} is not within any range.`);
     return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
 }
 
@@ -101,8 +96,8 @@ async function rateUp1() {
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 6; i++) {
-            const chance = getRandomGears(0, 100); ///
+        for (let i = 0; i < 1; i++) {
+            const chance = getRandomGears(3, 3); ///
             let gearsJson;
             let grade;
             let special = false;
@@ -118,10 +113,7 @@ async function rateUp1() {
                     gearsJson = await loadJSON('json-data/gears/rate-up1/8c-info.json');
                 }
                 special = true;
-                grade = "Ultra 8 star";
-            } else if (chance <= 8) {
-                gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
-                grade = "Ultra 7 star";
+                grade = "8 star";
             } else if (chance <= 3) {
                 let eachRate = 0.33;
                 let range = generateRandomRange(0.01, 2.00, eachRate);
