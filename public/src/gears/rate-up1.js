@@ -96,8 +96,8 @@ async function rateUp1() {
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 1; i++) {
-            const chance = getRandomGears(3, 3); ///
+        for (let i = 0; i < 6; i++) {
+            const chance = getRandomGears(0, 100); ///
             let gearsJson;
             let grade;
             let special = false;
