@@ -178,7 +178,7 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
