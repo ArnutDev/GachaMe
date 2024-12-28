@@ -197,7 +197,7 @@ async function getStat(data) {
     for (let index = 0; index < collabCommonJson.length; index++) {
         if (collabCommonJson[index].Name === data.Name) {
             result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
-            alert('Item Found : index ' + index);
+            // alert('Item Found : index ' + index);
             break; // หยุดการวนลูปหากพบแล้ว
         }
     }
