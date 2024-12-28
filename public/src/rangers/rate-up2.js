@@ -1,9 +1,3 @@
-let count = 0;
-let u1 = 0;
-let u2 = 0;
-let u3 = 0;
-let u4 = 0;
-
 async function loadJSON(filePath) {
     try {
         const response = await fetch(filePath);
@@ -119,8 +113,8 @@ function getRandomPickRanger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-async function normalGacha() {
-    const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 7 อัน
+async function rateUp2() {
+    const divSlots = document.querySelectorAll('.content-display2'); // เลือก div ทั้ง 7 อัน
     divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
 
     setTimeout(async () => {
@@ -131,34 +125,34 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info-special.json');
                 let amount = rangersJson.length;
                 let eachRate = 0.12; //change rate
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) { //how about rate-up of light power???
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info-special.json');
                     special = true;
                 } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info.json');
                 }
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info-special.json');
                 let amount = rangersJson.length;
-                let eachRate = 0.12; //change rate
+                let eachRate = 5; //change rate
                 let range = generateRandomRange(0.01, 22.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info-special.json');
                     special = true;
                 } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                    rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info.json');
                 }
                 grade = "8 star";
             } else {
@@ -192,7 +186,7 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count2").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
@@ -202,52 +196,14 @@ async function normalGacha() {
 
 }
 
-async function getStat(data) {
-    const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
-    const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-
-    // สร้างตัวแปรเก็บผลลัพธ์
-    let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
-
-    // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
-    for (let index = 0; index < collabUltraJson.length; index++) {
-        if (collabUltraJson[index].Name === data.Name) {
-            result = index + 1; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result ต้องบวก1เพราะมันมี2ค่า แต่ commonมันมี3 // เดือนโคลาโบค่อยเอาออก
-            break; // หยุดการวนลูปหากพบแล้ว
-        }
-    }
-    if (result == -1) {
-        for (let index = 0; index < collabCommonJson.length; index++) {
-            if (collabCommonJson[index].Name === data.Name) {
-                result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
-                break; // หยุดการวนลูปหากพบแล้ว
-            }
-        }
-    }
-    if (result == 0) {
-        u1++;
-    } else if (result == 1) {
-        u2++;
-    } else if (result == 2) {
-        u3++;
-    } else if (result == 3) {
-        u4++;
-    } else {
-        return false;
-    }
-    return true;
-}
-
-
-
 // Function to handle modal opening after closing it
 function handleModalReopen() {
     // Get the modal element and modal object
-    const myModalElement = document.getElementById('myModal');
+    const myModalElement = document.getElementById('myModal2');
     const modal = new bootstrap.Modal(myModalElement);
 
     // Add event listener for the "สุ่มอีกครั้ง" button
-    document.getElementById('randomButton').addEventListener('click', function () {
+    document.getElementById('randomButton2').addEventListener('click', function () {
         // Close the modal first
         modal.hide();
 
