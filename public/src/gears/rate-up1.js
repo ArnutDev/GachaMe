@@ -1,3 +1,9 @@
+let count = 0;
+let u1 = 0;
+let u2 = 0;
+let u3 = 0;
+let u4 = 0;
+
 async function loadJSON(filePath) {
     try {
         const response = await fetch(filePath);
@@ -11,7 +17,7 @@ async function loadJSON(filePath) {
     }
 }
 
-function getRandomRangers(min, max) {
+function getRandomGears(min, max) {
     return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
 
@@ -24,7 +30,7 @@ function generateRandomRange(min, max, eachRate) {
     }
 
     // ฟังก์ชันตรวจสอบและสุ่มค่าที่ไม่เกินช่วง
-    function getValidPair() {
+    function getValidPair() { //range 0.32,0.52,0.8,1
         let num1 = getValidRandomValue();
         let num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
         num2 = parseFloat(num2);
@@ -42,7 +48,6 @@ function generateRandomRange(min, max, eachRate) {
             num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
             num2 = parseFloat(num2);
         }
-
         return [num1, num2];
     }
 
@@ -56,6 +61,16 @@ function generateRandomRange(min, max, eachRate) {
     arr[2] = pair2[0];
     arr[3] = pair2[1];
 
+    // สุ่มค่าของ arr[4], arr[5]
+    let pair3 = getValidPair();
+    arr[4] = pair3[0];
+    arr[5] = pair3[1];
+
+    // สุ่มค่าของ arr[6], arr[7]
+    let pair4 = getValidPair();
+    arr[6] = pair4[0];
+    arr[7] = pair4[1];
+
     // ตรวจสอบว่าแต่ละช่วงไม่ทับกันและห่างกันไม่เกิน eachRate
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
@@ -66,10 +81,9 @@ function generateRandomRange(min, max, eachRate) {
             }
         }
     }
-
-    // ลูปแสดงผลค่าอาเรย์ตำแหน่งที่ 0-1, 2-3
+    // ลูปแสดงผล4ช่วงค่าอาเรย์ตำแหน่งที่ 1-0, 2-3, 4-5, 6-7
     // for (let i = 0; i < arr.length; i += 2) {
-    //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]} = ${(arr[i + 1] - arr[i]).toFixed(2)}`);
+    //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
     // }
 
     return arr;
@@ -80,71 +94,73 @@ function checkValueInRange(value, arr) {
     for (let i = 0; i < arr.length; i += 2) {
         if (value > arr[i] && value <= arr[i + 1]) {
             // ถ้าค่าอยู่ในช่วงระหว่าง arr[i] และ arr[i+1]
-            // alert(`arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]} range = ${(arr[i+1] -arr[i]).toFixed(2)}`);
+            // alert(`Value ${value} is within the range of arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]}`);
             return true; // คืนค่าจริงเมื่อค่าอยู่ในช่วง
         }
     }
     // // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
     // alert(`Value ${value} is not within any range.`);
-    // return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
+    return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
 }
 
 
 
-function getRandomPickRanger(min, max) {
+function getRandomPickGear(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-async function rateUp1() {
-    const divSlots = document.querySelectorAll('.content-display1'); // เลือก div ทั้ง 7 อัน
+async function normalGacha() {
+    const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 6 อัน
     divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 7; i++) {
-            const chance = getRandomRangers(0, 100); ///
-            let rangersJson;
+        for (let i = 0; i < 6; i++) {
+            const chance = getRandomGears(0, 100); ///
+            let gearsJson;
             let grade;
             let special = false;
-            if (chance <= 3) {
-                let range = generateRandomRange(0.01, 3.00, 0.18);
-                let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
+            if (chance <= 1) { //8 star
+                let eachRate = 0.20;
+                let range = generateRandomRange(0.01, 1.00, eachRate);
+                let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8u-info-special.json');
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info-special.json');
+                    special = true;
                 } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8u-info.json');
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
                 }
-                special = true;
-                grade = "Ultra 8 star";
-            } else if (chance <= 8) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
-                grade = "Ultra 7 star";
-            } else if (chance <= 30) {
-                let range = generateRandomRange(0.01, 22.00, 1.32);
-                let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8c-info-special.json');
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-up1/8c-info.json');
-                }
-                special = true;
                 grade = "8 star";
-            } else {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
+            } else if (chance <= 3) { //7 star
+                let eachRate = 0.33;
+                let range = generateRandomRange(0.01, 2.00, eachRate);
+                let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
+                let result = checkValueInRange(value, range);
+                if (result) {
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info-special.json');
+                    special = true;
+                } else {
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
+                }
                 grade = "7 star";
+            } else if (chance <= 50) { //6 star
+                gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
+                grade = "6 star";
+            } else { //5 star
+                gearsJson = await loadJSON('json-data/gears/rate-normal/5c-info.json');
+                grade = "5 star";
             }
 
-            const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
-            let rangers = rangersJson[randomIndex];
+            const randomIndex = getRandomPickGear(0, gearsJson.length - 1);
+            let gears = gearsJson[randomIndex];
 
 
             // เพิ่มข้อมูลใน div
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
-                    if (await getStat(rangers)) { //when use async function dont forget await
+                    if (await getStat(gears)) { //when use async function dont forget await
                         border = `border border-success border-5`;
                         special = false;
                     }
@@ -152,34 +168,62 @@ async function rateUp1() {
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">
                     <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
-                        <img src="${rangers.Image}" alt="${rangers.Name}" class="img-fluid" style="max-height: 80px;">
+                        <img src="${gears.Image}" alt="${gears.Name}" class="img-fluid" style="max-height: 80px;">
                     </div>
                     <p><strong>Grade:</strong> ${grade}</p>
-                    <p class="mt-2"><strong>Name:</strong> ${rangers.Name}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${gears.Name}</p>
                 </div>
             `;
             }
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count1").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        // document.getElementById("u-ranger-4").innerHTML = u4;
+        document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
-
 }
+
+async function getStat(data) {
+    const collabCommonJson = await loadJSON('json-data/gears/rate-normal/8c-info-special.json');
+
+    // สร้างตัวแปรเก็บผลลัพธ์
+    let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
+
+    // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
+    for (let index = 0; index < collabCommonJson.length; index++) {
+        if (collabCommonJson[index].Name === data.Name) {
+            result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
+            break; // หยุดการวนลูปหากพบแล้ว
+        }
+    }
+    if (result == 0) {
+        u1++;
+    } else if (result == 1) {
+        u2++;
+    } else if (result == 2) {
+        u3++;
+    } else if (result == 3) {
+        u4++;
+    } else {
+        return false;
+    }
+    return true;
+}
+
+
 
 // Function to handle modal opening after closing it
 function handleModalReopen() {
     // Get the modal element and modal object
-    const myModalElement = document.getElementById('myModal1');
+    const myModalElement = document.getElementById('myModal');
     const modal = new bootstrap.Modal(myModalElement);
 
     // Add event listener for the "สุ่มอีกครั้ง" button
-    document.getElementById('randomButton1').addEventListener('click', function () {
+    document.getElementById('randomButton').addEventListener('click', function () {
         // Close the modal first
         modal.hide();
 
