@@ -123,7 +123,8 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
-                let range = generateRandomRange(0.01, 3.00, 0.12);
+                let eachRate = 0.12;
+                let range = generateRandomRange(0.01, 3.00, eachRate);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) { //how about rate-up of light power???
@@ -137,7 +138,8 @@ async function normalGacha() {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                let range = generateRandomRange(0.01, 22.00, 0.12);
+                let eachRate = 0.12;
+                let range = generateRandomRange(0.01, 22.00, eachRate);
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
@@ -197,9 +199,17 @@ async function getStat(data) {
 
     // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
     for (let index = 0; index < collabUltraJson.length; index++) {
-        if (collabUltraJson[index].Name === data.Name || collabCommonJson[index].Name === data.Name) {
-            result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
+        if (collabUltraJson[index].Name === data.Name) {
+            result = index + 1; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result ต้องบวก1เพราะมันมี2ค่า แต่ commonมันมี3 // เดือนโคลาโบค่อยเอาออก
             break; // หยุดการวนลูปหากพบแล้ว
+        }
+    }
+    if (result == -1) {
+        for (let index = 0; index < collabCommonJson.length; index++) {
+            if (collabCommonJson[index].Name === data.Name) {
+                result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
+                break; // หยุดการวนลูปหากพบแล้ว
+            }
         }
     }
     if (result == 0) {

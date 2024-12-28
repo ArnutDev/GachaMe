@@ -1,12 +1,12 @@
 [
-    {
-      "Name": "Gintoki",
-      "Image": "https://rangers.lerico.net/res/u1450e-sg/u1450e-sg-thum.png",
-      "UnitCode": "u1450e-sg"
-    },
-    {
-      "Name": "Kagura",
-      "Image": "https://rangers.lerico.net/res/u1452e-ka/u1452e-ka-thum.png",
-      "UnitCode": "u1452e-ka"
-    }
-  ]
+  {
+    "Name": "Figure Skater James",
+    "Image": "https://rangers.lerico.net/res/u1467e-james/u1467e-james-thum.png",
+    "UnitCode": "u1467e-james"
+  },
+  {
+    "Name": "Ace Short Track Moon",
+    "Image": "https://rangers.lerico.net/res/u1465u-moon/u1465u-moon-thum.png",
+    "UnitCode": "u1465u-moon"
+  }
+]
