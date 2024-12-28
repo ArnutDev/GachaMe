@@ -108,7 +108,6 @@ async function rateUp1() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     gearsJson = await loadJSON('json-data/gears/rate-up1/8c-info-special.json');
-                    special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-up1/8c-info.json');
                 }
@@ -121,10 +120,10 @@ async function rateUp1() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     gearsJson = await loadJSON('json-data/gears/rate-up1/7c-info-special.json');
-                    special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-up1/7c-info.json');
                 }
+                // special = true;
                 grade = "7 star";
             } else if (chance <= 50) { //6 star
                 gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
@@ -135,14 +134,14 @@ async function rateUp1() {
             }
 
             const randomIndex = getRandomPickGears(0, gearsJson.length - 1);
-            let rangers = gearsJson[randomIndex];
+            let gears = gearsJson[randomIndex];
 
 
             // เพิ่มข้อมูลใน div
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
-                    if (await getStat(rangers)) { //when use async function dont forget await
+                    if (await getStat(gears)) { //when use async function dont forget await
                         border = `border border-success border-5`;
                         special = false;
                     }
@@ -150,10 +149,10 @@ async function rateUp1() {
                 divSlots[i].innerHTML = `
                 <div class="p-2 ${border} rounded">
                     <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
-                        <img src="${rangers.Image}" alt="${rangers.Name}" class="img-fluid" style="max-height: 80px;">
+                        <img src="${gears.Image}" alt="${gears.Name}" class="img-fluid" style="max-height: 80px;">
                     </div>
                     <p><strong>Grade:</strong> ${grade}</p>
-                    <p class="mt-2"><strong>Name:</strong> ${rangers.Name}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${gears.Name}</p>
                 </div>
             `;
             }
@@ -161,10 +160,11 @@ async function rateUp1() {
         }
         // อัปเดตจำนวนรวม
         document.getElementById("normal-count1").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
+        //Add this by amount in statistics
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        // document.getElementById("u-ranger-4").innerHTML = u4;
+        document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
 
