@@ -21,8 +21,9 @@ function getRandomRangers(min, max) {
     return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
 
-function generateRandomRange(min, max, eachRate) {
+function generateRandomRange(min, max, eachRate, amount) {
     let arr = [];
+    let countArr = 0;
 
     function getValidRandomValue() {
         let randomValue = (Math.random() * (max - min) + min).toFixed(2); // ใช้ toFixed(2) เพื่อให้ได้ 2 ตำแหน่ง
@@ -51,27 +52,34 @@ function generateRandomRange(min, max, eachRate) {
 
         return [num1, num2];
     }
-
-    // สุ่มค่าของ arr[0], arr[1]
-    let pair1 = getValidPair();
-    arr[0] = pair1[0];
-    arr[1] = pair1[1];
-
-    // สุ่มค่าของ arr[2], arr[3]
-    let pair2 = getValidPair();
-    arr[2] = pair2[0];
-    arr[3] = pair2[1];
-
-    // สุ่มค่าของ arr[4], arr[5]
-    let pair3 = getValidPair();
-    arr[4] = pair3[0];
-    arr[5] = pair3[1];
-
-    // สุ่มค่าของ arr[6], arr[7]
-    let pair4 = getValidPair();
-    arr[6] = pair4[0];
-    arr[7] = pair4[1];
-
+    if (countArr < amount) {
+        // สุ่มค่าของ arr[0], arr[1]
+        let pair1 = getValidPair();
+        arr[0] = pair1[0];
+        arr[1] = pair1[1];
+        countArr++;
+    }
+    if (countArr < amount) {
+        // สุ่มค่าของ arr[2], arr[3]
+        let pair2 = getValidPair();
+        arr[2] = pair2[0];
+        arr[3] = pair2[1];
+        countArr++;
+    }
+    if (countArr < amount) {
+        // สุ่มค่าของ arr[4], arr[5]
+        let pair3 = getValidPair();
+        arr[4] = pair3[0];
+        arr[5] = pair3[1];
+        countArr++;
+    }
+    if (countArr < amount) {
+        // สุ่มค่าของ arr[6], arr[7]
+        let pair4 = getValidPair();
+        arr[6] = pair4[0];
+        arr[7] = pair4[1];
+        countArr++;
+    }
     // ตรวจสอบว่าแต่ละช่วงไม่ทับกันและห่างกันไม่เกิน eachRate
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
@@ -123,8 +131,10 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                let amount = rangersJson.length;
                 let eachRate = 0.12;
-                let range = generateRandomRange(0.01, 3.00, eachRate);
+                let range = generateRandomRange(0.01, 3.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) { //how about rate-up of light power???
@@ -138,8 +148,10 @@ async function normalGacha() {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                let amount = rangersJson.length;
                 let eachRate = 0.12;
-                let range = generateRandomRange(0.01, 22.00, eachRate);
+                let range = generateRandomRange(0.01, 22.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
