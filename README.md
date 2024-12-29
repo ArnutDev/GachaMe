@@ -10,7 +10,7 @@
 This website will be updated with new content at the beginning of each month (*if time permits >_<*). 
 
 ## Important Notice
-Some of the data on this website is owned by LINE Corporation. Please avoid using it for commercial purposes without proper authorization. If you need to credit the sources, you can use the following references:
+Some of the data on this website is owned by LINE Corporation. Please avoid using it for commercial purposes. If you need to credit the sources, you can use the following references:
 - [GachaMe](https://gachame.netlify.app) (My Website)
 - [Rangers Book](https://rangers.lerico.net/en/rangers-book) (Source on my website)
 - [LINE Rangers Game] (Source on my website)
