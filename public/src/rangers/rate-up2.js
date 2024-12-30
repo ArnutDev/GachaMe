@@ -127,11 +127,11 @@ async function rateUp2() {
             if (chance <= 3) {
                 rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info-special.json');
                 let amount = rangersJson.length;
-                let eachRate = 0.12; //change rate
+                let eachRate = 0.22; //already changed
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
-                if (result) { //how about rate-up of light power???
+                if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up2/8u-info-special.json');
                     special = true;
                 } else {
@@ -144,7 +144,7 @@ async function rateUp2() {
             } else if (chance <= 30) {
                 rangersJson = await loadJSON('json-data/rangers/rate-up2/8c-info-special.json');
                 let amount = rangersJson.length;
-                let eachRate = 5; //change rate
+                let eachRate = 1.50; //already changed
                 let range = generateRandomRange(0.01, 22.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
