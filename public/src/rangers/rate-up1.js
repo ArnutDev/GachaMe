@@ -131,7 +131,7 @@ async function rateUp1() {
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
-                if (result) { //how about rate-up of light power???
+                if (result) {
                     rangersJson = await loadJSON('json-data/rangers/rate-up1/8u-info-special.json');
                     special = true;
                 } else {
