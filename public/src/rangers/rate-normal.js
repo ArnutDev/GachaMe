@@ -150,18 +150,20 @@ async function normalGacha() {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-                let amount = rangersJson.length;
-                let eachRate = 0.12; //change rate
-                let range = generateRandomRange(0.01, 22.00, eachRate, amount);
-                let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
-                }
+                // rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                // let amount = rangersJson.length;
+                // let eachRate = 0.12; //change rate
+                // let range = generateRandomRange(0.01, 22.00, eachRate, amount);
+                // let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
+                // let result = checkValueInRange(value, range);
+                // if (result) {
+                //     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                //     special = true;
+                // } else {
+                //     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                // }
+                special = true;
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');

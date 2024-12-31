@@ -103,7 +103,7 @@ async function rateUp2() { //change this to n
             let grade;
             let special = false;
             if (chance <= 1) {
-                let eachRate = 0.20;
+                let eachRate = 0.60;
                 let range = generateRandomRange(0.01, 1.00, eachRate);
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
@@ -115,7 +115,7 @@ async function rateUp2() { //change this to n
                 special = true;
                 grade = "8 star";
             } else if (chance <= 3) {
-                let eachRate = 0.33;
+                let eachRate = 1.23;
                 let range = generateRandomRange(0.01, 2.00, eachRate);
                 let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);

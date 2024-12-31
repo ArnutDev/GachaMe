@@ -121,28 +121,32 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 1) { //8 star
-                let eachRate = 0.15;
-                let range = generateRandomRange(0.01, 1.00, eachRate);
-                let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info-special.json');
-                    special = true;
-                } else {
-                    gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
-                }
+                // let eachRate = 0.15;
+                // let range = generateRandomRange(0.01, 1.00, eachRate);
+                // let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
+                // let result = checkValueInRange(value, range);
+                // if (result) {
+                //     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info-special.json');
+                //     special = true;
+                // } else {
+                //     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
+                // }
+                special = true;
+                gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
                 grade = "8 star";
             } else if (chance <= 3) { //7 star
-                let eachRate = 0.33;
-                let range = generateRandomRange(0.01, 2.00, eachRate);
-                let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info-special.json');
-                    special = true;
-                } else {
-                    gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
-                }
+                // let eachRate = 0.33;
+                // let range = generateRandomRange(0.01, 2.00, eachRate);
+                // let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
+                // let result = checkValueInRange(value, range);
+                // if (result) {
+                //     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info-special.json');
+                //     special = true;
+                // } else {
+                //     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
+                // }
+                special = true;
+                gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
                 grade = "7 star";
             } else if (chance <= 50) { //6 star
                 gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
