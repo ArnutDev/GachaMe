@@ -1,0 +1,31 @@
+{
+    "changelog": [
+        
+        {
+            "version": "First release 1.0.0",
+            "date": "2024-12-22",
+            "changes": [
+                "Add normal gacha",
+                "Add stats sidebar"
+            ]
+        },
+        {
+            "version": "1.1.0",
+            "date": "2024-12-23",
+            "changes": [
+                "Fixed rate gacha",
+                "Add 2 rate-up gacha",
+                "Update UI"
+            ]
+        },
+        {
+            "version": "1.2.0",
+            "date": "2024-12-31",
+            "changes": [
+                "Update new UI",
+                "Add january rangers gacha",
+                "Add january gears gacha (beta)"
+            ]
+        }
+    ]
+}

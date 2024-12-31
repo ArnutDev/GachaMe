@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GachaMe</title>
     <link rel="icon" href="assets/cover/coupon-logo.png" type="image/png">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Google tag (gtag.js) -->
@@ -33,9 +33,6 @@
             <div id="navbar1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="about-me.html" class="nav-link">About me</a>
                     </li>
                     <li class="nav-item">
@@ -45,416 +42,59 @@
             </div>
         </div>
     </nav>
-    <div class="caution text-center">
-        <p class="h4 d-block bg-warning">เว็บไซต์จำลองสุ่มกาชา LINE Rangers จัดทำเพื่อความบันเทิงเท่านั้น
-            อยากเปิดรัวๆแบบจุใจ
-            ไม่แสวงหาผลกำไรใดๆทั้งสิ้น จะพยายามอัปเดตทุกเดือน <a href="https://rangers.lerico.net/en/rangers-book"
-                target="_blank" rel="noopener noreferrer">แหล่งที่มาข้อมูล: LINE Rangers Handbook
-            </a>***พอดีไปเค้าต์ดาวน์ เดี๋ยวกลับมาอัปเดตตู้เกียร์ปีใหม่ให้นะครับ</p>
-
+    <div class="head mt-3 text-light">
+        <p class="h1 text-center">[ Pick your gacha type ]</ย>
     </div>
-    <div class="container p-2">
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-md-8">
-                <section class="box1 p-3 bg-light border border-dark border-3 rounded-5">
-                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 4 ชนิด!</h1>
-                    <div class="chest1">
-                        <img class="box1-banner w-auto h-auto img-fluid rounded-4" src="assets/cover/normal-gacha.png"
-                            alt="box1-banner">
-                        <div class="detail mt-3 text-center">
-                            <p class="h6">Rangers:</p>
-                            <p class="h6">"Gintoki",
-                                "Kagura",
-                                "Shinpachi",
-                                "Hijikata"</p>
-                            <p class="h5">โอกาสได้รับ: Ultra 0.12% | Common 0.88% </p>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal"
-                                onclick="normalGacha()">random</button>
+            <!-- Card 1 Rangers-->
+            <div class="col-md-6 mb-5">
+                <a href="rangers-rand.html" class="text-decoration-none">
+                    <div class="card">
+                        <img src="assets/cover/rangers-banner.jpg" class="card-img-top" alt="Card Image">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Gacha Rangers 6+1 Click!</h5>
+                            <p class="card-text mb-3 text-dark">
+                                The new rangers are waiting for you!!!
+                            </p>
+                            <div class="btn-container d-flex justify-content-end">
+                                <a href="rangers-rand.html" class="btn btn-primary">Click</a>
+                            </div>
                         </div>
                     </div>
-                </section>
-                <section class="box1 my-2 p-3 bg-light border border-dark border-3 rounded-5">
-                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 2 ชนิด!</h1>
-                    <div class="chest1">
-                        <img class="box1-banner w-auto h-auto img-fluid rounded-4"
-                            src="assets/cover/rate-up-gacha-1.jpg" alt="box1-banner">
-                        <div class="detail mt-3 text-center">
-                            <p class="h6">Rangers:</p>
-                            <p class="h6">"Gintoki",
-                                "Kagura"</p>
-                            <p class="h5">โอกาสได้รับ: Ultra 0.18% | Common 1.32% </p>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal1"
-                                onclick="rateUp1()">random</button>
-                        </div>
-                    </div>
-                </section>
-                <section class="box1 my-2 p-3 bg-light border border-dark border-3 rounded-5">
-                    <h1 class="name-box1 ps-3">เพิ่มโอกาสได้รับเรนเจอร์ 2 ชนิด!</h1>
-                    <div class="chest1">
-                        <img class="box1-banner w-auto h-auto img-fluid rounded-4"
-                            src="assets/cover/rate-up-gacha-2.jpg" alt="box1-banner">
-                        <div class="detail mt-3 text-center">
-                            <p class="h6">Rangers:</p>
-                            <p class="h6">"Hijikata",
-                                "Shinpachi"</p>
-                            <p class="h5">โอกาสได้รับ: Ultra 0.18% | Common 1.32% </p>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#myModal2"
-                                onclick="rateUp2()">random</button>
-                        </div>
-                    </div>
-                </section>
+                </a>
             </div>
-            <aside class="col-md-4">
-                <div class="stats-container bg-light border border-0 rounded-5">
-                    <h1 class="text-center">สถิติ</h1>
-                    <table class="table border border-5 border-success">
-                        <thead class="border border-1 border-success">
-                            <tr>
-                                <th class="text-center border border-1 border-success">Image</th>
-                                <th class="text-center border border-1 border-success">Ultra amount</th>
-                                <th class="text-center border border-1 border-success">Common amount</th>
-                            </tr>
-                        <tbody>
-                            <tr>
-                                <td class="border border-1 border-success">
-                                    <div class="image-box d-flex justify-content-center align-items-center"
-                                        style="height: 100px;">
-                                        <img src="https://rangers.lerico.net/res/u1450e-sg/u1450e-sg-thum.png"
-                                            alt="Gintoki" class="img-fluid" style="max-height: 80px;">
-                                    </div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="u-ranger-1">0</div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="c-ranger-1">0</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-1 border-success">
-                                    <div class="image-box d-flex justify-content-center align-items-center"
-                                        style="height: 100px;">
-                                        <img src="https://rangers.lerico.net/res/u1452e-ka/u1452e-ka-thum.png"
-                                            alt="Kagura" class="img-fluid" style="max-height: 80px;">
-                                    </div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="u-ranger-2">0</div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="c-ranger-2">0</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-1 border-success">
-                                    <div class="image-box d-flex justify-content-center align-items-center"
-                                        style="height: 100px;">
-                                        <img src="https://rangers.lerico.net/res/u1454e-ss/u1454e-ss-thum.png"
-                                            alt="Shinpachi" class="img-fluid" style="max-height: 80px;">
-                                    </div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="u-ranger-3">0</div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="c-ranger-3">0</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-1 border-success">
-                                    <div class="image-box d-flex justify-content-center align-items-center"
-                                        style="height: 100px;">
-                                        <img src="https://rangers.lerico.net/res/u1456e-ht/u1456e-ht-thum.png"
-                                            alt="Hijikata" class="img-fluid" style="max-height: 80px;">
-                                    </div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="u-ranger-4">0</div>
-                                </td>
-                                <td class="border border-1 border-success">
-                                    <div class="text-center" id="c-ranger-4">0</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        </thead>
 
-                    </table>
-                </div>
-            </aside>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg d-flex align-items-center justify-content-center">
-            <div class="modal-content text-center">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Result</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <div class="container p-2 text-center justify-content-center">
-                        <div class="row">
-                            <div class="content-display p-2 col-md-3">
-                                <div class="image-box bg-info" id="normal-image">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span></p>
-
-                            </div>
-                            <div class="content-display p-2 col-md-3">
-                                <div class="image-box" id="normal-image">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span>
-                                </p>
-
-                            </div>
-                            <div class="content-display p-2 col-md-3">
-                                <div class="image-box" id="normal-image">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span></p>
-
-                            </div>
-                            <div class="content-display p-2 col-md-3">
-                                <div class="image-box" id="normal-image">
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span></p>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="content-display p-2 col-md-4">
-                                <div class="image-box" id="normal-image">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span></p>
-
-                            </div>
-                            <div class="content-display p-2 col-md-4">
-                                <div class="image-box" id="normal-image">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span></p>
-
-                            </div>
-                            <div class="content-display p-2 col-md-4">
-                                <div class="image-box" id="normal-image">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name"></span></p>
-
+            <!-- Card 2 Gears -->
+            <div class="col-md-6 mb-5">
+                <a href="gears-rand.html" class="text-decoration-none">
+                    <div class="card">
+                        <img src="assets/cover/gears-banner.jpg" class="card-img-top" alt="Card Image">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Gacha Gears 5+1 Click! (Beta)</h5>
+                            <p class="card-text mb-3 text-dark">
+                                The new gears are waiting for you!!!
+                            </p>
+                            <div class="btn-container d-flex justify-content-end">
+                                <a href="rangers-rand.html" class="btn btn-primary">Click</a>
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                    <p><strong>Count:</strong> <span id="normal-count"></span></p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
-                    <button type="button" class="btn btn-primary" id="randomButton"
-                        onclick="normalGacha()">again</button>
-                </div>
+                </a>
             </div>
         </div>
     </div>
-    <!-- Modal1 -->
-    <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg d-flex align-items-center justify-content-center">
-            <div class="modal-content text-center">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel1">Result</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <div class="container p-2 text-center justify-content-center">
-                        <div class="row">
-                            <div class="content-display1 p-2 col-md-3">
-                                <div class="image-box bg-info" id="normal-image1">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
-
-                            </div>
-                            <div class="content-display1 p-2 col-md-3">
-                                <div class="image-box" id="normal-image1">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span>
-                                </p>
-
-                            </div>
-                            <div class="content-display1 p-2 col-md-3">
-                                <div class="image-box" id="normal-image1">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
-
-                            </div>
-                            <div class="content-display1 p-2 col-md-3">
-                                <div class="image-box" id="normal-image1">
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="content-display1 p-2 col-md-4">
-                                <div class="image-box" id="normal-image1">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
-
-                            </div>
-                            <div class="content-display1 p-2 col-md-4">
-                                <div class="image-box" id="normal-image1">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
-
-                            </div>
-                            <div class="content-display1 p-2 col-md-4">
-                                <div class="image-box" id="normal-image1">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result1"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name1"></span></p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                    <p><strong>Count:</strong> <span id="normal-count1"></span></p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
-                    <button type="button" class="btn btn-primary" id="randomButton1" onclick="rateUp1()">again</button>
-                </div>
-            </div>
+    <footer class="bg-warning text-dark mt-auto py-3">
+        <div class="container text-center">
+            <p class="mb-0">GachaMe is a LINE Rangers Gacha simulation website
+                that is made for entertainment purposes only. This website uses
+                some information from the <a href="https://rangers.lerico.net/en/rangers-book" target="_blank">LINE
+                    Rangers Handbook</a> and the LINE Rangers game.
+                This website is not an official website for the LINE Rangers game.
+                No personal user data is collected, but each gacha draw is collected
+                to generate statistical data.</p>
         </div>
-    </div>
-    <!-- Modal2 -->
-    <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg d-flex align-items-center justify-content-center">
-            <div class="modal-content text-center">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel2">Result</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <div class="container p-2 text-center justify-content-center">
-                        <div class="row">
-                            <div class="content-display2 p-2 col-md-3">
-                                <div class="image-box bg-info" id="normal-image2">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span></p>
-
-                            </div>
-                            <div class="content-display2 p-2 col-md-3">
-                                <div class="image-box" id="normal-image2">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span>
-                                </p>
-
-                            </div>
-                            <div class="content-display2 p-2 col-md-3">
-                                <div class="image-box" id="normal-image2">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span></p>
-
-                            </div>
-                            <div class="content-display2 p-2 col-md-3">
-                                <div class="image-box" id="normal-image2">
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span></p>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="content-display2 p-2 col-md-4">
-                                <div class="image-box" id="normal-image2">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span></p>
-
-                            </div>
-                            <div class="content-display2 p-2 col-md-4">
-                                <div class="image-box" id="normal-image2">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span></p>
-
-                            </div>
-                            <div class="content-display2 p-2 col-md-4">
-                                <div class="image-box" id="normal-image2">
-
-                                </div>
-                                <p><strong>Grade:</strong> <span id="normal-result2"></span></p>
-                                <p><strong>Name:</strong> <span class="name-container" id="normal-name2"></span></p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                    <p><strong>Count:</strong> <span id="normal-count2"></span></p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
-                    <button type="button" class="btn btn-primary" id="randomButton2" onclick="rateUp2()">again</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <script src="src/random.js"></script>
-    <script src="src/rateUp1.js"></script>
-    <script src="src/rateUp2.js"></script>
-
+    </footer>
 </body>
 
 </html>
