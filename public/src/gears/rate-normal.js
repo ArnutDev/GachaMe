@@ -121,7 +121,7 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 1) { //8 star
-                let eachRate = 0.20;
+                let eachRate = 0.15;
                 let range = generateRandomRange(0.01, 1.00, eachRate);
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
