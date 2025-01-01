@@ -13,7 +13,7 @@
             "version": "1.1.0",
             "date": "2024-12-23",
             "changes": [
-                "Fixed rate gacha",
+                "Fix rate gacha",
                 "Add 2 rate-up gacha",
                 "Update UI"
             ]
@@ -25,6 +25,14 @@
                 "Update new UI",
                 "Add january rangers gacha",
                 "Add january gears gacha (beta)"
+            ]
+        },
+        {
+            "version": "1.2.1",
+            "date": "2024-12-31",
+            "changes": [
+                "Fix navigation button",
+                "Update image about Leonard in Rangers Gacha"
             ]
         }
     ]
