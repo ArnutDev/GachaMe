@@ -7,11 +7,11 @@ async function loadChangelog() {
         // อ้างอิง DOM ที่จะแสดง Changelog
         const cardContainer = document.getElementById('card-container');
 
-        // เรียงลำดับ changelog (ล่าสุดขึ้นก่อน)
-        const sortedChangelog = data.changelog.sort((a, b) => new Date(b.date) - new Date(a.date));
+        // เรียงลำดับ changelog จากล่างขึ้นบน (index สุดท้ายไป index แรก)
+        const reversedChangelog = data.changelog.reverse();
 
         // วนลูปแสดง changelog
-        sortedChangelog.forEach(entry => {
+        reversedChangelog.forEach(entry => {
             // สร้าง card แต่ละเวอร์ชัน
             const card = document.createElement('div');
             card.className = 'card mb-4';
@@ -37,7 +37,7 @@ async function loadChangelog() {
             card.appendChild(cardBody);
 
             // เพิ่ม card ไปยัง container
-            cardContainer.appendChild(card);
+            cardContainer.appendChild(card); // appendChild จะทำงานปกติ เพราะข้อมูลถูก reverse แล้ว
         });
     } catch (error) {
         console.error('Error loading changelog:', error);
