@@ -25,15 +25,27 @@ gears-rand.html
         *odd month has 6 column of gears
         *even column depend on situation
 
-src/rangers
-    rate-normal.js
-        (can use ctrl+f to find "change" for temporary)
+src
+    /rangers
+        rate-normal.js
+            (can use ctrl+f to find "change" for temporary)
 
-    rate-up(N)
-src/gears
-    rate-normal.js
-        (can use ctrl+f to find "change" for temporary)
-        
-    rate-up(N)
+        rate-up(N)
+    /gears
+        rate-normal.js
+            (can use ctrl+f to find "change" for temporary)
 
+        rate-up(N)
+
+assets
+    /cover
+        (updates new cover depend on that month)
+        file name use form "month-g/r-normal" and "month-g/r-rate(N)"
+        *g for gear and r for ranger
+
+    /json-data
+        (open file info.txt to read each folder use for)
+    
+    change-log.json
+        update log everytime it change
 
