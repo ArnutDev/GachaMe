@@ -26,19 +26,19 @@ function generateRandomRange(min, max, eachRate, amount) {
     let countArr = 0;
 
     function getValidRandomValue() {
-        let randomValue = (Math.random() * (max - min) + min).toFixed(2); // ใช้ toFixed(2) เพื่อให้ได้ 2 ตำแหน่ง
+        let randomValue = (Math.random() * (max - min) + min).toFixed(2); // use toFixed(2) for 2 decimal
         return parseFloat(randomValue);
     }
 
-    // ฟังก์ชันตรวจสอบและสุ่มค่าที่ไม่เกินช่วง
+    //check and random value not over range
     function getValidPair() {
         let num1 = getValidRandomValue();
-        let num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
+        let num2 = (num1 + eachRate).toFixed(2); // use toFixed(2) for num2 2 decimal
         num2 = parseFloat(num2);
 
         // ตรวจสอบว่า num2 ไม่เกิน max และ num1 ยังไม่เกิน min
         if (num2 > max) {
-            num1 = (max - eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num1 มี 2 ตำแหน่ง
+            num1 = (max - eachRate).toFixed(2); // use toFixed(2) for num1 2 decimal
             num1 = parseFloat(num1);
             num2 = max;
         }
@@ -46,52 +46,52 @@ function generateRandomRange(min, max, eachRate, amount) {
         // ตรวจสอบว่า num1 ยังอยู่ในช่วง min ถึง max
         if (num1 < min) {
             num1 = min; // ถ้า num1 ต่ำกว่า min, ตั้งให้ num1 เป็น min
-            num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
+            num2 = (num1 + eachRate).toFixed(2); // use toFixed(2) for num2 2 decimal
             num2 = parseFloat(num2);
         }
 
         return [num1, num2];
     }
     if (countArr < amount) {
-        // สุ่มค่าของ arr[0], arr[1]
+        // random value of arr[0], arr[1]
         let pair1 = getValidPair();
         arr[0] = pair1[0];
         arr[1] = pair1[1];
         countArr++;
     }
     if (countArr < amount) {
-        // สุ่มค่าของ arr[2], arr[3]
+        //  random value of arr[2], arr[3]
         let pair2 = getValidPair();
         arr[2] = pair2[0];
         arr[3] = pair2[1];
         countArr++;
     }
     if (countArr < amount) {
-        // สุ่มค่าของ arr[4], arr[5]
+        //  random value of arr[4], arr[5]
         let pair3 = getValidPair();
         arr[4] = pair3[0];
         arr[5] = pair3[1];
         countArr++;
     }
     if (countArr < amount) {
-        // สุ่มค่าของ arr[6], arr[7]
+        //  random value of arr[6], arr[7]
         let pair4 = getValidPair();
         arr[6] = pair4[0];
         arr[7] = pair4[1];
         countArr++;
     }
-    // ตรวจสอบว่าแต่ละช่วงไม่ทับกันและห่างกันไม่เกิน eachRate
+
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
-            // ตรวจสอบว่าช่วงทับกันหรือล้ำกัน
+            //check for each range not overlap and have space not over eachRate
             if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
-                // ถ้าช่วงทับกันหรือห่างเกิน eachRate ให้สุ่มใหม่
+                // if it overlap then random until not overlap
                 return generateRandomRange(min, max, eachRate);
             }
         }
     }
 
-    // ลูปแสดงผลค่าอาเรย์ตำแหน่งที่ 1-0, 2-3, 4-5, 6-7
+    // display array position: 1-0, 2-3, 4-5, 6-7
     // for (let i = 0; i < arr.length; i += 2) {
     //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
     // }
@@ -100,15 +100,15 @@ function generateRandomRange(min, max, eachRate, amount) {
 }
 
 function checkValueInRange(value, arr) {
-    // ลูปตรวจสอบค่าที่กำหนดว่าอยู่ในช่วงไหน
+    // ลูปตรวจสอบค่าที่กำหนดว่าอยู่ในช่วงไหน check if the given value is in the range.
     for (let i = 0; i < arr.length; i += 2) {
         if (value > arr[i] && value <= arr[i + 1]) {
-            // ถ้าค่าอยู่ในช่วงระหว่าง arr[i] และ arr[i+1]
+            // if value between arr[i] and arr[i+1] then display
             // alert(`Value ${value} is within the range of arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]}`);
-            return true; // คืนค่าจริงเมื่อค่าอยู่ในช่วง
+            return true; // return true if in range
         }
     }
-    // // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
+    //if the given value not in any range
     // alert(`Value ${value} is not within any range.`);
     // return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
 }
@@ -120,25 +120,25 @@ function getRandomPickRanger(min, max) {
 }
 
 async function normalGacha() {
-    const divSlots = document.querySelectorAll('.content-display'); // เลือก div ทั้ง 7 อัน
-    divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
+    const divSlots = document.querySelectorAll('.content-display'); // select 7 div
+    divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
 
     setTimeout(async () => {
 
         for (let i = 0; i < 7; i++) {
-            const chance = getRandomRangers(0, 100); //change rate
+            const chance = getRandomRangers(0, 100);
             let rangersJson;
             let grade;
             let special = false;
             if (chance <= 3) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //change this
                 let amount = rangersJson.length;
                 let eachRate = 0.02; //change rate
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //
+                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
                     special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
@@ -148,14 +148,14 @@ async function normalGacha() {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json'); // change this
                 let amount = rangersJson.length;
                 let eachRate = 0.12; //change rate
                 let range = generateRandomRange(0.01, 22.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json'); //
+                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
                     special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
@@ -170,7 +170,7 @@ async function normalGacha() {
             let rangers = rangersJson[randomIndex];
 
 
-            // เพิ่มข้อมูลใน div
+            // add data in div
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
@@ -191,7 +191,7 @@ async function normalGacha() {
             }
 
         }
-        // อัปเดตจำนวนรวม
+        // update totall amount
         document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
@@ -206,21 +206,23 @@ async function getStat(data) {
     const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //comprehensive
     const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json'); //comprehensive
 
-    // สร้างตัวแปรเก็บผลลัพธ์
-    let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
+    //use for store result
+    let result = -1; // use -1 for not found any value when start check
 
     // ตรวจสอบว่า data.Name ตรงกับข้อมูลใน collabUltraJson หรือไม่
     for (let index = 0; index < collabUltraJson.length; index++) {
         if (collabUltraJson[index].Name === data.Name) {
-            result = index + 1; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result ต้องบวก1เพราะมันมี2ค่า แต่ commonมันมี3 // เดือนโคลาโบค่อยเอาออก
-            break; // หยุดการวนลูปหากพบแล้ว
+            // if match then keep index value in result variable and +1 when even month has come 
+            // and remove +1 when collabro come
+            result = index + 1;
+            break; // found stop the loop
         }
     }
     if (result == -1) {
         for (let index = 0; index < collabCommonJson.length; index++) {
             if (collabCommonJson[index].Name === data.Name) {
-                result = index; // ถ้าตรงกัน ให้เก็บ index ไว้ใน result
-                break; // หยุดการวนลูปหากพบแล้ว
+                result = index; // if match then keep index value in result variable 
+                break; // found stop the loop
             }
         }
     }
@@ -246,7 +248,7 @@ function handleModalReopen() {
     const myModalElement = document.getElementById('myModal');
     const modal = new bootstrap.Modal(myModalElement);
 
-    // Add event listener for the "สุ่มอีกครั้ง" button
+    // Add event listener for the "Random" button
     document.getElementById('randomButton').addEventListener('click', function () {
         // Close the modal first
         modal.hide();
