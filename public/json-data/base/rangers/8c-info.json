@@ -658,5 +658,15 @@
     "Name": "Sit Back & Sea Pico",
     "Image": "https://rangers.lerico.net/res/u473e-pico/u473e-pico-thum.png",
     "UnitCode": "u473e-pico"
+  },
+  {
+    "Name": "Short Track Moon",
+    "Image": "https://rangers.lerico.net/res/u1465e-moon/u1465e-moon-thum.png",
+    "UnitCode": "u1465e-moon"
+  },
+  {
+    "Name": "Biathlon Crush",
+    "Image": "https://rangers.lerico.net/res/u1463e-crush/u1463e-crush-thum.png",
+    "UnitCode": "u1463e-crush"
   }
 ]
