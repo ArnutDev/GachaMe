@@ -214,7 +214,7 @@ async function getStat(data) {
         if (collabUltraJson[index].Name === data.Name) {
             // if match then keep index value in result variable and +1 when even month has come 
             // and remove +1 when collabro come
-            result = index + 1;
+            result = index;
             break; // found stop the loop
         }
     }
