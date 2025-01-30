@@ -15,23 +15,24 @@ function getRandomGears(min, max) {
     return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
 
-function generateRandomRange(min, max, eachRate) {
+function generateRandomRange(min, max, eachRate, amount) {
     let arr = [];
+    let countArr = 0;
 
     function getValidRandomValue() {
-        let randomValue = (Math.random() * (max - min) + min).toFixed(2); // ใช้ toFixed(2) เพื่อให้ได้ 2 ตำแหน่ง
+        let randomValue = (Math.random() * (max - min) + min).toFixed(2); // use toFixed(2) for 2 decimal
         return parseFloat(randomValue);
     }
 
-    // ฟังก์ชันตรวจสอบและสุ่มค่าที่ไม่เกินช่วง
+    //check and random value not over range
     function getValidPair() {
         let num1 = getValidRandomValue();
-        let num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
+        let num2 = (num1 + eachRate).toFixed(2); // use toFixed(2) for num2 2 decimal
         num2 = parseFloat(num2);
 
         // ตรวจสอบว่า num2 ไม่เกิน max และ num1 ยังไม่เกิน min
         if (num2 > max) {
-            num1 = (max - eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num1 มี 2 ตำแหน่ง
+            num1 = (max - eachRate).toFixed(2); // use toFixed(2) for num1 2 decimal
             num1 = parseFloat(num1);
             num2 = max;
         }
@@ -39,106 +40,131 @@ function generateRandomRange(min, max, eachRate) {
         // ตรวจสอบว่า num1 ยังอยู่ในช่วง min ถึง max
         if (num1 < min) {
             num1 = min; // ถ้า num1 ต่ำกว่า min, ตั้งให้ num1 เป็น min
-            num2 = (num1 + eachRate).toFixed(2); // ใช้ toFixed(2) เพื่อให้ num2 มี 2 ตำแหน่ง
+            num2 = (num1 + eachRate).toFixed(2); // use toFixed(2) for num2 2 decimal
             num2 = parseFloat(num2);
         }
 
         return [num1, num2];
     }
+    if (countArr < amount) {
+        // random value of arr[0], arr[1]
+        let pair1 = getValidPair();
+        arr[0] = pair1[0];
+        arr[1] = pair1[1];
+        countArr++;
+    }
+    if (countArr < amount) {
+        //  random value of arr[2], arr[3]
+        let pair2 = getValidPair();
+        arr[2] = pair2[0];
+        arr[3] = pair2[1];
+        countArr++;
+    }
+    if (countArr < amount) {
+        //  random value of arr[4], arr[5]
+        let pair3 = getValidPair();
+        arr[4] = pair3[0];
+        arr[5] = pair3[1];
+        countArr++;
+    }
+    if (countArr < amount) {
+        //  random value of arr[6], arr[7]
+        let pair4 = getValidPair();
+        arr[6] = pair4[0];
+        arr[7] = pair4[1];
+        countArr++;
+    }
 
-    // สุ่มค่าของ arr[0], arr[1]
-    let pair1 = getValidPair();
-    arr[0] = pair1[0];
-    arr[1] = pair1[1];
+    for (let i = 0; i < arr.length; i += 2) {
+        for (let j = i + 2; j < arr.length; j += 2) {
+            //check for each range not overlap and have space not over eachRate
+            if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
+                // if it overlap then random until not overlap
+                return generateRandomRange(min, max, eachRate);
+            }
+        }
+    }
 
-    // ตรวจสอบว่าแต่ละช่วงไม่ทับกันและห่างกันไม่เกิน eachRate
+    // display array position: 1-0, 2-3, 4-5, 6-7
     // for (let i = 0; i < arr.length; i += 2) {
-    //     for (let j = i + 2; j < arr.length; j += 2) {
-    //         // ตรวจสอบว่าช่วงทับกันหรือล้ำกัน
-    //         if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
-    //             // ถ้าช่วงทับกันหรือห่างเกิน eachRate ให้สุ่มใหม่
-    //             return generateRandomRange(min, max, eachRate);
-    //         }
-    //     }
-    // }
-
-    // ลูปแสดงผลค่าอาเรย์ตำแหน่งที่ 0-1, 2-3
-    // for (let i = 0; i < arr.length; i += 2) {
-    //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]} = ${(arr[i + 1] - arr[i]).toFixed(2)}`);
+    //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
     // }
 
     return arr;
 }
 
 function checkValueInRange(value, arr) {
-    // ลูปตรวจสอบค่าที่กำหนดว่าอยู่ในช่วงไหน
+    // ลูปตรวจสอบค่าที่กำหนดว่าอยู่ในช่วงไหน check if the given value is in the range.
     for (let i = 0; i < arr.length; i += 2) {
         if (value > arr[i] && value <= arr[i + 1]) {
-            // ถ้าค่าอยู่ในช่วงระหว่าง arr[i] และ arr[i+1]
-            // alert(`arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]} range = ${(arr[i+1] -arr[i]).toFixed(2)}`);
-            return true; // คืนค่าจริงเมื่อค่าอยู่ในช่วง
+            // if value between arr[i] and arr[i+1] then display
+            // alert(`Value ${value} is within the range of arr[${i}] - arr[${i + 1}] ${arr[i]}> ${value} <${arr[i+1]}`);
+            return true; // return true if in range
         }
     }
-    // // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
+    //if the given value not in any range
     // alert(`Value ${value} is not within any range.`);
     return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
 }
 
 
 
-function getRandomPickGears(min, max) {
+function getRandomPickGear(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-async function rateUp4() { //change this to n
-    //change this to n
-    const divSlots = document.querySelectorAll('.content-display4'); // เลือก div ทั้ง 7 อัน
-    divSlots.forEach(slot => (slot.innerHTML = '')); // ล้างข้อมูลเก่า
+async function rateUp4() {
+    const divSlots = document.querySelectorAll('.content-display4'); // select 7 div
+    divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 6; i++) {
-            const chance = getRandomGears(0, 100); ///
+        for (let i = 0; i < 7; i++) {
+            const chance = getRandomGears(0, 100);
             let gearsJson;
             let grade;
             let special = false;
             if (chance <= 1) {
-                let eachRate = 0.60;
-                let range = generateRandomRange(0.01, 1.00, eachRate);
+                gearsJson = await loadJSON('json-data/gears/rate-up4/8c-info-special.json'); //change this
+                let amount = gearsJson.length;
+                let eachRate = 0.60; //change rate
+                let range = generateRandomRange(0.01, 1.00, eachRate, amount);
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
-                if (result) { //change this to n
+                if (result) {
                     gearsJson = await loadJSON('json-data/gears/rate-up4/8c-info-special.json');
-                } else { //change this to n
+                    special = true;
+                } else {
                     gearsJson = await loadJSON('json-data/gears/rate-up4/8c-info.json');
                 }
-                special = true;
                 grade = "8 star";
-            } else if (chance <= 3) {
-                let eachRate = 1.23;
-                let range = generateRandomRange(0.01, 2.00, eachRate);
-                let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
+            } else if (chance <= 2) {
+                gearsJson = await loadJSON('json-data/gears/rate-up4/7c-info-special.json'); // change this
+                let amount = gearsJson.length;
+                let eachRate = 1.25; //change rate
+                let range = generateRandomRange(0.01, 3.00, eachRate, amount);
+                let value = getRandomGears(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
-                if (result) { //change this to n
+                if (result) {
                     gearsJson = await loadJSON('json-data/gears/rate-up4/7c-info-special.json');
-                } else { //change this to n
+                    special = true;
+                } else {
                     gearsJson = await loadJSON('json-data/gears/rate-up4/7c-info.json');
                 }
-                // special = true;
                 grade = "7 star";
-            } else if (chance <= 50) { //6 star
-                gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
+            } else if (chance <= 50) {
+                gearsJson = await loadJSON('json-data/gears/rate-up4/6c-info.json');
                 grade = "6 star";
-            } else { //5 star
+            } else {
                 gearsJson = await loadJSON('json-data/gears/rate-normal/5c-info.json');
                 grade = "5 star";
             }
 
-            const randomIndex = getRandomPickGears(0, gearsJson.length - 1);
+            const randomIndex = getRandomPickGear(0, gearsJson.length - 1);
             let gears = gearsJson[randomIndex];
 
 
-            // เพิ่มข้อมูลใน div
+            // add data in div
             if (divSlots[i]) {
                 let border = ``;
                 if (special) {
@@ -159,13 +185,12 @@ async function rateUp4() { //change this to n
             }
 
         }
-        // อัปเดตจำนวนรวม
-        //change this to n
+        // update totall amount
         document.getElementById("normal-count4").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
-        document.getElementById("u-ranger-1").innerHTML = u1;
-        document.getElementById("u-ranger-2").innerHTML = u2;
-        document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
+        document.getElementById("u-gear-1").innerHTML = u1;
+        document.getElementById("u-gear-2").innerHTML = u2;
+        document.getElementById("u-gear-3").innerHTML = u3;
+        // document.getElementById("u-gear-4").innerHTML = u4;
     }, 300);
     count++;
 
@@ -174,11 +199,10 @@ async function rateUp4() { //change this to n
 // Function to handle modal opening after closing it
 function handleModalReopen() {
     // Get the modal element and modal object
-    const myModalElement = document.getElementById('myModal4'); //change this to n
+    const myModalElement = document.getElementById('myModal4');
     const modal = new bootstrap.Modal(myModalElement);
 
-    // Add event listener for the "สุ่มอีกครั้ง" button
-    //change this to n
+    // Add event listener for the "Random" button
     document.getElementById('randomButton4').addEventListener('click', function () {
         // Close the modal first
         modal.hide();
