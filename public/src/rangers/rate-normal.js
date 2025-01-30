@@ -131,39 +131,35 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
-                // rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
-                // let amount = rangersJson.length;
-                // let eachRate = 0.02; //change rate
-                // let range = generateRandomRange(0.01, 3.00, eachRate, amount);
-                // let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
-                // let result = checkValueInRange(value, range);
-                // if (result) { //how about rate-up of light power???
-                //     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
-                //     special = true;
-                // } else {
-                //     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                // }
-                special = true;
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                let amount = rangersJson.length;
+                let eachRate = 0.02; //change rate
+                let range = generateRandomRange(0.01, 3.00, eachRate, amount);
+                let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
+                let result = checkValueInRange(value, range);
+                if (result) {
+                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //
+                    special = true;
+                } else {
+                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
+                }
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                // rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-                // let amount = rangersJson.length;
-                // let eachRate = 0.12; //change rate
-                // let range = generateRandomRange(0.01, 22.00, eachRate, amount);
-                // let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                // let result = checkValueInRange(value, range);
-                // if (result) {
-                //     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-                //     special = true;
-                // } else {
-                //     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
-                // }
-                special = true;
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                let amount = rangersJson.length;
+                let eachRate = 0.12; //change rate
+                let range = generateRandomRange(0.01, 22.00, eachRate, amount);
+                let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
+                let result = checkValueInRange(value, range);
+                if (result) {
+                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json'); //
+                    special = true;
+                } else {
+                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                }
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -200,17 +196,15 @@ async function normalGacha() {
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        // document.getElementById("u-ranger-4").innerHTML = u4;
+        document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
 
 }
 
 async function getStat(data) {
-    // const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
-    // const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
-    const collabUltraJson = await loadJSON('json-data/rangers/rangers-info-u-special.json');
-    const collabCommonJson = await loadJSON('json-data/rangers/rangers-info-c-special.json');
+    const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //comprehensive
+    const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json'); //comprehensive
 
     // สร้างตัวแปรเก็บผลลัพธ์
     let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
@@ -230,13 +224,13 @@ async function getStat(data) {
             }
         }
     }
-    if (result == 0) { // light/dark or main1
+    if (result == 0) { // light/dark | co-main1
         u1++;
-    } else if (result == 1) { // main2
+    } else if (result == 1) { // sub1 | co-main2
         u2++;
-    } else if (result == 2) { //sub 1
+    } else if (result == 2) { // sub2 | co-sub1
         u3++;
-    } else if (result == 3) { //sub 2
+    } else if (result == 3) { // none | co-sub2
         u4++;
     } else {
         return false;
