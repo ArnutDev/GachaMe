@@ -207,8 +207,10 @@ async function normalGacha() {
 }
 
 async function getStat(data) {
-    const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
-    const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+    // const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+    // const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+    const collabUltraJson = await loadJSON('json-data/rangers/rangers-info-u-special.json');
+    const collabCommonJson = await loadJSON('json-data/rangers/rangers-info-c-special.json');
 
     // สร้างตัวแปรเก็บผลลัพธ์
     let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
@@ -228,13 +230,13 @@ async function getStat(data) {
             }
         }
     }
-    if (result == 0) {
+    if (result == 0) { // light/dark or main1
         u1++;
-    } else if (result == 1) {
+    } else if (result == 1) { // main2
         u2++;
-    } else if (result == 2) {
+    } else if (result == 2) { //sub 1
         u3++;
-    } else if (result == 3) {
+    } else if (result == 3) { //sub 2
         u4++;
     } else {
         return false;

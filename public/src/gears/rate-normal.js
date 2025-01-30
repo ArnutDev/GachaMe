@@ -193,6 +193,7 @@ async function normalGacha() {
 
 async function getStat(data) {
     const collabCommonJson = await loadJSON('json-data/gears/rate-normal/8c-info-special.json');
+    // const collabCommonJson = await loadJSON('json-data/gears/gears-info-special.json');
 
     // สร้างตัวแปรเก็บผลลัพธ์
     let result = -1; // ใช้ -1 เพื่อบ่งบอกว่าไม่พบค่าในตอนเริ่มต้น
