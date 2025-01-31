@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Swordsman Laios",
+    "Image": "https://rangers.lerico.net/res/u1469u-la/u1469u-la-thum.png",
+    "UnitCode": "u1469u-la"
+  },
+  {
+    "Name": "Elven Mage Marcille",
+    "Image": "https://rangers.lerico.net/res/u1471u-ma/u1471u-ma-thum.png",
+    "UnitCode": "u1471u-ma"
+  },
+  {
+    "Name": "Sharp Senses Chilchuck",
+    "Image": "https://rangers.lerico.net/res/u1473u-ch/u1473u-ch-thum.png",
+    "UnitCode": "u1473u-ch"
+  },
+  {
+    "Name": "Dwarf Warrior Senshi",
+    "Image": "https://rangers.lerico.net/res/u1475u-se/u1475u-se-thum.png",
+    "UnitCode": "u1475u-se"
+  }
+]

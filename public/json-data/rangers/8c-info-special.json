@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Laios",
+    "Image": "https://rangers.lerico.net/res/u1469e-la/u1469e-la-thum.png",
+    "UnitCode": "u1469e-la"
+  },
+  {
+    "Name": "Marcille",
+    "Image": "https://rangers.lerico.net/res/u1471e-ma/u1471e-ma-thum.png",
+    "UnitCode": "u1471e-ma"
+  },
+  {
+    "Name": "Chilchuck",
+    "Image": "https://rangers.lerico.net/res/u1473e-ch/u1473e-ch-thum.png",
+    "UnitCode": "u1473e-ch"
+  },
+  {
+    "Name": "Senshi",
+    "Image": "https://rangers.lerico.net/res/u1475e-se/u1475e-se-thum.png",
+    "UnitCode": "u1475e-se"
+  }
+]

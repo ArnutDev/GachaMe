@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "[DM]Kensuke",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_wpn_08_icon.png",
+    "ItemCode": "eq_2502_wpn_08"
+  },
+  {
+    "Name": "[DM]Ambrosia",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_wpn_18_icon.png",
+    "ItemCode": "eq_2502_wpn_18"
+  },
+  {
+    "Name": "[DM]Chilchuck Bow",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_wpn_28_icon.png",
+    "ItemCode": "eq_2502_wpn_28"
+  },
+  {
+    "Name": "[DM]Exorcism Sorbet",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_acc_07_icon.png",
+    "ItemCode": "eq_2502_acc_07"
+  },
+  {
+    "Name": "[DM]Izutsumi's Scarf",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_acc_17_icon.png",
+    "ItemCode": "eq_2502_acc_17"
+  },
+  {
+    "Name": "[DM]Senshi's Pot",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_amr_06_icon.png",
+    "ItemCode": "eq_2502_amr_06"
+  }
+]
