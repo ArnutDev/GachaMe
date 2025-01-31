@@ -125,40 +125,32 @@ async function normalGacha() {
     setTimeout(async () => {
 
         for (let i = 0; i < 7; i++) {
-            const chance = getRandomRangers(0, 100);
+            const chance = getRandomRangers(30, 30);
             let rangersJson;
             let grade;
             let special = false;
             if (chance <= 3) {
-                rangersJson = await loadJSON('json-data/rangers/8u-info-special.json'); // change this
-                let amount = rangersJson.length;
-                let eachRate = 0.12; //change rate
-                let range = generateRandomRange(0.01, 3.00, eachRate, amount);
-                let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/8u-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                }
+                //add new ultra rangers to this path first (except dark/light)
+                //rate-normal using the same rate like the others
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
+                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                rangersJson = await loadJSON('json-data/rangers/8c-info-special.json'); // change this
-                let amount = rangersJson.length;
-                let eachRate = 0.88; //change rate
-                let range = generateRandomRange(0.01, 22.00, eachRate, amount);
-                let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/8c-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
-                }
+                //add new common rangers to this path first (except dark/light)
+                //rate-normal using the same rate like the others
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                //this path is include get from scrapping that have only 3 rangers new 
+                specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
+                //push dark/light rangers here index is 0 for dark/light
+                rangersJson.push(specialJson[0]);
+                //use loop console.log for check the item was acttually added 
+                // for (let a = 0; a < rangersJson.length; a++) {
+                //     console.log(rangersJson[a].Name);
+                // }
+                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -167,7 +159,6 @@ async function normalGacha() {
 
             const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
             let rangers = rangersJson[randomIndex];
-
 
             // add data in div
             if (divSlots[i]) {
@@ -195,7 +186,6 @@ async function normalGacha() {
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
 
@@ -225,14 +215,12 @@ async function getStat(data) {
             }
         }
     }
-    if (result == 0) { // light/dark | co-main1
+    if (result == 0) { // light/dark 
         u1++;
-    } else if (result == 1) { // sub1 | co-main2
+    } else if (result == 1) { // sub1 
         u2++;
-    } else if (result == 2) { // sub2 | co-sub1
+    } else if (result == 2) { // sub2 
         u3++;
-    } else if (result == 3) { // none | co-sub2
-        u4++;
     } else {
         return false;
     }
