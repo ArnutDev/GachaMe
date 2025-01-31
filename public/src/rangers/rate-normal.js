@@ -90,7 +90,6 @@ function generateRandomRange(min, max, eachRate, amount) {
             }
         }
     }
-
     // display array position: 1-0, 2-3, 4-5, 6-7
     // for (let i = 0; i < arr.length; i += 2) {
     //     alert(`arr[${i}] - arr[${i + 1}] = ${arr[i]} - ${arr[i + 1]}`);
@@ -133,7 +132,7 @@ async function normalGacha() {
             if (chance <= 3) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //change this
                 let amount = rangersJson.length;
-                let eachRate = 0.02; //change rate
+                let eachRate = 0.30; //change rate
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
@@ -142,6 +141,8 @@ async function normalGacha() {
                     special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
+                    // const testRanger = rangersJson[0] //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    // alert(testRanger.Name);
                 }
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
