@@ -120,7 +120,7 @@ async function rateUp2() {
     setTimeout(async () => {
 
         for (let i = 0; i < 7; i++) {
-            const chance = getRandomGears(1, 100); //change rate
+            const chance = getRandomGears(0, 100); //change rate
             let gearsJson = [];
             let specialJson;
             let grade;
