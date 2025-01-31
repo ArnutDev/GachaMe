@@ -130,33 +130,31 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //change this
+                rangersJson = await loadJSON('json-data/rangers/8u-info-special.json'); // change this
                 let amount = rangersJson.length;
-                let eachRate = 0.30; //change rate
+                let eachRate = 0.12; //change rate
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json');
+                    rangersJson = await loadJSON('json-data/rangers/8u-info-special.json');
                     special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                    // const testRanger = rangersJson[0] //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                    // alert(testRanger.Name);
                 }
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json'); // change this
+                rangersJson = await loadJSON('json-data/rangers/8c-info-special.json'); // change this
                 let amount = rangersJson.length;
-                let eachRate = 0.12; //change rate
+                let eachRate = 0.88; //change rate
                 let range = generateRandomRange(0.01, 22.00, eachRate, amount);
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json');
+                    rangersJson = await loadJSON('json-data/rangers/8c-info-special.json');
                     special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
@@ -204,8 +202,8 @@ async function normalGacha() {
 }
 
 async function getStat(data) {
-    const collabUltraJson = await loadJSON('json-data/rangers/rate-normal/8u-info-special.json'); //comprehensive
-    const collabCommonJson = await loadJSON('json-data/rangers/rate-normal/8c-info-special.json'); //comprehensive
+    const collabUltraJson = await loadJSON('json-data/rangers/8u-info-special.json'); //comprehensive
+    const collabCommonJson = await loadJSON('json-data/rangers/8c-info-special.json'); //comprehensive
 
     //use for store result
     let result = -1; // use -1 for not found any value when start check
