@@ -32,6 +32,8 @@ src
             for check if it push success Done!
 
         rate-up(N)
+            -after add new data in jason-data folder uncomment loop console.log 
+            for check if it push success Done!
     /gears
         rate-normal.js
             (can use ctrl+f to find "change" for temporary)

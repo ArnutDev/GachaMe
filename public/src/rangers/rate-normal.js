@@ -125,7 +125,7 @@ async function normalGacha() {
     setTimeout(async () => {
 
         for (let i = 0; i < 7; i++) {
-            const chance = getRandomRangers(30, 30);
+            const chance = getRandomRangers(0, 100);
             let rangersJson;
             let grade;
             let special = false;
@@ -203,7 +203,7 @@ async function getStat(data) {
         if (collabUltraJson[index].Name === data.Name) {
             // if match then keep index value in result variable and +1 when even month has come 
             // and remove +1 when collabro come
-            result = index;
+            result = index + 1;
             break; // found stop the loop
         }
     }
