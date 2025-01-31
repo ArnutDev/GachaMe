@@ -74,13 +74,14 @@ function generateRandomRange(min, max, eachRate, amount) {
         arr[7] = pair4[1];
         countArr++;
     }
+
     // ตรวจสอบว่าแต่ละช่วงไม่ทับกันและห่างกันไม่เกิน eachRate
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
             // ตรวจสอบว่าช่วงทับกันหรือล้ำกัน
             if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
                 // ถ้าช่วงทับกันหรือห่างเกิน eachRate ให้สุ่มใหม่
-                return generateRandomRange(min, max, eachRate);
+                return generateRandomRange(min, max, eachRate, amount);
             }
         }
     }
@@ -102,9 +103,10 @@ function checkValueInRange(value, arr) {
             return true; // คืนค่าจริงเมื่อค่าอยู่ในช่วง
         }
     }
-    // // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
+    // ถ้าค่าที่กำหนดไม่อยู่ในช่วงใดๆ
     // alert(`Value ${value} is not within any range.`);
-    // return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
+    // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
+    return false;
 }
 
 
@@ -129,14 +131,15 @@ async function rateUp1() {
                 specialJson = await loadJSON('json-data/rangers/8u-info-special.json');
                 let amount = specialJson.length;
                 let eachRate = 0.18; //already changed
-                let range = generateRandomRange(0.01, 3.00, eachRate, amount);
-                let value = getRandomRangers(1.00, 3.00); //x>[0] && x<=[1]
+                let range = generateRandomRange(0.01, 3.00, eachRate, amount - 2); //-2 cuz rate-up only 2 rangers
+                let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
+                // console.log('u: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 0 to 1 is rate-up main1 ,main2
-                    for (let j = 0, i = j; j < 2; j++, i++) {
+                    for (let j = 0, k = j; j < 2; j++, k++) {
                         rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + rangersJson[i].Name);
+                        // alert('sp> ' + rangersJson[k].Name);
                     }
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
@@ -161,14 +164,15 @@ async function rateUp1() {
                 specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
                 let amount = specialJson.length;
                 let eachRate = 1.32; //already changed
-                let range = generateRandomRange(0.01, 22.00, eachRate, amount);
+                let range = generateRandomRange(0.01, 22.00, eachRate, amount - 2); //-2 cuz rate-up only 2 rangers
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
+                // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 0 to 1 is rate-up main1 ,main2
-                    for (let j = 0, i = j; j < 2; j++, i++) {
+                    for (let j = 0, k = j; j < 2; j++, k++) {
                         rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + rangersJson[i].Name);
+                        // alert('sp> ' + rangersJson[k].Name);
                     }
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
