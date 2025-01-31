@@ -28,7 +28,8 @@ gears-rand.html
 src
     /rangers
         rate-normal.js
-            (can use ctrl+f to find "change" for temporary)
+            -after add new data in jason-data folder uncomment loop console.log 
+            for check if it push success Done!
 
         rate-up(N)
     /gears
@@ -44,8 +45,11 @@ assets
         *g for gear and r for ranger
 
     /json-data
-        (open file info.txt to read each folder use for)
-    
+        -just scraping new data and put it on 8u-info-special.json
+        and 8c-info-special.json for seperate use
+        /rate-normal
+            -add new data rangers in 8c-info.json and 8u-info.json (except dark/light) Done!
+            
     change-log.json
         update log everytime it change
 
