@@ -139,10 +139,9 @@ async function rateUp1() {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert('sp> ' + gearsJson[k].Name);
                     }
-                    for (let a = 0; a < gearsJson.length; a++) {
-                        // console.log(gearsJson[a].Name);
-                    }
-                    special = true;
+                    // for (let a = 0; a < gearsJson.length; a++) {
+                    //     console.log(gearsJson[a].Name);
+                    // }
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
                     //j= 1 to 2 is 2 of them that not rate-up now then move to none special
@@ -150,10 +149,11 @@ async function rateUp1() {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
                     }
-                    for (let a = 0; a < gearsJson.length; a++) {
-                        // console.log(gearsJson[a].Name);
-                    }
+                    // for (let a = 0; a < gearsJson.length; a++) {
+                    //     console.log(gearsJson[a].Name);
+                    // }
                 }
+                special = true;
                 grade = "8 star";
             } else if (chance <= 3) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
@@ -169,10 +169,9 @@ async function rateUp1() {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert('sp> ' + gearsJson[k].Name);
                     }
-                    for (let a = 0; a < gearsJson.length; a++) {
-                        // console.log(gearsJson[a].Name);
-                    }
-                    special = true;
+                    // for (let a = 0; a < gearsJson.length; a++) {
+                    //     console.log(gearsJson[a].Name);
+                    // }
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
                     //j= 3 is 1 of them that not rate-up now then move to none special
@@ -180,10 +179,11 @@ async function rateUp1() {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
                     }
-                    for (let a = 0; a < gearsJson.length; a++) {
-                        // console.log(gearsJson[a].Name);
-                    }
+                    // for (let a = 0; a < gearsJson.length; a++) {
+                    //     console.log(gearsJson[a].Name);
+                    // }
                 }
+                special = true;
                 grade = "7 star";
             } else if (chance <= 50) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
@@ -193,9 +193,10 @@ async function rateUp1() {
                     gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
                 }
-                for (let a = 0; a < gearsJson.length; a++) {
-                    // console.log(gearsJson[a].Name);
-                }
+                // for (let a = 0; a < gearsJson.length; a++) {
+                //     console.log(gearsJson[a].Name);
+                // }
+                special = true;
                 grade = "6 star";
             } else {
                 gearsJson = await loadJSON('json-data/gears/rate-normal/5c-info.json');
