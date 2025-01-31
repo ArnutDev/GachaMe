@@ -36,7 +36,7 @@ src
             for check if it push success Done!
     /gears
         rate-normal.js
-            (can use ctrl+f to find "change" for temporary)
+            not done implement!!!
         
         rate-up(N)
 
