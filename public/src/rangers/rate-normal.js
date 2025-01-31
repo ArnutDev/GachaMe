@@ -2,7 +2,6 @@ let count = 0;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
-let u4 = 0;
 
 async function loadJSON(filePath) {
     try {
