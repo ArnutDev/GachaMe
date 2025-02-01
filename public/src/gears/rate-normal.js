@@ -127,7 +127,7 @@ async function normalGacha() {
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 6; i++) {
             const chance = getRandomGears(0, 100); //change rate
             let gearsJson = [];
             let specialJson;
