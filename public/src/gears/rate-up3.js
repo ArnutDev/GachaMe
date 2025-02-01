@@ -119,7 +119,7 @@ async function rateUp3() {
 
     setTimeout(async () => {
 
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 6; i++) {
             const chance = getRandomGears(0, 100); //change rate
             let gearsJson = [];
             let specialJson;
@@ -134,23 +134,16 @@ async function rateUp3() {
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    //j= 2 is 8 special have 3 of them
-                    for (let j = 2, k = 0; j < 3; j++, k++) {
-                        gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
-                    }
+                    //j=2 is 8 special have only 1 of them that rate up
+                    gearsJson.push(specialJson[2]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     // for (let a = 0; a < gearsJson.length; a++) {
                     //     console.log(gearsJson[a].Name);
                     // }
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
-                    //j= 1 to 2 is 2 of them that not rate-up now then move to none special
+                    //j= 0 and 2 is 2 of them that not rate-up now then move to none special
                     for (let j = 0; j < 2; j++) {
-                        // if (j == 2) { //skip rate-up
-                        //     continue;
-                        // }
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
                     }
                     // for (let a = 0; a < gearsJson.length; a++) {
                     //     console.log(gearsJson[a].Name);
@@ -159,47 +152,10 @@ async function rateUp3() {
                 special = true;
                 grade = "8 star";
             } else if (chance <= 3) {
-                specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 1;
-                let eachRate = 1.25; //already changed
-                let range = generateRandomRange(0.01, 2.00, eachRate, amount); // 1 cuz 7 star special only have rate-up 1 of them
-                let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
-                // console.log('c: ' + value);
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    //j= 4 is 7 special have rate-up 1 of them
-                    for (let j = 4, k = 0; j < 5; j++, k++) {
-                        gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
-                    }
-                    for (let a = 0; a < gearsJson.length; a++) {
-                        // console.log(gearsJson[a].Name);
-                    }
-                } else {
-                    gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
-                    //j= 3 is 1 of them that not rate-up now then move to none special
-                    for (let j = 3; j < 4; j++) {
-                        gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
-                    }
-                    for (let a = 0; a < gearsJson.length; a++) {
-                        // console.log(gearsJson[a].Name);
-                    }
-                }
-                special = true;
+                gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
                 grade = "7 star";
             } else if (chance <= 50) {
-                specialJson = await loadJSON('json-data/gears/gears-info-special.json');
                 gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
-                //j= 5 is 6 star that not rate-up now then move to none special
-                for (let j = 5; j < 6; j++) {
-                    gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                    // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
-                }
-                for (let a = 0; a < gearsJson.length; a++) {
-                    // console.log(gearsJson[a].Name);
-                }
-                special = true;
                 grade = "6 star";
             } else {
                 gearsJson = await loadJSON('json-data/gears/rate-normal/5c-info.json');
@@ -236,9 +192,6 @@ async function rateUp3() {
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
-        document.getElementById("u-gear-4").innerHTML = u4;
-        document.getElementById("u-gear-5").innerHTML = u5;
-        document.getElementById("u-gear-6").innerHTML = u6;
     }, 300);
     count++;
 
