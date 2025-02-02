@@ -9,6 +9,7 @@ rangers-rand.html
     -info in card 
         "img src"
         "Odds UP:"
+        *line <br> should be equality in every card
     -footer
         "img src"
         *odd month has 4 column of rangers
@@ -20,6 +21,7 @@ gears-rand.html
     -info in card 
         "img src"
         "Odds UP:"
+        *line <br> should be equality in every card
     -footer
         "img src"
         *odd month has 6 column of gears
@@ -28,24 +30,38 @@ gears-rand.html
 src
     /rangers
         rate-normal.js
-            (can use ctrl+f to find "change" for temporary)
+            -after add new data in jason-data folder uncomment loop console.log 
+            for check if it push success Done!
 
         rate-up(N)
+            -after add new data in jason-data folder uncomment loop console.log 
+            for check if it push success Done!
     /gears
         rate-normal.js
-            (can use ctrl+f to find "change" for temporary)
+            -after add new data in jason-data folder uncomment loop console.log 
+            for check if it push success Done!
         
         rate-up(N)
+            -after add new data in jason-data folder uncomment loop console.log 
+            for check if it push success Done!
 
 assets
     /cover
         (updates new cover depend on that month)
-        file name use form "month-g/r-normal" and "month-g/r-rate(N)"
+        file name use form "g/r-normal" and "g/r-rate(N)"
         *g for gear and r for ranger
 
     /json-data
-        (open file info.txt to read each folder use for)
-    
+        /rangers
+            -just scraping new data and put it on 8u-info-special.json
+            and 8c-info-special.json for seperate use
+                /rate-normal
+                    -add new data rangers in 8c-info.json and 8u-info.json (except dark/light) Done!
+        /gears
+            -just scraping new data and put it on gears-info-special.json for seperate use
+                /rate-normal
+                    -add new data rangers in gears-info-special.json Done!
     change-log.json
-        update log everytime it change
+        update chagnelog everytime it change
 
+*** check UI responsive horizontal on phone 
