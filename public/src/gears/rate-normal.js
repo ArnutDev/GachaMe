@@ -188,8 +188,63 @@ async function normalGacha() {
     }, 300);
     count++;
 
+    guaranteeCount = count * 200
+    if (guaranteeCount == 3000) {
+        document.getElementById("btn-guarantee").style.display = "block";
+    } else if (guaranteeCount == 5000) { // ควรสร้าง modalแยก คือควรเปิดการันตีแล้วปิดไม่ควรเปิด200ต่อ คือเอา ปุ่ม again ใน modal ออกเมื่อเปิดกล่องการันตี
+        document.getElementById("btn-guarantee1").style.display = "block";
+    }
 }
 
+async function guarantee(type) {
+    const divSlots = document.querySelectorAll('.content-display'); // select 7 div
+    divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
+
+    setTimeout(async () => {
+        for (let i = 1; i < 2; i++) {
+            let specialJson;
+            let grade;
+            let special = true;
+            //rate-normal using the same rate like the others
+            //add new special gears to this path first
+            specialJson = await loadJSON('json-data/gears/gears-info-special.json');
+
+            const randomIndex = getRandomPickGear(0, specialJson.length - 1);
+            let gears = specialJson[randomIndex];
+            // เพิ่มข้อมูลใน div
+            if (divSlots[i]) {
+                let border = ``;
+                if (special) {
+                    if (await getStat(gears)) { //when use async function dont forget await
+                        border = `border border-success border-5`;
+                        special = false;
+                    }
+                }
+                divSlots[i].innerHTML = `
+                <div class="p-2 ${border} rounded">
+                    <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <img src="${gears.Image}" alt="${gears.Name}" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                    <p><strong>Grade:</strong> ${grade}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${gears.Name}</p>
+                </div>
+            `;
+            }
+        }
+        // อัปเดตจำนวนรวม
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
+        document.getElementById("u-gear-1").innerHTML = u1;
+        document.getElementById("u-gear-2").innerHTML = u2;
+        document.getElementById("u-gear-3").innerHTML = u3;
+    }, 300);
+    if (type == 1) {
+        document.getElementById("btn-guarantee").style.display = "none";
+
+    } else if (type == 2) {
+        document.getElementById("btn-guarantee1").style.display = "none";
+
+    }
+}
 async function getStat(data) {
     const collabCommonJson = await loadJSON('json-data/gears/gears-info-special.json'); //comprehensive
 

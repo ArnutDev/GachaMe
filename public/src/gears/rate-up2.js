@@ -198,6 +198,12 @@ async function rateUp2() {
     }, 300);
     count++;
 
+    guaranteeCount = count * 200
+    if (guaranteeCount == 3000) {
+        document.getElementById("btn-guarantee").style.display = "block";
+    } else if (guaranteeCount == 5000) {
+        document.getElementById("btn-guarantee1").style.display = "block";
+    }
 }
 
 // Function to handle modal opening after closing it
