@@ -1,4 +1,6 @@
 let count = 0;
+let guaranteeCount = 0;
+let maxGuarantee = 15;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
@@ -182,17 +184,22 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 200}`;
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
     }, 300);
     count++;
+    if (guaranteeCount < 25) {
+        guaranteeCount++;
+    }
 
-    guaranteeCount = count * 200
-    if (guaranteeCount == 3000) {
+    if (guaranteeCount == 15) {
+        maxGuarantee = 25;
+    }
+    if (count * 200 == 3000) {
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (guaranteeCount == 5000) { // ควรสร้าง modalแยก คือควรเปิดการันตีแล้วปิดไม่ควรเปิด200ต่อ คือเอา ปุ่ม again ใน modal ออกเมื่อเปิดกล่องการันตี
+    } else if (count * 200 == 5000) {
         document.getElementById("btn-guarantee1").style.display = "block";
     }
 }

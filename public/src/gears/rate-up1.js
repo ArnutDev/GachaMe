@@ -188,17 +188,23 @@ async function rateUp1() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count1").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
+        document.getElementById("normal-count1").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 200}`;
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
     }, 300);
     count++;
 
-    guaranteeCount = count * 200
-    if (guaranteeCount == 3000) {
+    if (guaranteeCount < 25) {
+        guaranteeCount++;
+    }
+
+    if (guaranteeCount == 15) {
+        maxGuarantee = 25;
+    }
+    if (count * 200 == 3000) {
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (guaranteeCount == 5000) {
+    } else if (count * 200 == 5000) {
         document.getElementById("btn-guarantee1").style.display = "block";
     }
 }
