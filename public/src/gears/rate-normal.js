@@ -202,26 +202,25 @@ async function guarantee(type) {
     divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
 
     setTimeout(async () => {
-        for (let i = 1; i < 2; i++) {
-            let specialJson;
-            let grade;
-            let special = true;
-            //rate-normal using the same rate like the others
-            //add new special gears to this path first
-            specialJson = await loadJSON('json-data/gears/gears-info-special.json');
+        let specialJson;
+        let grade;
+        let special = true;
+        //rate-normal using the same rate like the others
+        //add new special gears to this path first
+        specialJson = await loadJSON('json-data/gears/gears-info-special.json');
 
-            const randomIndex = getRandomPickGear(0, specialJson.length - 1);
-            let gears = specialJson[randomIndex];
-            // เพิ่มข้อมูลใน div
-            if (divSlots[i]) {
-                let border = ``;
-                if (special) {
-                    if (await getStat(gears)) { //when use async function dont forget await
-                        border = `border border-success border-5`;
-                        special = false;
-                    }
+        const randomIndex = getRandomPickGear(0, specialJson.length - 1);
+        let gears = specialJson[randomIndex];
+        // เพิ่มข้อมูลใน div
+        if (divSlots[1]) {
+            let border = ``;
+            if (special) {
+                if (await getStat(gears)) { //when use async function dont forget await
+                    border = `border border-success border-5`;
+                    special = false;
                 }
-                divSlots[i].innerHTML = `
+            }
+            divSlots[1].innerHTML = `
                 <div class="p-2 ${border} rounded">
                     <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
                         <img src="${gears.Image}" alt="${gears.Name}" class="img-fluid" style="max-height: 80px;">
@@ -230,7 +229,6 @@ async function guarantee(type) {
                     <p class="mt-2"><strong>Name:</strong> ${gears.Name}</p>
                 </div>
             `;
-            }
         }
         // อัปเดตจำนวนรวม
         document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
