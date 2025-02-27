@@ -201,7 +201,7 @@ async function rateUp2() {
     guaranteeCount = count * 200
     if (guaranteeCount == 3000) {
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (guaranteeCount == 5000) {
+    } else if (guaranteeCount == 4500) {
         document.getElementById("btn-guarantee1").style.display = "block";
     }
 }

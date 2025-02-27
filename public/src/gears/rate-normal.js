@@ -119,6 +119,7 @@ function getRandomPickGear(min, max) {
 }
 
 async function normalGacha() {
+    document.getElementById("randomButton").style.display = "block";
     const divSlots = document.querySelectorAll('.content-display'); // select 7 div
     divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
 
@@ -189,9 +190,9 @@ async function normalGacha() {
     count++;
 
     guaranteeCount = count * 200
-    if (guaranteeCount == 3000) {
+    if (guaranteeCount == 200) {
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (guaranteeCount == 5000) { // ควรสร้าง modalแยก คือควรเปิดการันตีแล้วปิดไม่ควรเปิด200ต่อ คือเอา ปุ่ม again ใน modal ออกเมื่อเปิดกล่องการันตี
+    } else if (guaranteeCount == 400) { // ควรสร้าง modalแยก คือควรเปิดการันตีแล้วปิดไม่ควรเปิด200ต่อ คือเอา ปุ่ม again ใน modal ออกเมื่อเปิดกล่องการันตี
         document.getElementById("btn-guarantee1").style.display = "block";
     }
 }
@@ -239,11 +240,10 @@ async function guarantee(type) {
     }, 300);
     if (type == 1) {
         document.getElementById("btn-guarantee").style.display = "none";
-
     } else if (type == 2) {
         document.getElementById("btn-guarantee1").style.display = "none";
-
     }
+    document.getElementById("randomButton").style.display = "none";
 }
 async function getStat(data) {
     const collabCommonJson = await loadJSON('json-data/gears/gears-info-special.json'); //comprehensive
