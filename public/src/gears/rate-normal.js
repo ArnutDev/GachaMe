@@ -190,9 +190,9 @@ async function normalGacha() {
     count++;
 
     guaranteeCount = count * 200
-    if (guaranteeCount == 200) {
+    if (guaranteeCount == 3000) {
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (guaranteeCount == 400) { // ควรสร้าง modalแยก คือควรเปิดการันตีแล้วปิดไม่ควรเปิด200ต่อ คือเอา ปุ่ม again ใน modal ออกเมื่อเปิดกล่องการันตี
+    } else if (guaranteeCount == 5000) { // ควรสร้าง modalแยก คือควรเปิดการันตีแล้วปิดไม่ควรเปิด200ต่อ คือเอา ปุ่ม again ใน modal ออกเมื่อเปิดกล่องการันตี
         document.getElementById("btn-guarantee1").style.display = "block";
     }
 }
