@@ -5,13 +5,13 @@
     "UnitCode": "u1482e-brown"
   },
   {
-    "Name": "Samurai Moon",
-    "Image": "https://rangers.lerico.net/res/u1486e-moon/u1486e-moon-thum.png",
-    "UnitCode": "u1486e-moon"
-  },
-  {
     "Name": "Chinese Opera Cony",
     "Image": "https://rangers.lerico.net/res/u1480e-cony/u1480e-cony-thum.png",
     "UnitCode": "u1480e-cony"
+  },
+  {
+    "Name": "Samurai Moon",
+    "Image": "https://rangers.lerico.net/res/u1486e-moon/u1486e-moon-thum.png",
+    "UnitCode": "u1486e-moon"
   }
 ]
