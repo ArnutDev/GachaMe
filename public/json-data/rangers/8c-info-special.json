@@ -1,17 +1,17 @@
 [
   {
-    "Name": "Figure Skater James",
-    "Image": "https://rangers.lerico.net/res/u1467e-james/u1467e-james-thum.png",
-    "UnitCode": "u1467e"
+    "Name": "New Soldier Brown",
+    "Image": "https://rangers.lerico.net/res/u1482e-brown/u1482e-brown-thum.png",
+    "UnitCode": "u1482e-brown"
   },
   {
-    "Name": "Short Track Moon",
-    "Image": "https://rangers.lerico.net/res/u1465e-moon/u1465e-moon-thum.png",
-    "UnitCode": "u1465e-moon"
+    "Name": "Samurai Moon",
+    "Image": "https://rangers.lerico.net/res/u1486e-moon/u1486e-moon-thum.png",
+    "UnitCode": "u1486e-moon"
   },
   {
-    "Name": "Biathlon Crush",
-    "Image": "https://rangers.lerico.net/res/u1463e-crush/u1463e-crush-thum.png",
-    "UnitCode": "u1463e-crush"
+    "Name": "Chinese Opera Cony",
+    "Image": "https://rangers.lerico.net/res/u1480e-cony/u1480e-cony-thum.png",
+    "UnitCode": "u1480e-cony"
   }
 ]

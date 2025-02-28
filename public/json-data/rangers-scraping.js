@@ -1,12 +1,7 @@
 const targetNames = [
-    "New Soldier Brown",
-    "Samurai Moon",
-    "Chinese Opera Cony"
+    "Ninja Moon",
+    "Hero Chinese Opera Cony"
 ];
-/* 
-Ninja Moon
-Hero Chinese Opera Cony
-*/
 const data = [];
 
 function searchAndStoreData(queries) {
@@ -38,7 +33,7 @@ function searchAndStoreData(queries) {
                             const unitCode = unitCodeMatch[1];
 
                             // ตรวจสอบว่าชื่อตรงกับ targetNames และ unitCode มีตัวอักษร 'e','u' หลังชุดตัวเลข
-                            if (targetNames.includes(name) && /\d+e/.test(unitCode)) {
+                            if (targetNames.includes(name) && /\d+u/.test(unitCode)) {
                                 console.log(`เก็บ: ${query}`)
                                 data.push({
                                     Name: name,
