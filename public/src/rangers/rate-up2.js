@@ -74,6 +74,7 @@ function generateRandomRange(min, max, eachRate, amount) {
         arr[7] = pair4[1];
         countArr++;
     }
+
     // ตรวจสอบว่าแต่ละช่วงไม่ทับกันและห่างกันไม่เกิน eachRate
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
@@ -128,29 +129,25 @@ async function rateUp2() {
             let special = false;
             if (chance <= 3) {
                 specialJson = await loadJSON('json-data/rangers/8u-info-special.json');
-                let amount = specialJson.length;
-                let eachRate = 0.18; //already changed
-                let range = generateRandomRange(0.01, 3.00, eachRate, amount - 2); //-2 cuz rate-up only 2 rangers
+                let amount = 1;
+                let eachRate = 0.22; //already changed
+                let range = generateRandomRange(0.01, 3.00, eachRate, amount); //1 cuz rate-up only 1 rangers
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 // console.log('u: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    //j= 2 to 3 is rate-up sub1 ,sub2
-                    for (let j = 2, k = j; j < 4; j++, k++) {
-                        rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + rangersJson[k].Name);
-                    }
+                    //index 1 meaning the second ultra has push
+                    rangersJson.push(specialJson[1]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
                     special = true;
                 } else {
-                    //j= 0 - 1 is main1,main2 move to none special
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                    for (let j = 0; j < 2; j++) {
-                        rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert(rangersJson[rangersJson.length - 1].Name); //last position of rangersJson
-                    }
+                    //delete last 2 rangers (it should be 2 new latest rangers)
+                    rangersJson.splice(rangersJson.length - 2);
+                    //push index 0 meaning that 1 ultra rangers not rate up has push
+                    rangersJson.push(specialJson[0]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
@@ -161,29 +158,30 @@ async function rateUp2() {
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
                 specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
-                let amount = specialJson.length;
-                let eachRate = 1.32; //already changed
-                let range = generateRandomRange(0.01, 22.00, eachRate, amount - 2); //-2 cuz rate-up only 2 rangers
+                let amount = 2;
+                let eachRate = 1.50; //already changed
+                let range = generateRandomRange(0.01, 22.00, eachRate, amount); //2 cuz rate-up only 2 common rangers
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    //j= 2 to 3 is rate-up sub1 ,sub2
-                    for (let j = 2, k = j; j < 4; j++, k++) {
+                    //j= 0 and 2 is rate-up main1 ,sub2
+                    for (let j = 0; j < 3; j++) {
+                        if (j == 1) { //skip unrate up
+                            continue;
+                        }
                         rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + rangersJson[k].Name);
                     }
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
                     special = true;
                 } else {
-                    //j= 0 - 1 is main1,main2 move to none special
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
-                    for (let j = 0; j < 1; j++) {
-                        rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert(rangersJson[rangersJson.length - 1].Name); //last position of rangersJson
-                    }
+                    //delete last 2 rangers (it should be 2 new latest rangers)
+                    rangersJson.splice(rangersJson.length - 2);
+                    //index 1 meaning second common rangers not rate up has push 
+                    rangersJson.push(specialJson[1]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
@@ -220,14 +218,26 @@ async function rateUp2() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count2").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count2").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
 
+    if (guaranteeCount < 15) {
+        guaranteeCount++;
+    }
+
+    if (guaranteeCount == 7) {
+        maxGuarantee = 15;
+    }
+
+    if (count * 300 == 2100) {
+        document.getElementById("btn-guarantee").style.display = "block";
+    } else if (count * 300 == 4500) {
+        document.getElementById("btn-guarantee1").style.display = "block";
+    }
 }
 
 // Function to handle modal opening after closing it

@@ -50,6 +50,16 @@
             "changes": [
                 "Fixed bug about use loop more than usually in gears random"
             ]
+        },
+        {
+            "version": "1.4.0",
+            "date": "2025-03-01",
+            "changes": [
+                "Added march rangers gacha",
+                "Added march gears gacha (beta)",
+                "Added guarantee system (free box)"
+            ]
         }
+        
     ]
 }

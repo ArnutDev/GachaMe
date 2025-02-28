@@ -1,32 +1,37 @@
 [
   {
-    "Name": "[DM]Kensuke",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_wpn_08_icon.png",
-    "ItemCode": "eq_2502_wpn_08"
+    "Name": "11th Anniv Radio",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2503_acc_08_icon.png",
+    "ItemCode": "eq_2503_acc_08"
   },
   {
-    "Name": "[DM]Ambrosia",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_wpn_18_icon.png",
-    "ItemCode": "eq_2502_wpn_18"
+    "Name": "11th Anniv Uniform",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2503_amr_08_icon.png",
+    "ItemCode": "eq_2503_amr_08"
   },
   {
-    "Name": "[DM]Chilchuck Bow",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_wpn_28_icon.png",
-    "ItemCode": "eq_2502_wpn_28"
+    "Name": "11th Anniv Gloves",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2503_wpn_08_icon.png",
+    "ItemCode": "eq_2503_wpn_08"
   },
   {
-    "Name": "[DM]Exorcism Sorbet",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_acc_07_icon.png",
-    "ItemCode": "eq_2502_acc_07"
+    "Name": "Christmas Holy Bow",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2212_wpn_07_icon.png",
+    "ItemCode": "eq_2212_wpn_07"
   },
   {
-    "Name": "[DM]Izutsumi's Scarf",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_acc_17_icon.png",
-    "ItemCode": "eq_2502_acc_17"
+    "Name": "Moon Shield",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_057_icon.png",
+    "ItemCode": "eq_amr_evt_057"
   },
   {
-    "Name": "[DM]Senshi's Pot",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2502_amr_06_icon.png",
-    "ItemCode": "eq_2502_amr_06"
+    "Name": "New Year's Flower Comb",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_047_icon.png",
+    "ItemCode": "eq_acc_evt_047"
+  },
+  {
+    "Name": "Queen Sally's Glove",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_016_icon.png",
+    "ItemCode": "eq_amr_evt_016"
   }
 ]

@@ -1,8 +1,9 @@
 let count = 0;
+let guaranteeCount = 0;
+let maxGuarantee = 7;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
-let u4 = 0;
 
 async function loadJSON(filePath) {
     try {
@@ -119,6 +120,7 @@ function getRandomPickRanger(min, max) {
 }
 
 async function normalGacha() {
+    document.getElementById("randomButton").style.display = "block";
     const divSlots = document.querySelectorAll('.content-display'); // select 7 div
     divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
 
@@ -130,35 +132,27 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
-                rangersJson = await loadJSON('json-data/rangers/8u-info-special.json'); // change this
-                let amount = rangersJson.length;
-                let eachRate = 0.12; //change rate
-                let range = generateRandomRange(0.01, 3.00, eachRate, amount);
-                let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/8u-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                }
+                //add new ultra rangers to this path first (except dark/light)
+                //rate-normal using the same rate like the others
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
+                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                rangersJson = await loadJSON('json-data/rangers/8c-info-special.json'); // change this
-                let amount = rangersJson.length;
-                let eachRate = 0.88; //change rate
-                let range = generateRandomRange(0.01, 22.00, eachRate, amount);
-                let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/8c-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
-                }
+                //add new common rangers to this path first (except dark/light)
+                //rate-normal using the same rate like the others
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                //this path is include get from scrapping that have only 3 rangers new 
+                specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
+                //push dark/light rangers here index is 0 for dark/light
+                rangersJson.push(specialJson[0]);
+                //use loop console.log for check the item was acttually added 
+                // for (let a = 0; a < rangersJson.length; a++) {
+                //     console.log(rangersJson[a].Name);
+                // }
+                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -167,7 +161,6 @@ async function normalGacha() {
 
             const randomIndex = getRandomPickRanger(0, rangersJson.length - 1);
             let rangers = rangersJson[randomIndex];
-
 
             // add data in div
             if (divSlots[i]) {
@@ -190,17 +183,74 @@ async function normalGacha() {
             }
 
         }
-        // update totall amount
+        // update total amount
+        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 300}`;
+        document.getElementById("u-ranger-1").innerHTML = u1;
+        document.getElementById("u-ranger-2").innerHTML = u2;
+        document.getElementById("u-ranger-3").innerHTML = u3;
+    }, 300);
+    count++;
+
+    if (guaranteeCount < 15) {
+        guaranteeCount++;
+    }
+
+    if (guaranteeCount == 7) {
+        maxGuarantee = 15;
+    }
+
+    if (count * 300 == 2100) {
+        document.getElementById("btn-guarantee").style.display = "block";
+    } else if (count * 300 == 4500) {
+        document.getElementById("btn-guarantee1").style.display = "block";
+    }
+}
+async function guarantee(type) {
+    const divSlots = document.querySelectorAll('.content-display'); // select 7 div
+    divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
+
+    setTimeout(async () => {
+        let specialJson;
+        let grade = "8 star";
+        let special = true;
+        //rate-normal using the same rate like the others
+        //add new special gears to this path first
+        specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
+
+        const randomIndex = getRandomPickRanger(0, specialJson.length - 1);
+        let rangers = specialJson[randomIndex];
+        // เพิ่มข้อมูลใน div
+        if (divSlots[5]) {
+            let border = ``;
+            if (special) {
+                if (await getStat(rangers)) { //when use async function dont forget await
+                    border = `border border-success border-5`;
+                    special = false;
+                }
+            }
+            divSlots[5].innerHTML = `
+                <div class="p-2 ${border} rounded">
+                    <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <img src="${rangers.Image}" alt="${rangers.Name}" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                    <p><strong>Grade:</strong> ${grade}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${rangers.Name}</p>
+                </div>
+            `;
+        }
+        // อัปเดตจำนวนรวม
         document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
-    count++;
-
+    if (type == 1) {
+        document.getElementById("btn-guarantee").style.display = "none";
+    } else if (type == 2) {
+        document.getElementById("btn-guarantee1").style.display = "none";
+    }
+    document.getElementById("randomButton").style.display = "none";
 }
-
 async function getStat(data) {
     const collabUltraJson = await loadJSON('json-data/rangers/8u-info-special.json'); //comprehensive
     const collabCommonJson = await loadJSON('json-data/rangers/8c-info-special.json'); //comprehensive
@@ -213,7 +263,7 @@ async function getStat(data) {
         if (collabUltraJson[index].Name === data.Name) {
             // if match then keep index value in result variable and +1 when even month has come 
             // and remove +1 when collabro come
-            result = index;
+            result = index + 1;
             break; // found stop the loop
         }
     }
@@ -225,14 +275,12 @@ async function getStat(data) {
             }
         }
     }
-    if (result == 0) { // light/dark | co-main1
+    if (result == 0) { // light/dark 
         u1++;
-    } else if (result == 1) { // sub1 | co-main2
+    } else if (result == 1) { // sub1 
         u2++;
-    } else if (result == 2) { // sub2 | co-sub1
+    } else if (result == 2) { // sub2 
         u3++;
-    } else if (result == 3) { // none | co-sub2
-        u4++;
     } else {
         return false;
     }
