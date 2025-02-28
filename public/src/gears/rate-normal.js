@@ -217,6 +217,15 @@ async function guarantee(type) {
         specialJson = await loadJSON('json-data/gears/gears-info-special.json');
 
         const randomIndex = getRandomPickGear(0, specialJson.length - 1);
+
+        //check amount of gears every month
+        if (randomIndex < 3) {
+            grade = "8 star";
+        } else if (randomIndex < 5) {
+            grade = "7 star";
+        } else {
+            grade = "6 star";
+        }
         let gears = specialJson[randomIndex];
         // เพิ่มข้อมูลใน div
         if (divSlots[1]) {

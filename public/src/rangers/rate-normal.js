@@ -211,7 +211,7 @@ async function guarantee(type) {
 
     setTimeout(async () => {
         let specialJson;
-        let grade;
+        let grade = "8 star";
         let special = true;
         //rate-normal using the same rate like the others
         //add new special gears to this path first
