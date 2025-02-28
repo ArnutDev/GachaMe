@@ -275,11 +275,11 @@ async function getStat(data) {
         }
     }
     if (result == 0) { // 8
-        u1++;
+        u3++; //switch next time
     } else if (result == 1) { // 8
         u2++;
     } else if (result == 2) { // 8
-        u3++;
+        u1++; //switch next time
     } else {
         return false;
     }
