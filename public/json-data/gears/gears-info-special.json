@@ -1,8 +1,8 @@
 [
   {
-    "Name": "11th Anniv Gloves",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2503_wpn_08_icon.png",
-    "ItemCode": "eq_2503_wpn_08"
+    "Name": "11th Anniv Radio",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2503_acc_08_icon.png",
+    "ItemCode": "eq_2503_acc_08"
   },
   {
     "Name": "11th Anniv Uniform",
@@ -10,9 +10,9 @@
     "ItemCode": "eq_2503_amr_08"
   },
   {
-    "Name": "11th Anniv Radio",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2503_acc_08_icon.png",
-    "ItemCode": "eq_2503_acc_08"
+    "Name": "11th Anniv Gloves",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2503_wpn_08_icon.png",
+    "ItemCode": "eq_2503_wpn_08"
   },
   {
     "Name": "Christmas Holy Bow",
