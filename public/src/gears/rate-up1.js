@@ -128,7 +128,7 @@ async function rateUp1() {
             if (chance <= 1) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
                 let amount = 1;
-                let eachRate = 0.60; //already changed
+                let eachRate = 0.80; //already changed
                 let range = generateRandomRange(0.01, 1.00, eachRate, amount); // 1 cuz rate-up 8 star special only have 1 of them
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
