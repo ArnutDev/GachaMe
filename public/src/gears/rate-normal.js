@@ -1,4 +1,6 @@
 let count = 0;
+let guaranteeCount = 0;
+let maxGuarantee = 15;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
@@ -122,6 +124,7 @@ function getRandomPickGear(min, max) {
 }
 
 async function normalGacha() {
+    document.getElementById("randomButton").style.display = "block";
     const divSlots = document.querySelectorAll('.content-display'); // select 7 div
     divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
 
@@ -230,7 +233,7 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 200}`;
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
@@ -239,9 +242,77 @@ async function normalGacha() {
         document.getElementById("u-gear-6").innerHTML = u6;
     }, 300);
     count++;
+    if (guaranteeCount < 25) {
+        guaranteeCount++;
+    }
 
+    if (guaranteeCount == 15) {
+        maxGuarantee = 25;
+    }
+    if (count * 200 == 3000) {
+        document.getElementById("btn-guarantee").style.display = "block";
+    } else if (count * 200 == 5000) {
+        document.getElementById("btn-guarantee1").style.display = "block";
+    }
 }
+async function guarantee(type) {
+    const divSlots = document.querySelectorAll('.content-display'); // select 7 div
+    divSlots.forEach(slot => (slot.innerHTML = '')); // clear old data
 
+    setTimeout(async () => {
+        let specialJson;
+        let grade;
+        let special = true;
+        //rate-normal using the same rate like the others
+        //add new special gears to this path first
+        specialJson = await loadJSON('json-data/gears/gears-info-special.json');
+
+        const randomIndex = getRandomPickGear(0, specialJson.length - 1);
+
+        //check amount of gears every month
+        if (randomIndex < 3) {
+            grade = "8 star";
+        } else if (randomIndex < 6) {
+            grade = "7 star";
+        } else {
+            grade = "6 star";
+        }
+        let gears = specialJson[randomIndex];
+        // เพิ่มข้อมูลใน div
+        if (divSlots[1]) {
+            let border = ``;
+            if (special) {
+                if (await getStat(gears)) { //when use async function dont forget await
+                    border = `border border-success border-5`;
+                    special = false;
+                }
+            }
+            divSlots[1].innerHTML = `
+                <div class="p-2 ${border} rounded">
+                    <div class="image-box d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <img src="${gears.Image}" alt="${gears.Name}" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                    <p><strong>Grade:</strong> ${grade}</p>
+                    <p class="mt-2"><strong>Name:</strong> ${gears.Name}</p>
+                </div>
+            `;
+        }
+        // อัปเดตจำนวนรวม
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count * 200}`;
+        document.getElementById("u-gear-1").innerHTML = u1;
+        document.getElementById("u-gear-2").innerHTML = u2;
+        document.getElementById("u-gear-3").innerHTML = u3;
+        document.getElementById("u-gear-4").innerHTML = u4;
+        document.getElementById("u-gear-5").innerHTML = u5;
+        document.getElementById("u-gear-6").innerHTML = u6;
+    }, 300);
+    if (type == 1) {
+        document.getElementById("btn-guarantee").style.display = "none";
+    } else if (type == 2) {
+        document.getElementById("btn-guarantee1").style.display = "none";
+    }
+    document.getElementById("randomButton").style.display = "none";
+}
 async function getStat(data) {
     const collabCommonJson = await loadJSON('json-data/gears/gears-info-special.json'); //comprehensive
 
