@@ -254,8 +254,6 @@ async function guarantee(type) {
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
         document.getElementById("u-ranger-4").innerHTML = u4;
-        document.getElementById("u-ranger-5").innerHTML = u5;
-        document.getElementById("u-ranger-6").innerHTML = u6;
     }, 300);
     if (type == 1) {
         document.getElementById("btn-guarantee").style.display = "none";
