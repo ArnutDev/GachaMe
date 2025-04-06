@@ -8,7 +8,7 @@ async function loadChangelog() {
         const cardContainer = document.getElementById('card-container');
 
         // เรียงลำดับ changelog จากล่างขึ้นบน (index สุดท้ายไป index แรก)
-        const reversedChangelog = data.changelog.reverse();
+        const reversedChangelog = data.reverse();
 
         // วนลูปแสดง changelog
         reversedChangelog.forEach(entry => {
