@@ -1,22 +1,22 @@
 [
   {
-    "Name": "Swordsman Laios",
-    "Image": "https://rangers.lerico.net/res/u1469u-la/u1469u-la-thum.png",
-    "UnitCode": "u1469u-la"
+    "Name": "Science Club Senku Ishigami",
+    "Image": "https://rangers.lerico.net/res/u1488u-is/u1488u-is-thum.png",
+    "UnitCode": "u1488u-is"
   },
   {
-    "Name": "Elven Mage Marcille",
-    "Image": "https://rangers.lerico.net/res/u1471u-ma/u1471u-ma-thum.png",
-    "UnitCode": "u1471u-ma"
+    "Name": "Scientist of Darkness Dr. Xeno",
+    "Image": "https://rangers.lerico.net/res/u1490u-dr/u1490u-dr-thum.png",
+    "UnitCode": "u1490u-dr"
   },
   {
-    "Name": "Sharp Senses Chilchuck",
-    "Image": "https://rangers.lerico.net/res/u1473u-ch/u1473u-ch-thum.png",
-    "UnitCode": "u1473u-ch"
+    "Name": "Elite Sniper Stanley",
+    "Image": "https://rangers.lerico.net/res/u1492u-st/u1492u-st-thum.png",
+    "UnitCode": "u1492u-st"
   },
   {
-    "Name": "Dwarf Warrior Senshi",
-    "Image": "https://rangers.lerico.net/res/u1475u-se/u1475u-se-thum.png",
-    "UnitCode": "u1475u-se"
+    "Name": "Mentalist Gen Asagiri",
+    "Image": "https://rangers.lerico.net/res/u1494u-as/u1494u-as-thum.png",
+    "UnitCode": "u1494u-as"
   }
 ]

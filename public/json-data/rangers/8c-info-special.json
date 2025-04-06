@@ -1,22 +1,22 @@
 [
   {
-    "Name": "Laios",
-    "Image": "https://rangers.lerico.net/res/u1469e-la/u1469e-la-thum.png",
-    "UnitCode": "u1469e-la"
+    "Name": "Senku Ishigami",
+    "Image": "https://rangers.lerico.net/res/u1488e-is/u1488e-is-thum.png",
+    "UnitCode": "u1488e-is"
   },
   {
-    "Name": "Marcille",
-    "Image": "https://rangers.lerico.net/res/u1471e-ma/u1471e-ma-thum.png",
-    "UnitCode": "u1471e-ma"
+    "Name": "Dr. Xeno",
+    "Image": "https://rangers.lerico.net/res/u1490e-dr/u1490e-dr-thum.png",
+    "UnitCode": "u1490e-dr"
   },
   {
-    "Name": "Chilchuck",
-    "Image": "https://rangers.lerico.net/res/u1473e-ch/u1473e-ch-thum.png",
-    "UnitCode": "u1473e-ch"
+    "Name": "Stanley",
+    "Image": "https://rangers.lerico.net/res/u1492e-st/u1492e-st-thum.png",
+    "UnitCode": "u1492e-st"
   },
   {
-    "Name": "Senshi",
-    "Image": "https://rangers.lerico.net/res/u1475e-se/u1475e-se-thum.png",
-    "UnitCode": "u1475e-se"
+    "Name": "Gen Asagiri",
+    "Image": "https://rangers.lerico.net/res/u1494e-as/u1494e-as-thum.png",
+    "UnitCode": "u1494e-as"
   }
 ]
