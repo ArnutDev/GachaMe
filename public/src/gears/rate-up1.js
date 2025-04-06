@@ -165,7 +165,7 @@ async function rateUp1() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 4 is 7 special have rate-up 1 of them
-                    for (let j = 4, k = 0; j < 5; j++, k++) {
+                    for (let j = 3, k = 0; j < 4; j++, k++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert('sp> ' + gearsJson[k].Name);
                     }
@@ -175,7 +175,7 @@ async function rateUp1() {
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
                     //j= 3 is 1 of them that not rate-up now then move to none special
-                    for (let j = 3; j < 4; j++) {
+                    for (let j = 4; j < 5; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
                     }
