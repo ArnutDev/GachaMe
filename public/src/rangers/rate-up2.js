@@ -220,7 +220,7 @@ async function rateUp2() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count2").innerHTML = ` ${count}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count2").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
@@ -228,6 +228,19 @@ async function rateUp2() {
     }, 300);
     count++;
 
+    if (guaranteeCount < 15) {
+        guaranteeCount++;
+    }
+
+    if (guaranteeCount == 7) {
+        maxGuarantee = 15;
+    }
+
+    if (count * 300 == 2100) {
+        document.getElementById("btn-guarantee").style.display = "block";
+    } else if (count * 300 == 4500) {
+        document.getElementById("btn-guarantee1").style.display = "block";
+    }
 }
 
 // Function to handle modal opening after closing it
