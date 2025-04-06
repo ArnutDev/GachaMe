@@ -1,17 +1,22 @@
 [
   {
-    "Name": "New Soldier Brown",
-    "Image": "https://rangers.lerico.net/res/u1482e-brown/u1482e-brown-thum.png",
-    "UnitCode": "u1482e-brown"
+    "Name": "Senku Ishigami",
+    "Image": "https://rangers.lerico.net/res/u1488e-is/u1488e-is-thum.png",
+    "UnitCode": "u1488e-is"
   },
   {
-    "Name": "Chinese Opera Cony",
-    "Image": "https://rangers.lerico.net/res/u1480e-cony/u1480e-cony-thum.png",
-    "UnitCode": "u1480e-cony"
+    "Name": "Dr. Xeno",
+    "Image": "https://rangers.lerico.net/res/u1490e-dr/u1490e-dr-thum.png",
+    "UnitCode": "u1490e-dr"
   },
   {
-    "Name": "Samurai Moon",
-    "Image": "https://rangers.lerico.net/res/u1486e-moon/u1486e-moon-thum.png",
-    "UnitCode": "u1486e-moon"
+    "Name": "Stanley",
+    "Image": "https://rangers.lerico.net/res/u1492e-st/u1492e-st-thum.png",
+    "UnitCode": "u1492e-st"
+  },
+  {
+    "Name": "Gen Asagiri",
+    "Image": "https://rangers.lerico.net/res/u1494e-as/u1494e-as-thum.png",
+    "UnitCode": "u1494e-as"
   }
 ]

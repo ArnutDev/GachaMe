@@ -30,19 +30,19 @@ gears-rand.html
 src
     /rangers
         rate-normal.js
-            -after add new data in jason-data folder uncomment loop console.log 
+            -after add new data in json-data folder uncomment loop console.log 
             for check if it push success Done!
 
         rate-up(N)
-            -after add new data in jason-data folder uncomment loop console.log 
+            -after add new data in json-data folder uncomment loop console.log 
             for check if it push success Done!
     /gears
         rate-normal.js
-            -after add new data in jason-data folder uncomment loop console.log 
+            -after add new data in json-data folder uncomment loop console.log 
             for check if it push success Done!
         
         rate-up(N)
-            -after add new data in jason-data folder uncomment loop console.log 
+            -after add new data in json-data folder uncomment loop console.log 
             for check if it push success Done!
 
 assets
