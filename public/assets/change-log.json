@@ -1,55 +1,69 @@
-{
-    "changelog": [
-        
-        {
-            "version": "First release 1.0.0",
-            "date": "2024-12-22",
-            "changes": [
-                "Added normal gacha",
-                "Added stats sidebar"
-            ]
-        },
-        {
-            "version": "1.1.0",
-            "date": "2024-12-23",
-            "changes": [
-                "Fixed rate gacha",
-                "Added 2 rate-up gacha",
-                "Updated UI"
-            ]
-        },
-        {
-            "version": "1.2.0",
-            "date": "2025-01-01",
-            "changes": [
-                "Updated new UI",
-                "Added january rangers gacha",
-                "Added january gears gacha (beta)"
-            ]
-        },
-        {
-            "version": "1.2.1",
-            "date": "2025-01-01",
-            "changes": [
-                "Fixed navigation button",
-                "Updated image about leonard in Rangers Gacha"
-            ]
-        },
-        {
-            "version": "1.3.0",
-            "date": "2025-01-31",
-            "changes": [
-                "Added february rangers gacha",
-                "Added february gears gacha (beta)",
-                "Fixed rate gacha"
-            ]
-        },
-        {
-            "version": "1.3.1",
-            "date": "2025-01-01",
-            "changes": [
-                "Fixed bug about use loop more than usually in gears random"
-            ]
-        }
-    ]
-}
+[
+    {
+        "version": "First release 1.0.0",
+        "date": "2024-12-22",
+        "changes": [
+            "Added normal gacha",
+            "Added stats sidebar"
+        ]
+    },
+    {
+        "version": "1.1.0",
+        "date": "2024-12-23",
+        "changes": [
+            "Fixed rate gacha",
+            "Added 2 rate-up gacha",
+            "Updated UI"
+        ]
+    },
+    {
+        "version": "1.2.0",
+        "date": "2025-01-01",
+        "changes": [
+            "Updated new UI",
+            "Added january rangers gacha",
+            "Added january gears gacha (beta)"
+        ]
+    },
+    {
+        "version": "1.2.1",
+        "date": "2025-01-01",
+        "changes": [
+            "Fixed navigation button",
+            "Updated image about leonard in Rangers Gacha"
+        ]
+    },
+    {
+        "version": "1.3.0",
+        "date": "2025-01-31",
+        "changes": [
+            "Added february rangers gacha",
+            "Added february gears gacha (beta)",
+            "Fixed rate gacha"
+        ]
+    },
+    {
+        "version": "1.3.1",
+        "date": "2025-01-01",
+        "changes": [
+            "Fixed bug about use loop more than usually in gears random"
+        ]
+    },
+    {
+        "version": "1.4.0",
+        "date": "2025-03-01",
+        "changes": [
+            "Added march rangers gacha",
+            "Added march gears gacha (beta)",
+            "Added guarantee system (free box)"
+        ]
+    },
+    {
+        "version": "1.5.0",
+        "date": "2025-04-06",
+        "changes": [
+            "Added april rangers gacha",
+            "Added april gears gacha"
+        ]
+    }
+]
