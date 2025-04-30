@@ -1,32 +1,77 @@
 [
   {
-    "Name": "[DS]Senku's Tool Pouch",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_amr_08_icon.png",
-    "ItemCode": "eq_2504_amr_08"
+    "Name": "Leonard's Mysterious Bomb",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_08_icon.png",
+    "ItemCode": "eq_wpn_evt_08"
   },
   {
-    "Name": "[DS]Dr. Xeno's Headphones",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_amr_18_icon.png",
-    "ItemCode": "eq_2504_amr_18"
+    "Name": "Leonard's Tough Dumbbell",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_18_icon.png",
+    "ItemCode": "eq_wpn_evt_18"
   },
   {
-    "Name": "[DS]Ryusui's Hat",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_amr_28_icon.png",
-    "ItemCode": "eq_2504_amr_28"
+    "Name": "Leonard's Quick Umbrella",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_28_icon.png",
+    "ItemCode": "eq_wpn_evt_28"
   },
   {
-    "Name": "[DS] Stanley's Gun",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_wpn_07_icon.png",
-    "ItemCode": "eq_2504_wpn_07"
+    "Name": "Croc King's Sword",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2305_wpn_08_icon.png",
+    "ItemCode": "eq_2305_wpn_08"
   },
   {
-    "Name": "[DS]Dr. Xeno's Gloves",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_wpn_17_icon.png",
-    "ItemCode": "eq_2504_wpn_17"
+    "Name": "Leonard's Quick Belt",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_08_icon.png",
+    "ItemCode": "eq_amr_evt_08"
   },
   {
-    "Name": "[DS]Medusa",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_acc_06_icon.png",
-    "ItemCode": "eq_2504_acc_06"
+    "Name": "Leonard's Mysterious Bag",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_18_icon.png",
+    "ItemCode": "eq_amr_evt_18"
+  },
+  {
+    "Name": "Leonard's Tough Vest",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_28_icon.png",
+    "ItemCode": "eq_amr_evt_28"
+  },
+  {
+    "Name": "Leonard's Tough Watch",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_08_icon.png",
+    "ItemCode": "eq_acc_evt_08"
+  },
+  {
+    "Name": "Leonard's Quick Visor",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_18_icon.png",
+    "ItemCode": "eq_acc_evt_18"
+  },
+  {
+    "Name": "Leonard's Mysterious Syringe",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_28_icon.png",
+    "ItemCode": "eq_acc_evt_28"
+  },
+  {
+    "Name": "Belle Cony's Hairpin",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2305_acc_08_icon.png",
+    "ItemCode": "eq_2305_acc_08"
+  },
+  {
+    "Name": "Leonard's Ingenious Outfit",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_027_icon.png",
+    "ItemCode": "eq_amr_evt_027"
+  },
+  {
+    "Name": "Leonard's Mighty Hammer",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_007_icon.png",
+    "ItemCode": "eq_wpn_evt_007"
+  },
+  {
+    "Name": "Leonard's Delicate Device",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_017_icon.png",
+    "ItemCode": "eq_acc_evt_017"
+  },
+  {
+    "Name": "Queen Sally's Glove",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_016_icon.png",
+    "ItemCode": "eq_amr_evt_016"
   }
 ]
