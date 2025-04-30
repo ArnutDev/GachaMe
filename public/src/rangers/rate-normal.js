@@ -133,35 +133,35 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
-                rangersJson = await loadJSON('json-data/rangers/8u-info-special.json'); // change this
-                let amount = rangersJson.length;
-                let eachRate = 0.12; //change rate
-                let range = generateRandomRange(0.01, 3.00, eachRate, amount);
-                let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/8u-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                }
+                // rangersJson = await loadJSON('json-data/rangers/8u-info-special.json'); // change this
+                // let amount = rangersJson.length;
+                // let eachRate = 0.12; //change rate
+                // let range = generateRandomRange(0.01, 3.00, eachRate, amount);
+                // let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
+                // let result = checkValueInRange(value, range);
+                // if (result) {
+                //     rangersJson = await loadJSON('json-data/rangers/8u-info-special.json');
+                //     special = true;
+                // } else {
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
+                // }
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                rangersJson = await loadJSON('json-data/rangers/8c-info-special.json'); // change this
-                let amount = rangersJson.length;
-                let eachRate = 0.88; //change rate
-                let range = generateRandomRange(0.01, 22.00, eachRate, amount);
-                let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    rangersJson = await loadJSON('json-data/rangers/8c-info-special.json');
-                    special = true;
-                } else {
-                    rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
-                }
+                // rangersJson = await loadJSON('json-data/rangers/8c-info-special.json'); // change this
+                // let amount = rangersJson.length;
+                // let eachRate = 0.88; //change rate
+                // let range = generateRandomRange(0.01, 22.00, eachRate, amount);
+                // let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
+                // let result = checkValueInRange(value, range);
+                // if (result) {
+                //     rangersJson = await loadJSON('json-data/rangers/8c-info-special.json');
+                //     special = true;
+                // } else {
+                rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                // }
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -253,7 +253,7 @@ async function guarantee(type) {
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
+        // document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     if (type == 1) {
         document.getElementById("btn-guarantee").style.display = "none";
@@ -274,7 +274,7 @@ async function getStat(data) {
         if (collabUltraJson[index].Name === data.Name) {
             // if match then keep index value in result variable and +1 when even month has come 
             // and remove +1 when collabro come
-            result = index;
+            result = index + 1;
             break; // found stop the loop
         }
     }
