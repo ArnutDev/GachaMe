@@ -130,6 +130,7 @@ async function normalGacha() {
         for (let i = 0; i < 7; i++) {
             const chance = getRandomRangers(0, 100);
             let rangersJson;
+            let specialJson;
             let grade;
             let special = false;
             if (chance <= 3) {
@@ -145,6 +146,8 @@ async function normalGacha() {
                 // } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
                 // }
+                // console.log(rangersJson)
+                special = true
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
@@ -161,7 +164,11 @@ async function normalGacha() {
                 //     special = true;
                 // } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
+                specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
+                rangersJson.push(specialJson[0]);
                 // }
+                // console.log(rangersJson)
+                special = true
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
@@ -198,7 +205,7 @@ async function normalGacha() {
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        document.getElementById("u-ranger-4").innerHTML = u4;
+        // document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     count++;
     if (guaranteeCount < 15) {

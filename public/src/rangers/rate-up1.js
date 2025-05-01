@@ -141,7 +141,7 @@ async function rateUp1() {
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
-                    special = true;
+
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
                     //delete last 2 rangers (it should be 2 new latest rangers)
@@ -152,6 +152,7 @@ async function rateUp1() {
                     //     console.log(rangersJson[a].Name);
                     // }
                 }
+                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
@@ -172,7 +173,7 @@ async function rateUp1() {
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
-                    special = true;
+
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
                     //delete last 2 rangers (it should be 2 new latest rangers)
@@ -183,6 +184,7 @@ async function rateUp1() {
                     //     console.log(rangersJson[a].Name);
                     // }
                 }
+                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');
