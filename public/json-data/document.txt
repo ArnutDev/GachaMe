@@ -7,7 +7,6 @@ rangers-rand.html
     -topic 
         "Gacha Rangers for"
     -info in card 
-        "img src"
         "Odds UP:"
         *line <br> should be equality in every card
     -footer
