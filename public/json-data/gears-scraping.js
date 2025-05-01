@@ -1,10 +1,6 @@
 const targetNames = [
-    "11th Anniv Gloves",
-    "11th Anniv Uniform",
-    "11th Anniv Radio",
-    "Christmas Holy Bow",
-    "Moon Shield",
-    "New Year's Flower Comb",
+    "Croc King's Sword",
+    "Belle Cony's Hairpin",
     "Queen Sally's Glove"
 ];
 

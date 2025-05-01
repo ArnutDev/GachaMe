@@ -1,7 +1,10 @@
 const targetNames = [
-    "Ninja Moon",
-    "Hero Chinese Opera Cony"
+    "Super Butler KSM",
+    "Soda Parfait Sally"
 ];
+//Super Butler KSM
+//Soda Parfait Sally
+
 const data = [];
 
 function searchAndStoreData(queries) {
@@ -66,7 +69,7 @@ function searchAndStoreData(queries) {
 }
 
 // ฟังก์ชันดาวน์โหลดไฟล์ JSON
-function downloadJSON(data, filename = "8c-info-special.json") { // 8c,8u
+function downloadJSON(data, filename = "8u-info-special.json") { // 8c,8u
     const blob = new Blob([JSON.stringify(data, null, 2)], {
         type: "application/json"
     });
