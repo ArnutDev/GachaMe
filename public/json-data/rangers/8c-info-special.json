@@ -1,22 +1,17 @@
 [
   {
-    "Name": "Senku Ishigami",
-    "Image": "https://rangers.lerico.net/res/u1488e-is/u1488e-is-thum.png",
-    "UnitCode": "u1488e-is"
+    "Name": "Maid Cony",
+    "Image": "https://rangers.lerico.net/res/u1501e-cony/u1501e-cony-thum.png",
+    "UnitCode": "u1501e-cony"
   },
   {
-    "Name": "Dr. Xeno",
-    "Image": "https://rangers.lerico.net/res/u1490e-dr/u1490e-dr-thum.png",
-    "UnitCode": "u1490e-dr"
+    "Name": "Butler KSM",
+    "Image": "https://rangers.lerico.net/res/u1497e-ksm/u1497e-ksm-thum.png",
+    "UnitCode": "u1497e-ksm"
   },
   {
-    "Name": "Stanley",
-    "Image": "https://rangers.lerico.net/res/u1492e-st/u1492e-st-thum.png",
-    "UnitCode": "u1492e-st"
-  },
-  {
-    "Name": "Gen Asagiri",
-    "Image": "https://rangers.lerico.net/res/u1494e-as/u1494e-as-thum.png",
-    "UnitCode": "u1494e-as"
+    "Name": "Parfait Sally",
+    "Image": "https://rangers.lerico.net/res/u1499e-sally/u1499e-sally-thum.png",
+    "UnitCode": "u1499e-sally"
   }
 ]

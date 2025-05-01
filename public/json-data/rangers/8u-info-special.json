@@ -1,22 +1,12 @@
 [
   {
-    "Name": "Science Club Senku Ishigami",
-    "Image": "https://rangers.lerico.net/res/u1488u-is/u1488u-is-thum.png",
-    "UnitCode": "u1488u-is"
+    "Name": "Super Butler KSM",
+    "Image": "https://rangers.lerico.net/res/u1497u-ksm/u1497u-ksm-thum.png",
+    "UnitCode": "u1497u-ksm"
   },
   {
-    "Name": "Scientist of Darkness Dr. Xeno",
-    "Image": "https://rangers.lerico.net/res/u1490u-dr/u1490u-dr-thum.png",
-    "UnitCode": "u1490u-dr"
-  },
-  {
-    "Name": "Elite Sniper Stanley",
-    "Image": "https://rangers.lerico.net/res/u1492u-st/u1492u-st-thum.png",
-    "UnitCode": "u1492u-st"
-  },
-  {
-    "Name": "Mentalist Gen Asagiri",
-    "Image": "https://rangers.lerico.net/res/u1494u-as/u1494u-as-thum.png",
-    "UnitCode": "u1494u-as"
+    "Name": "Soda Parfait Sally",
+    "Image": "https://rangers.lerico.net/res/u1499u-sally/u1499u-sally-thum.png",
+    "UnitCode": "u1499u-sally"
   }
 ]
