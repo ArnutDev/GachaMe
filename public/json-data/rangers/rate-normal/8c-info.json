@@ -678,5 +678,15 @@
     "Name": "Samurai Moon",
     "Image": "https://rangers.lerico.net/res/u1486e-moon/u1486e-moon-thum.png",
     "UnitCode": "u1486e-moon"
+  },
+  {
+    "Name": "Butler KSM",
+    "Image": "https://rangers.lerico.net/res/u1497e-ksm/u1497e-ksm-thum.png",
+    "UnitCode": "u1497e-ksm"
+  },
+  {
+    "Name": "Parfait Sally",
+    "Image": "https://rangers.lerico.net/res/u1499e-sally/u1499e-sally-thum.png",
+    "UnitCode": "u1499e-sally"
   }
 ]

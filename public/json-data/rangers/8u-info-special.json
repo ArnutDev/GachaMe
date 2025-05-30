@@ -1,22 +1,22 @@
 [
   {
-    "Name": "Science Club Senku Ishigami",
-    "Image": "https://rangers.lerico.net/res/u1488u-is/u1488u-is-thum.png",
-    "UnitCode": "u1488u-is"
+    "Name": "High Schooler Taiyo",
+    "Image": "https://rangers.lerico.net/res/u1511u-ty/u1511u-ty-thum.png",
+    "UnitCode": "u1511u-ty"
   },
   {
-    "Name": "Scientist of Darkness Dr. Xeno",
-    "Image": "https://rangers.lerico.net/res/u1490u-dr/u1490u-dr-thum.png",
-    "UnitCode": "u1490u-dr"
+    "Name": "Genius Hacker Shion",
+    "Image": "https://rangers.lerico.net/res/u1504u-so/u1504u-so-thum.png",
+    "UnitCode": "u1504u-so"
   },
   {
-    "Name": "Elite Sniper Stanley",
-    "Image": "https://rangers.lerico.net/res/u1492u-st/u1492u-st-thum.png",
-    "UnitCode": "u1492u-st"
+    "Name": "Aikido Master Futaba",
+    "Image": "https://rangers.lerico.net/res/u1508u-ft/u1508u-ft-thum.png",
+    "UnitCode": "u1508u-ft"
   },
   {
-    "Name": "Mentalist Gen Asagiri",
-    "Image": "https://rangers.lerico.net/res/u1494u-as/u1494u-as-thum.png",
-    "UnitCode": "u1494u-as"
+    "Name": "Weapons Expert Shinzo",
+    "Image": "https://rangers.lerico.net/res/u1506u-sz/u1506u-sz-thum.png",
+    "UnitCode": "u1506u-sz"
   }
 ]

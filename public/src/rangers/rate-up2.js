@@ -129,29 +129,30 @@ async function rateUp2() {
             let special = false;
             if (chance <= 3) {
                 specialJson = await loadJSON('json-data/rangers/8u-info-special.json');
-                let amount = 1;
+                let amount = 2;
                 let eachRate = 0.22; //already changed
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount); //1 cuz rate-up only 1 rangers
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 // console.log('u: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    //index 1 meaning the second ultra has push
-                    rangersJson.push(specialJson[1]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    //j= 0 to 1 is rate-up main1 ,sub1
+                    for (let j = 2; j < 4; j++) {
+                        rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    }
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
-                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                    //delete last 2 rangers (it should be 2 new latest rangers)
-                    rangersJson.splice(rangersJson.length - 2);
-                    //push index 0 meaning that 1 ultra rangers not rate up has push
-                    rangersJson.push(specialJson[0]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    for (let j = 0; j < 2; j++) {
+                        rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    }
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
                 }
+                special = true;
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
@@ -165,27 +166,23 @@ async function rateUp2() {
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    //j= 0 and 2 is rate-up main1 ,sub2
-                    for (let j = 0; j < 3; j++) {
-                        if (j == 1) { //skip unrate up
-                            continue;
-                        }
+                    //j= 0 to 1 is rate-up main1 ,sub1
+                    for (let j = 2; j < 4; j++) {
                         rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     }
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
-                    special = true;
                 } else {
                     rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
-                    //delete last 2 rangers (it should be 2 new latest rangers)
-                    rangersJson.splice(rangersJson.length - 2);
-                    //index 1 meaning second common rangers not rate up has push 
-                    rangersJson.push(specialJson[1]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    for (let j = 0; j < 2; j++) {
+                        rangersJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    }
                     // for (let a = 0; a < rangersJson.length; a++) {
                     //     console.log(rangersJson[a].Name);
                     // }
                 }
+                special = true;
                 grade = "8 star";
             } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7c-info.json');

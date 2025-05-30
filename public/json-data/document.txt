@@ -59,12 +59,9 @@ assets
                     -add new data rangers in 8c-info.json and 8u-info.json (except dark/light) Done!
         /gears
             -just scraping new data and put it on gears-info-special.json for seperate use
-<<<<<<< HEAD
                 /rate-normal
                     -add new data rangers in gears-info-special.json Done!
-=======
             
->>>>>>> mar-update
     change-log.json
         update chagnelog everytime it change
 

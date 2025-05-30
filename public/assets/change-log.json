@@ -21,8 +21,8 @@
         "date": "2025-01-01",
         "changes": [
             "Updated new UI",
-            "Added january rangers gacha",
-            "Added january gears gacha (beta)"
+            "Added January rangers gacha",
+            "Added January gears gacha (beta)"
         ]
     },
     {
@@ -37,8 +37,8 @@
         "version": "1.3.0",
         "date": "2025-01-31",
         "changes": [
-            "Added february rangers gacha",
-            "Added february gears gacha (beta)",
+            "Added February rangers gacha",
+            "Added February gears gacha (beta)",
             "Fixed rate gacha"
         ]
     },
@@ -53,8 +53,8 @@
         "version": "1.4.0",
         "date": "2025-03-01",
         "changes": [
-            "Added march rangers gacha",
-            "Added march gears gacha (beta)",
+            "Added March rangers gacha",
+            "Added March gears gacha (beta)",
             "Added guarantee system (free box)"
         ]
     },
@@ -62,8 +62,23 @@
         "version": "1.5.0",
         "date": "2025-04-06",
         "changes": [
-            "Added april rangers gacha",
-            "Added april gears gacha"
+            "Added April rangers gacha",
+            "Added April gears gacha"
+        ]
+    },
+    {
+        "version": "1.6.0",
+        "date": "2025-05-01",
+        "changes": [
+            "Added May rangers gacha"
+        ]
+    },
+    {
+        "version": "1.7.0",
+        "date": "2025-05-30",
+        "changes": [
+            "Added June rangers gacha",
+            "Added June gears gacha"
         ]
     }
 ]

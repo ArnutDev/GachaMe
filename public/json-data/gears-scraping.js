@@ -1,11 +1,10 @@
 const targetNames = [
-    "11th Anniv Gloves",
-    "11th Anniv Uniform",
-    "11th Anniv Radio",
-    "Christmas Holy Bow",
-    "Moon Shield",
-    "New Year's Flower Comb",
-    "Queen Sally's Glove"
+    "Sakura Ring",
+    "Shion Loupe",
+    "Spider Nest",
+    "Yozakura T-Shirt",
+    "Gecko Gloves",
+    "Yae"
 ];
 
 function searchAndStoreData(queries) {

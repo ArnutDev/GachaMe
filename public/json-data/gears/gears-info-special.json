@@ -1,32 +1,32 @@
 [
   {
-    "Name": "[DS]Senku's Tool Pouch",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_amr_08_icon.png",
-    "ItemCode": "eq_2504_amr_08"
+    "Name": "Sakura Ring",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_08_icon.png",
+    "ItemCode": "eq_2506_acc_08"
   },
   {
-    "Name": "[DS]Dr. Xeno's Headphones",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_amr_18_icon.png",
-    "ItemCode": "eq_2504_amr_18"
+    "Name": "Shion Loupe",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_18_icon.png",
+    "ItemCode": "eq_2506_acc_18"
   },
   {
-    "Name": "[DS]Ryusui's Hat",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_amr_28_icon.png",
-    "ItemCode": "eq_2504_amr_28"
+    "Name": "Spider Nest",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_28_icon.png",
+    "ItemCode": "eq_2506_acc_28"
   },
   {
-    "Name": "[DS] Stanley's Gun",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_wpn_07_icon.png",
-    "ItemCode": "eq_2504_wpn_07"
+    "Name": "Yozakura T-Shirt",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_amr_07_icon.png",
+    "ItemCode": "eq_2506_amr_07"
   },
   {
-    "Name": "[DS]Dr. Xeno's Gloves",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_wpn_17_icon.png",
-    "ItemCode": "eq_2504_wpn_17"
+    "Name": "Gecko Gloves",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_amr_17_icon.png",
+    "ItemCode": "eq_2506_amr_17"
   },
   {
-    "Name": "[DS]Medusa",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2504_acc_06_icon.png",
-    "ItemCode": "eq_2504_acc_06"
+    "Name": "Yae",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_wpn_06_icon.png",
+    "ItemCode": "eq_2506_wpn_06"
   }
 ]

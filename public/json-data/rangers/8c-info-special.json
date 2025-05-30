@@ -1,22 +1,22 @@
 [
   {
-    "Name": "Senku Ishigami",
-    "Image": "https://rangers.lerico.net/res/u1488e-is/u1488e-is-thum.png",
-    "UnitCode": "u1488e-is"
+    "Name": "Taiyo",
+    "Image": "https://rangers.lerico.net/res/u1511e-ty/u1511e-ty-thum.png",
+    "UnitCode": "u1511e-ty"
   },
   {
-    "Name": "Dr. Xeno",
-    "Image": "https://rangers.lerico.net/res/u1490e-dr/u1490e-dr-thum.png",
-    "UnitCode": "u1490e-dr"
+    "Name": "Shion",
+    "Image": "https://rangers.lerico.net/res/u1504e-so/u1504e-so-thum.png",
+    "UnitCode": "u1504e-so"
   },
   {
-    "Name": "Stanley",
-    "Image": "https://rangers.lerico.net/res/u1492e-st/u1492e-st-thum.png",
-    "UnitCode": "u1492e-st"
+    "Name": "Futaba",
+    "Image": "https://rangers.lerico.net/res/u1508e-ft/u1508e-ft-thum.png",
+    "UnitCode": "u1508e-ft"
   },
   {
-    "Name": "Gen Asagiri",
-    "Image": "https://rangers.lerico.net/res/u1494e-as/u1494e-as-thum.png",
-    "UnitCode": "u1494e-as"
+    "Name": "Shinzo",
+    "Image": "https://rangers.lerico.net/res/u1506e-sz/u1506e-sz-thum.png",
+    "UnitCode": "u1506e-sz"
   }
 ]
