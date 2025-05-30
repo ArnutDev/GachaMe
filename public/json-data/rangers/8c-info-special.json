@@ -1,17 +1,22 @@
 [
   {
-    "Name": "Maid Cony",
-    "Image": "https://rangers.lerico.net/res/u1501e-cony/u1501e-cony-thum.png",
-    "UnitCode": "u1501e-cony"
+    "Name": "Taiyo",
+    "Image": "https://rangers.lerico.net/res/u1511e-ty/u1511e-ty-thum.png",
+    "UnitCode": "u1511e-ty"
   },
   {
-    "Name": "Butler KSM",
-    "Image": "https://rangers.lerico.net/res/u1497e-ksm/u1497e-ksm-thum.png",
-    "UnitCode": "u1497e-ksm"
+    "Name": "Shion",
+    "Image": "https://rangers.lerico.net/res/u1504e-so/u1504e-so-thum.png",
+    "UnitCode": "u1504e-so"
   },
   {
-    "Name": "Parfait Sally",
-    "Image": "https://rangers.lerico.net/res/u1499e-sally/u1499e-sally-thum.png",
-    "UnitCode": "u1499e-sally"
+    "Name": "Futaba",
+    "Image": "https://rangers.lerico.net/res/u1508e-ft/u1508e-ft-thum.png",
+    "UnitCode": "u1508e-ft"
+  },
+  {
+    "Name": "Shinzo",
+    "Image": "https://rangers.lerico.net/res/u1506e-sz/u1506e-sz-thum.png",
+    "UnitCode": "u1506e-sz"
   }
 ]

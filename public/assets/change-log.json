@@ -72,5 +72,13 @@
         "changes": [
             "Added May rangers gacha"
         ]
+    },
+    {
+        "version": "1.7.0",
+        "date": "2025-05-30",
+        "changes": [
+            "Added June rangers gacha",
+            "Added June gears gacha"
+        ]
     }
 ]

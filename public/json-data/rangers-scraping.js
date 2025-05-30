@@ -1,10 +1,15 @@
 const targetNames = [
-    "Super Butler KSM",
-    "Soda Parfait Sally"
+    "High Schooler Taiyo",
+    "Genius Hacker Shion",
+    "Aikido Master Futaba",
+    "Weapons Expert Shinzo"
 ];
-//Super Butler KSM
-//Soda Parfait Sally
-
+/*
+"High Schooler Taiyo",
+    "Genius Hacker Shion",
+    "Aikido Master Futaba",
+    "Weapons Expert Shinzo"
+*/
 const data = [];
 
 function searchAndStoreData(queries) {

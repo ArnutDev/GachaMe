@@ -1,7 +1,10 @@
 const targetNames = [
-    "Croc King's Sword",
-    "Belle Cony's Hairpin",
-    "Queen Sally's Glove"
+    "Sakura Ring",
+    "Shion Loupe",
+    "Spider Nest",
+    "Yozakura T-Shirt",
+    "Gecko Gloves",
+    "Yae"
 ];
 
 function searchAndStoreData(queries) {
