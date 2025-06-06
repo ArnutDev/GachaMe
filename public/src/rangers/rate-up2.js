@@ -130,7 +130,7 @@ async function rateUp2() {
             if (chance <= 3) {
                 specialJson = await loadJSON('json-data/rangers/8u-info-special.json');
                 let amount = 2;
-                let eachRate = 0.22; //already changed
+                let eachRate = 0.18; //already changed
                 let range = generateRandomRange(0.01, 3.00, eachRate, amount); //1 cuz rate-up only 1 rangers
                 let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
                 // console.log('u: ' + value);
@@ -160,7 +160,7 @@ async function rateUp2() {
             } else if (chance <= 30) {
                 specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
                 let amount = 2;
-                let eachRate = 1.50; //already changed
+                let eachRate = 1.32; //already changed
                 let range = generateRandomRange(0.01, 22.00, eachRate, amount); //2 cuz rate-up only 2 common rangers
                 let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
