@@ -84,6 +84,13 @@ function generateRandomRange(min, max, eachRate, amount) {
         arr[7] = pair4[1];
         countArr++;
     }
+    if (countArr < amount) {
+        //  random value of arr[6], arr[7]
+        let pair4 = getValidPair();
+        arr[8] = pair4[0];
+        arr[9] = pair4[1];
+        countArr++;
+    }
 
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
@@ -138,8 +145,8 @@ async function normalGacha() {
             let special = false;
             if (chance <= 1) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 3;
-                let eachRate = 0.20; //already changed
+                let amount = 5;
+                let eachRate = 0.07; //already changed
                 let range = generateRandomRange(0.01, 1.00, eachRate, amount); // 3 cuz 8 star special only have 3 of them
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
@@ -160,8 +167,8 @@ async function normalGacha() {
                 grade = "8 star";
             } else if (chance <= 3) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 2;
-                let eachRate = 0.50; //already changed
+                let amount = 3;
+                let eachRate = 0.17; //already changed
                 let range = generateRandomRange(0.01, 2.00, eachRate, amount); // 2 cuz 7 star special only have 2 of them
                 let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
@@ -181,26 +188,7 @@ async function normalGacha() {
                 }
                 grade = "7 star";
             } else if (chance <= 50) {
-                specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 1;
-                let eachRate = 4.55; //already changed
-                let range = generateRandomRange(0.01, 47.00, eachRate, amount); // 1 cuz 6 star special only have 1 of them
-                let value = getRandomGears(0.01, 47.00); //x>[0] && x<=[1]
-                // console.log('c: ' + value);
-                let result = checkValueInRange(value, range);
-                if (result) {
-                    //j= 5  is 6 special have 1 of them
-                    for (let j = 5, k = 0; j < 6; j++, k++) {
-                        gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
-                    }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
-                    special = true;
-                } else {
-                    gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
-                }
+                gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
                 grade = "6 star";
             } else {
                 gearsJson = await loadJSON('json-data/gears/rate-normal/5c-info.json');
