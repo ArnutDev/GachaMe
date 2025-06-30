@@ -1,12 +1,15 @@
 const targetNames = [
-    "Sakura Ring",
-    "Shion Loupe",
-    "Spider Nest",
-    "Yozakura T-Shirt",
-    "Gecko Gloves",
-    "Yae"
+    "Sea Fishing Rod"
 ];
-
+/*"Sea Fishing Rod",
+    "Beach Ball",
+    "Life Jacket",
+    "WingStar Specs",
+    "Beach Sandals",
+    "Summer Water Gun",
+    "Summer Swim Ring",
+    "Summer Scuba Mask",
+    "Queen Sally's Glove"*/
 function searchAndStoreData(queries) {
     const data = [];
     const searchInput = document.querySelector("input[type='search']");

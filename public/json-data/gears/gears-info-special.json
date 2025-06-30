@@ -1,32 +1,47 @@
 [
   {
-    "Name": "Sakura Ring",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_08_icon.png",
-    "ItemCode": "eq_2506_acc_08"
+    "Name": "Sea Fishing Rod",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2507_wpn_08_icon.png",
+    "ItemCode": "eq_2507_wpn_08"
   },
   {
-    "Name": "Shion Loupe",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_18_icon.png",
-    "ItemCode": "eq_2506_acc_18"
+    "Name": "Beach Ball",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_118_icon.png",
+    "ItemCode": "eq_wpn_evt_118"
   },
   {
-    "Name": "Spider Nest",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_28_icon.png",
-    "ItemCode": "eq_2506_acc_28"
+    "Name": "Life Jacket",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_118_icon.png",
+    "ItemCode": "eq_amr_evt_118"
   },
   {
-    "Name": "Yozakura T-Shirt",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_amr_07_icon.png",
-    "ItemCode": "eq_2506_amr_07"
+    "Name": "WingStar Specs",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2407_acc_08_icon.png",
+    "ItemCode": "eq_2407_acc_08"
   },
   {
-    "Name": "Gecko Gloves",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_amr_17_icon.png",
-    "ItemCode": "eq_2506_amr_17"
+    "Name": "Beach Sandals",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_118_icon.png",
+    "ItemCode": "eq_acc_evt_118"
   },
   {
-    "Name": "Yae",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_wpn_06_icon.png",
-    "ItemCode": "eq_2506_wpn_06"
+    "Name": "Summer Water Gun",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_117_icon.png",
+    "ItemCode": "eq_wpn_evt_117"
+  },
+  {
+    "Name": "Summer Swim Ring",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_117_icon.png",
+    "ItemCode": "eq_amr_evt_117"
+  },
+  {
+    "Name": "Summer Scuba Mask",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_117_icon.png",
+    "ItemCode": "eq_acc_evt_117"
+  },
+  {
+    "Name": "Queen Sally's Glove",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_016_icon.png",
+    "ItemCode": "eq_amr_evt_016"
   }
 ]
