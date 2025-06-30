@@ -1,22 +1,17 @@
 [
   {
-    "Name": "Taiyo",
-    "Image": "https://rangers.lerico.net/res/u1511e-ty/u1511e-ty-thum.png",
-    "UnitCode": "u1511e-ty"
+    "Name": "Lifeguard Ron",
+    "Image": "https://rangers.lerico.net/res/u1517e-ron/u1517e-ron-thum.png",
+    "UnitCode": "u1517e-ron"
   },
   {
-    "Name": "Shion",
-    "Image": "https://rangers.lerico.net/res/u1504e-so/u1504e-so-thum.png",
-    "UnitCode": "u1504e-so"
+    "Name": "Kayak Sally",
+    "Image": "https://rangers.lerico.net/res/u1515e-sally/u1515e-sally-thum.png",
+    "UnitCode": "u1515e-sally"
   },
   {
-    "Name": "Futaba",
-    "Image": "https://rangers.lerico.net/res/u1508e-ft/u1508e-ft-thum.png",
-    "UnitCode": "u1508e-ft"
-  },
-  {
-    "Name": "Shinzo",
-    "Image": "https://rangers.lerico.net/res/u1506e-sz/u1506e-sz-thum.png",
-    "UnitCode": "u1506e-sz"
+    "Name": "Beach Volleyball Moon",
+    "Image": "https://rangers.lerico.net/res/u1513e-moon/u1513e-moon-thum.png",
+    "UnitCode": "u1513e-moon"
   }
 ]

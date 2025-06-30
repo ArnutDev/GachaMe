@@ -1,15 +1,10 @@
 const targetNames = [
-    "High Schooler Taiyo",
-    "Genius Hacker Shion",
-    "Aikido Master Futaba",
-    "Weapons Expert Shinzo"
+    "Power Kayak Sally",
+    "Sand Beach Volleyball Moon"
 ];
-/*
-"High Schooler Taiyo",
-    "Genius Hacker Shion",
-    "Aikido Master Futaba",
-    "Weapons Expert Shinzo"
-*/
+//Power Kayak Sally
+//Sand Beach Volleyball Moon
+
 const data = [];
 
 function searchAndStoreData(queries) {

@@ -1,22 +1,12 @@
 [
   {
-    "Name": "High Schooler Taiyo",
-    "Image": "https://rangers.lerico.net/res/u1511u-ty/u1511u-ty-thum.png",
-    "UnitCode": "u1511u-ty"
+    "Name": "Power Kayak Sally",
+    "Image": "https://rangers.lerico.net/res/u1515u-sally/u1515u-sally-thum.png",
+    "UnitCode": "u1515u-sally"
   },
   {
-    "Name": "Genius Hacker Shion",
-    "Image": "https://rangers.lerico.net/res/u1504u-so/u1504u-so-thum.png",
-    "UnitCode": "u1504u-so"
-  },
-  {
-    "Name": "Aikido Master Futaba",
-    "Image": "https://rangers.lerico.net/res/u1508u-ft/u1508u-ft-thum.png",
-    "UnitCode": "u1508u-ft"
-  },
-  {
-    "Name": "Weapons Expert Shinzo",
-    "Image": "https://rangers.lerico.net/res/u1506u-sz/u1506u-sz-thum.png",
-    "UnitCode": "u1506u-sz"
+    "Name": "Sand Beach Volleyball Moon",
+    "Image": "https://rangers.lerico.net/res/u1513u-moon/u1513u-moon-thum.png",
+    "UnitCode": "u1513u-moon"
   }
 ]

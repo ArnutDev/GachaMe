@@ -688,5 +688,15 @@
     "Name": "Parfait Sally",
     "Image": "https://rangers.lerico.net/res/u1499e-sally/u1499e-sally-thum.png",
     "UnitCode": "u1499e-sally"
+  },
+  {
+    "Name": "Kayak Sally",
+    "Image": "https://rangers.lerico.net/res/u1515e-sally/u1515e-sally-thum.png",
+    "UnitCode": "u1515e-sally"
+  },
+  {
+    "Name": "Beach Volleyball Moon",
+    "Image": "https://rangers.lerico.net/res/u1513e-moon/u1513e-moon-thum.png",
+    "UnitCode": "u1513e-moon"
   }
 ]
