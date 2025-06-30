@@ -1,9 +1,9 @@
 const targetNames = [
-    "Super Butler KSM",
-    "Soda Parfait Sally"
+    "Power Kayak Sally",
+    "Sand Beach Volleyball Moon"
 ];
-//Super Butler KSM
-//Soda Parfait Sally
+//Power Kayak Sally
+//Sand Beach Volleyball Moon
 
 const data = [];
 

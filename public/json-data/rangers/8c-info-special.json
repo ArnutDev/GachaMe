@@ -1,17 +1,17 @@
 [
   {
-    "Name": "Maid Cony",
-    "Image": "https://rangers.lerico.net/res/u1501e-cony/u1501e-cony-thum.png",
-    "UnitCode": "u1501e-cony"
+    "Name": "Lifeguard Ron",
+    "Image": "https://rangers.lerico.net/res/u1517e-ron/u1517e-ron-thum.png",
+    "UnitCode": "u1517e-ron"
   },
   {
-    "Name": "Butler KSM",
-    "Image": "https://rangers.lerico.net/res/u1497e-ksm/u1497e-ksm-thum.png",
-    "UnitCode": "u1497e-ksm"
+    "Name": "Kayak Sally",
+    "Image": "https://rangers.lerico.net/res/u1515e-sally/u1515e-sally-thum.png",
+    "UnitCode": "u1515e-sally"
   },
   {
-    "Name": "Parfait Sally",
-    "Image": "https://rangers.lerico.net/res/u1499e-sally/u1499e-sally-thum.png",
-    "UnitCode": "u1499e-sally"
+    "Name": "Beach Volleyball Moon",
+    "Image": "https://rangers.lerico.net/res/u1513e-moon/u1513e-moon-thum.png",
+    "UnitCode": "u1513e-moon"
   }
 ]

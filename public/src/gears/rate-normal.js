@@ -146,7 +146,7 @@ async function normalGacha() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 0 to 2 is 8 special have 3 of them
-                    for (let j = 0, k = j; j < 3; j++, k++) {
+                    for (let j = 0, k = j; j < 5; j++, k++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert('sp> ' + gearsJson[k].Name);
                     }
@@ -168,7 +168,7 @@ async function normalGacha() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 3 to 4 is 7 special have 2 of them
-                    for (let j = 3, k = 0; j < 5; j++, k++) {
+                    for (let j = 5, k = 0; j < 8; j++, k++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert('sp> ' + gearsJson[k].Name);
                     }
@@ -270,9 +270,9 @@ async function guarantee(type) {
         const randomIndex = getRandomPickGear(0, specialJson.length - 1);
 
         //check amount of gears every month
-        if (randomIndex < 3) {
+        if (randomIndex < 6) {
             grade = "8 star";
-        } else if (randomIndex < 6) {
+        } else if (randomIndex < 9) {
             grade = "7 star";
         } else {
             grade = "6 star";
@@ -332,14 +332,10 @@ async function getStat(data) {
         u1++;
     } else if (result == 1) { // 8
         u2++;
-    } else if (result == 2) { // 8
+    } else if (result == 3) { // 8
         u3++;
-    } else if (result == 3) { // 7
+    } else if (result == 6) { // 7
         u4++;
-    } else if (result == 4) { // 7
-        u5++;
-    } else if (result == 5) { // 6
-        u6++;
     } else {
         return false;
     }

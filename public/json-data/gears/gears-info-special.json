@@ -1,73 +1,43 @@
 [
   {
-    "Name": "Leonard's Mysterious Bomb",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_08_icon.png",
-    "ItemCode": "eq_wpn_evt_08"
+    "Name": "Sea Fishing Rod",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2507_wpn_08_icon.png",
+    "ItemCode": "eq_2507_wpn_08"
   },
   {
-    "Name": "Leonard's Tough Dumbbell",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_18_icon.png",
-    "ItemCode": "eq_wpn_evt_18"
+    "Name": "Beach Ball",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_118_icon.png",
+    "ItemCode": "eq_wpn_evt_118"
   },
   {
-    "Name": "Leonard's Quick Umbrella",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_28_icon.png",
-    "ItemCode": "eq_wpn_evt_28"
+    "Name": "Life Jacket",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_118_icon.png",
+    "ItemCode": "eq_amr_evt_118"
   },
   {
-    "Name": "Croc King's Sword",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2305_wpn_08_icon.png",
-    "ItemCode": "eq_2305_wpn_08"
+    "Name": "WingStar Specs",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2407_acc_08_icon.png",
+    "ItemCode": "eq_2407_acc_08"
   },
   {
-    "Name": "Leonard's Quick Belt",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_08_icon.png",
-    "ItemCode": "eq_amr_evt_08"
+    "Name": "Beach Sandals",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_118_icon.png",
+    "ItemCode": "eq_acc_evt_118"
   },
   {
-    "Name": "Leonard's Mysterious Bag",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_18_icon.png",
-    "ItemCode": "eq_amr_evt_18"
+    "Name": "Summer Water Gun",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_117_icon.png",
+    "ItemCode": "eq_wpn_evt_117"
   },
   {
-    "Name": "Leonard's Tough Vest",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_28_icon.png",
-    "ItemCode": "eq_amr_evt_28"
+    "Name": "Summer Swim Ring",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_117_icon.png",
+    "ItemCode": "eq_amr_evt_117"
   },
   {
-    "Name": "Leonard's Tough Watch",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_08_icon.png",
-    "ItemCode": "eq_acc_evt_08"
-  },
-  {
-    "Name": "Leonard's Quick Visor",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_18_icon.png",
-    "ItemCode": "eq_acc_evt_18"
-  },
-  {
-    "Name": "Leonard's Mysterious Syringe",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_28_icon.png",
-    "ItemCode": "eq_acc_evt_28"
-  },
-  {
-    "Name": "Belle Cony's Hairpin",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2305_acc_08_icon.png",
-    "ItemCode": "eq_2305_acc_08"
-  },
-  {
-    "Name": "Leonard's Ingenious Outfit",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_027_icon.png",
-    "ItemCode": "eq_amr_evt_027"
-  },
-  {
-    "Name": "Leonard's Mighty Hammer",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_007_icon.png",
-    "ItemCode": "eq_wpn_evt_007"
-  },
-  {
-    "Name": "Leonard's Delicate Device",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_017_icon.png",
-    "ItemCode": "eq_acc_evt_017"
+    "Name": "Summer Scuba Mask",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_117_icon.png",
+    "ItemCode": "eq_acc_evt_117"
   },
   {
     "Name": "Queen Sally's Glove",
