@@ -1,6 +1,5 @@
 let count = 0;
-let guaranteeCount = 0;
-let maxGuarantee = 7;
+let freeBoxCount = 1;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
@@ -194,25 +193,16 @@ async function normalGacha() {
 
         }
         // update totall amount
-        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count/6 * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
         document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
-    count++;
-    if (guaranteeCount < 15) {
-        guaranteeCount++;
-    }
-
-    if (guaranteeCount == 7) {
-        maxGuarantee = 15;
-    }
-
-    if (count * 300 == 2100) {
+    count += 6;
+    if (count / 100 >= freeBoxCount) {
+        freeBoxCount++;
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (count * 300 == 4500) {
-        document.getElementById("btn-guarantee1").style.display = "block";
     }
 }
 async function guarantee(type) {
@@ -257,8 +247,6 @@ async function guarantee(type) {
     }, 300);
     if (type == 1) {
         document.getElementById("btn-guarantee").style.display = "none";
-    } else if (type == 2) {
-        document.getElementById("btn-guarantee1").style.display = "none";
     }
     document.getElementById("randomButton").style.display = "none";
 }

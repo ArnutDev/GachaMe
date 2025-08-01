@@ -1,6 +1,6 @@
 let count = 0;
-let guaranteeCount = 0;
-let maxGuarantee = 15;
+let mirrorCount = 0;
+let freeBoxCount = 1;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
@@ -84,13 +84,6 @@ function generateRandomRange(min, max, eachRate, amount) {
         arr[7] = pair4[1];
         countArr++;
     }
-    if (countArr < amount) {
-        //  random value of arr[6], arr[7]
-        let pair4 = getValidPair();
-        arr[8] = pair4[0];
-        arr[9] = pair4[1];
-        countArr++;
-    }
 
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
@@ -130,6 +123,11 @@ function getRandomPickGear(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function printItem() {
+    for (let a = 0; a < gearsJson.length; a++) {
+        console.log(gearsJson[a].Name);
+    }
+}
 async function normalGacha() {
     document.getElementById("randomButton").style.display = "block";
     const divSlots = document.querySelectorAll('.content-display'); // select 7 div
@@ -145,21 +143,18 @@ async function normalGacha() {
             let special = false;
             if (chance <= 1) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 5;
-                let eachRate = 0.07; //already changed
+                let amount = 3;
+                let eachRate = 0.20; //already changed
                 let range = generateRandomRange(0.01, 1.00, eachRate, amount); // 3 cuz 8 star special only have 3 of them
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 0 to 2 is 8 special have 3 of them
-                    for (let j = 0, k = j; j < 5; j++, k++) {
+                    for (let j = 0; j < 3; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem()
                     special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
@@ -167,28 +162,42 @@ async function normalGacha() {
                 grade = "8 star";
             } else if (chance <= 3) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 3;
-                let eachRate = 0.17; //already changed
+                let amount = 2;
+                let eachRate = 0.50; //already changed
                 let range = generateRandomRange(0.01, 2.00, eachRate, amount); // 2 cuz 7 star special only have 2 of them
                 let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 3 to 4 is 7 special have 2 of them
-                    for (let j = 5, k = 0; j < 8; j++, k++) {
+                    for (let j = 3; j < 5; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert('sp> ' + gearsJson[k].Name);
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem()
                     special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
                 }
                 grade = "7 star";
             } else if (chance <= 50) {
-                gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
+                specialJson = await loadJSON('json-data/gears/gears-info-special.json');
+                let amount = 1;
+                let eachRate = 4.55; //already changed
+                let range = generateRandomRange(0.01, 47.00, eachRate, amount); // 1 cuz 6 star special only have 1 of them
+                let value = getRandomGears(0.01, 47.00); //x>[0] && x<=[1]
+                // console.log('c: ' + value);
+                let result = checkValueInRange(value, range);
+                if (result) {
+                    //j= 5  is 6 special have 1 of them
+                    for (let j = 5; j < 6; j++) {
+                        gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
+                    }
+                    // printItem()
+                    special = true;
+                } else {
+                    gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
+                }
                 grade = "6 star";
             } else {
                 gearsJson = await loadJSON('json-data/gears/rate-normal/5c-info.json');
@@ -221,7 +230,7 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 200}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count/5 * 200}`;
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
@@ -229,18 +238,14 @@ async function normalGacha() {
         document.getElementById("u-gear-5").innerHTML = u5;
         document.getElementById("u-gear-6").innerHTML = u6;
     }, 300);
-    count++;
-    if (guaranteeCount < 25) {
-        guaranteeCount++;
-    }
 
-    if (guaranteeCount == 15) {
-        maxGuarantee = 25;
-    }
-    if (count * 200 == 3000) {
-        document.getElementById("btn-guarantee").style.display = "block";
-    } else if (count * 200 == 5000) {
+    count += 5;
+    mirrorCount += 5;
+    if (mirrorCount >= 150) {
         document.getElementById("btn-guarantee1").style.display = "block";
+        mirrorCount = 0;
+    } else if (mirrorCount >= 90) {
+        document.getElementById("btn-guarantee").style.display = "block";
     }
 }
 async function guarantee(type) {
@@ -258,9 +263,9 @@ async function guarantee(type) {
         const randomIndex = getRandomPickGear(0, specialJson.length - 1);
 
         //check amount of gears every month
-        if (randomIndex < 6) {
+        if (randomIndex < 3) {
             grade = "8 star";
-        } else if (randomIndex < 9) {
+        } else if (randomIndex < 6) {
             grade = "7 star";
         } else {
             grade = "6 star";
@@ -320,10 +325,14 @@ async function getStat(data) {
         u1++;
     } else if (result == 1) { // 8
         u2++;
-    } else if (result == 3) { // 8
+    } else if (result == 2) { // 8
         u3++;
-    } else if (result == 6) { // 7
+    } else if (result == 3) { // 7
         u4++;
+    } else if (result == 4) { // 7
+        u5++;
+    } else if (result == 5) { // 6
+        u6++;
     } else {
         return false;
     }

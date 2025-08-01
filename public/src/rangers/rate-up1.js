@@ -215,26 +215,16 @@ async function rateUp1() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count1").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count1").innerHTML = ` ${count}, Ruby used: ${count/6 * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
         document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
-    count++;
-
-    if (guaranteeCount < 15) {
-        guaranteeCount++;
-    }
-
-    if (guaranteeCount == 7) {
-        maxGuarantee = 15;
-    }
-
-    if (count * 300 == 2100) {
+    count += 6;
+    if (count / 100 >= freeBoxCount) {
+        freeBoxCount++;
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (count * 300 == 4500) {
-        document.getElementById("btn-guarantee1").style.display = "block";
     }
 }
 

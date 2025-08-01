@@ -1,10 +1,15 @@
 const targetNames = [
-    "Power Kayak Sally",
-    "Sand Beach Volleyball Moon"
+    "PS D-EXT SpDiv4 Denji",
+    "PS D-EXT SpDiv4 Power",
+    "PS D-EXT SpDiv4 Aki",
+    "PS D-EXT SpDiv4 Kobeni"
 ];
-//Power Kayak Sally
-//Sand Beach Volleyball Moon
-
+/*
+ "PS D-EXT SpDiv4 Denji",
+ "PS D-EXT SpDiv4 Power",
+ "PS D-EXT SpDiv4 Aki",
+ "PS D-EXT SpDiv4 Kobeni"
+*/
 const data = [];
 
 function searchAndStoreData(queries) {
