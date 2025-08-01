@@ -1,22 +1,22 @@
 [
   {
-    "Name": "Taiyo",
-    "Image": "https://rangers.lerico.net/res/u1511e-ty/u1511e-ty-thum.png",
-    "UnitCode": "u1511e-ty"
+    "Name": "Denji",
+    "Image": "https://rangers.lerico.net/res/u1519e-de/u1519e-de-thum.png",
+    "UnitCode": "u1519e-de"
   },
   {
-    "Name": "Shion",
-    "Image": "https://rangers.lerico.net/res/u1504e-so/u1504e-so-thum.png",
-    "UnitCode": "u1504e-so"
+    "Name": "Power",
+    "Image": "https://rangers.lerico.net/res/u1521e-po/u1521e-po-thum.png",
+    "UnitCode": "u1521e-po"
   },
   {
-    "Name": "Futaba",
-    "Image": "https://rangers.lerico.net/res/u1508e-ft/u1508e-ft-thum.png",
-    "UnitCode": "u1508e-ft"
+    "Name": "Aki",
+    "Image": "https://rangers.lerico.net/res/u1523e-ak/u1523e-ak-thum.png",
+    "UnitCode": "u1523e-ak"
   },
   {
-    "Name": "Shinzo",
-    "Image": "https://rangers.lerico.net/res/u1506e-sz/u1506e-sz-thum.png",
-    "UnitCode": "u1506e-sz"
+    "Name": "Kobeni",
+    "Image": "https://rangers.lerico.net/res/u1525e-ko/u1525e-ko-thum.png",
+    "UnitCode": "u1525e-ko"
   }
 ]

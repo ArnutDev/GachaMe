@@ -80,5 +80,29 @@
             "Added June rangers gacha",
             "Added June gears gacha"
         ]
+    },
+    {
+        "version": "1.8.0",
+        "date": "2025-06-30",
+        "changes": [
+            "Added July rangers gacha",
+            "Added July gears gacha"
+        ]
+    },
+    {
+        "version": "1.8.1",
+        "date": "2025-06-30",
+        "changes": [
+            "Fixed gacha rate for gears"
+        ]
+    },
+    {
+        "version": "1.9.0",
+        "date": "2025-08-01",
+        "changes": [
+            "Added August rangers gacha",
+            "Added August gears gacha",
+            "Updated new guarantee system (free box)"
+        ]
     }
 ]

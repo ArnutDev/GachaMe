@@ -1,6 +1,6 @@
 let count = 0;
-let guaranteeCount = 0;
-let maxGuarantee = 15;
+let mirrorCount = 0;
+let freeBoxCount = 1;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
@@ -123,6 +123,11 @@ function getRandomPickGear(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function printItem() {
+    for (let a = 0; a < gearsJson.length; a++) {
+        console.log(gearsJson[a].Name);
+    }
+}
 async function normalGacha() {
     document.getElementById("randomButton").style.display = "block";
     const divSlots = document.querySelectorAll('.content-display'); // select 7 div
@@ -146,13 +151,10 @@ async function normalGacha() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 0 to 2 is 8 special have 3 of them
-                    for (let j = 0, k = j; j < 3; j++, k++) {
+                    for (let j = 0; j < 3; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem()
                     special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
@@ -168,13 +170,11 @@ async function normalGacha() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 3 to 4 is 7 special have 2 of them
-                    for (let j = 3, k = 0; j < 5; j++, k++) {
+                    for (let j = 3; j < 5; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert('sp> ' + gearsJson[k].Name);
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem()
                     special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
@@ -190,13 +190,10 @@ async function normalGacha() {
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 5  is 6 special have 1 of them
-                    for (let j = 5, k = 0; j < 6; j++, k++) {
+                    for (let j = 5; j < 6; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem()
                     special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/6c-info.json');
@@ -233,7 +230,7 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 200}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count/5 * 200}`;
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
@@ -241,18 +238,14 @@ async function normalGacha() {
         document.getElementById("u-gear-5").innerHTML = u5;
         document.getElementById("u-gear-6").innerHTML = u6;
     }, 300);
-    count++;
-    if (guaranteeCount < 25) {
-        guaranteeCount++;
-    }
 
-    if (guaranteeCount == 15) {
-        maxGuarantee = 25;
-    }
-    if (count * 200 == 3000) {
-        document.getElementById("btn-guarantee").style.display = "block";
-    } else if (count * 200 == 5000) {
+    count += 5;
+    mirrorCount += 5;
+    if (mirrorCount >= 150) {
         document.getElementById("btn-guarantee1").style.display = "block";
+        mirrorCount = 0;
+    } else if (mirrorCount >= 90) {
+        document.getElementById("btn-guarantee").style.display = "block";
     }
 }
 async function guarantee(type) {

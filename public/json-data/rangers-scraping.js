@@ -1,14 +1,14 @@
 const targetNames = [
-    "High Schooler Taiyo",
-    "Genius Hacker Shion",
-    "Aikido Master Futaba",
-    "Weapons Expert Shinzo"
+    "PS D-EXT SpDiv4 Denji",
+    "PS D-EXT SpDiv4 Power",
+    "PS D-EXT SpDiv4 Aki",
+    "PS D-EXT SpDiv4 Kobeni"
 ];
 /*
-"High Schooler Taiyo",
-    "Genius Hacker Shion",
-    "Aikido Master Futaba",
-    "Weapons Expert Shinzo"
+ "PS D-EXT SpDiv4 Denji",
+ "PS D-EXT SpDiv4 Power",
+ "PS D-EXT SpDiv4 Aki",
+ "PS D-EXT SpDiv4 Kobeni"
 */
 const data = [];
 

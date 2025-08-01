@@ -1,32 +1,32 @@
 [
   {
-    "Name": "Sakura Ring",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_08_icon.png",
-    "ItemCode": "eq_2506_acc_08"
+    "Name": "[CM]Power's Hammer",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_wpn_18_icon.png",
+    "ItemCode": "eq_2508_wpn_18"
   },
   {
-    "Name": "Shion Loupe",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_18_icon.png",
-    "ItemCode": "eq_2506_acc_18"
+    "Name": "[CM]Denji’s Axe",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_wpn_08_icon.png",
+    "ItemCode": "eq_2508_wpn_08"
   },
   {
-    "Name": "Spider Nest",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_acc_28_icon.png",
-    "ItemCode": "eq_2506_acc_28"
+    "Name": "[CM]Aki's Sword",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_wpn_28_icon.png",
+    "ItemCode": "eq_2508_wpn_28"
   },
   {
-    "Name": "Yozakura T-Shirt",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_amr_07_icon.png",
-    "ItemCode": "eq_2506_amr_07"
+    "Name": "[CM]Starter Rope",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_acc_17_icon.png",
+    "ItemCode": "eq_2508_acc_17"
   },
   {
-    "Name": "Gecko Gloves",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_amr_17_icon.png",
-    "ItemCode": "eq_2506_amr_17"
+    "Name": "[CM]Kobeni's Hairpin",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_acc_07_icon.png",
+    "ItemCode": "eq_2508_acc_07"
   },
   {
-    "Name": "Yae",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2506_wpn_06_icon.png",
-    "ItemCode": "eq_2506_wpn_06"
+    "Name": "[CM]Denji's Shoes",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_amr_06_icon.png",
+    "ItemCode": "eq_2508_amr_06"
   }
 ]

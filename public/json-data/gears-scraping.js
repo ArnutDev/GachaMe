@@ -1,10 +1,10 @@
 const targetNames = [
-    "Sakura Ring",
-    "Shion Loupe",
-    "Spider Nest",
-    "Yozakura T-Shirt",
-    "Gecko Gloves",
-    "Yae"
+    "Power's Hammer",
+    "Denji’s Axe",
+    "Aki's Sword",
+    "Starter Rope",
+    "Kobeni's Hairpin",
+    "Denji's Shoes"
 ];
 
 function searchAndStoreData(queries) {
