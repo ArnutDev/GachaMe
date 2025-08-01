@@ -265,7 +265,7 @@ async function guarantee(type) {
         //check amount of gears every month
         if (randomIndex < 3) {
             grade = "8 star";
-        } else if (randomIndex < 6) {
+        } else if (randomIndex < 5) {
             grade = "7 star";
         } else {
             grade = "6 star";
