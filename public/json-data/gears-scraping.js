@@ -1,15 +1,12 @@
 const targetNames = [
-    "Sea Fishing Rod"
+    "Power's Hammer",
+    "Denji’s Axe",
+    "Aki's Sword",
+    "Starter Rope",
+    "Kobeni's Hairpin",
+    "Denji's Shoes"
 ];
-/*"Sea Fishing Rod",
-    "Beach Ball",
-    "Life Jacket",
-    "WingStar Specs",
-    "Beach Sandals",
-    "Summer Water Gun",
-    "Summer Swim Ring",
-    "Summer Scuba Mask",
-    "Queen Sally's Glove"*/
+
 function searchAndStoreData(queries) {
     const data = [];
     const searchInput = document.querySelector("input[type='search']");

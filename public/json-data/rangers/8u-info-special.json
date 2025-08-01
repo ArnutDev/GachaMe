@@ -1,12 +1,22 @@
 [
   {
-    "Name": "Power Kayak Sally",
-    "Image": "https://rangers.lerico.net/res/u1515u-sally/u1515u-sally-thum.png",
-    "UnitCode": "u1515u-sally"
+    "Name": "PS D-EXT SpDiv4 Denji",
+    "Image": "https://rangers.lerico.net/res/u1519u-de/u1519u-de-thum.png",
+    "UnitCode": "u1519u-de"
   },
   {
-    "Name": "Sand Beach Volleyball Moon",
-    "Image": "https://rangers.lerico.net/res/u1513u-moon/u1513u-moon-thum.png",
-    "UnitCode": "u1513u-moon"
+    "Name": "PS D-EXT SpDiv4 Power",
+    "Image": "https://rangers.lerico.net/res/u1521u-po/u1521u-po-thum.png",
+    "UnitCode": "u1521u-po"
+  },
+  {
+    "Name": "PS D-EXT SpDiv4 Aki",
+    "Image": "https://rangers.lerico.net/res/u1523u-ak/u1523u-ak-thum.png",
+    "UnitCode": "u1523u-ak"
+  },
+  {
+    "Name": "PS D-EXT SpDiv4 Kobeni",
+    "Image": "https://rangers.lerico.net/res/u1525u-ko/u1525u-ko-thum.png",
+    "UnitCode": "u1525u-ko"
   }
 ]

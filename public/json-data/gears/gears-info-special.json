@@ -1,47 +1,32 @@
 [
   {
-    "Name": "Sea Fishing Rod",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2507_wpn_08_icon.png",
-    "ItemCode": "eq_2507_wpn_08"
+    "Name": "[CM]Power's Hammer",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_wpn_18_icon.png",
+    "ItemCode": "eq_2508_wpn_18"
   },
   {
-    "Name": "Beach Ball",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_118_icon.png",
-    "ItemCode": "eq_wpn_evt_118"
+    "Name": "[CM]Denji’s Axe",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_wpn_08_icon.png",
+    "ItemCode": "eq_2508_wpn_08"
   },
   {
-    "Name": "Life Jacket",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_118_icon.png",
-    "ItemCode": "eq_amr_evt_118"
+    "Name": "[CM]Aki's Sword",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_wpn_28_icon.png",
+    "ItemCode": "eq_2508_wpn_28"
   },
   {
-    "Name": "WingStar Specs",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2407_acc_08_icon.png",
-    "ItemCode": "eq_2407_acc_08"
+    "Name": "[CM]Starter Rope",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_acc_17_icon.png",
+    "ItemCode": "eq_2508_acc_17"
   },
   {
-    "Name": "Beach Sandals",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_118_icon.png",
-    "ItemCode": "eq_acc_evt_118"
+    "Name": "[CM]Kobeni's Hairpin",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_acc_07_icon.png",
+    "ItemCode": "eq_2508_acc_07"
   },
   {
-    "Name": "Summer Water Gun",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_117_icon.png",
-    "ItemCode": "eq_wpn_evt_117"
-  },
-  {
-    "Name": "Summer Swim Ring",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_117_icon.png",
-    "ItemCode": "eq_amr_evt_117"
-  },
-  {
-    "Name": "Summer Scuba Mask",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_117_icon.png",
-    "ItemCode": "eq_acc_evt_117"
-  },
-  {
-    "Name": "Queen Sally's Glove",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_016_icon.png",
-    "ItemCode": "eq_amr_evt_016"
+    "Name": "[CM]Denji's Shoes",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2508_amr_06_icon.png",
+    "ItemCode": "eq_2508_amr_06"
   }
 ]
