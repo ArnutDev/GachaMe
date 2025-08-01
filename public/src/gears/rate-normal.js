@@ -1,6 +1,6 @@
 let count = 0;
 let mirrorCount = 0;
-let freeBoxCount = 1;
+let firstBoxReach = false;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
@@ -244,7 +244,9 @@ async function normalGacha() {
     if (mirrorCount >= 150) {
         document.getElementById("btn-guarantee1").style.display = "block";
         mirrorCount = 0;
-    } else if (mirrorCount >= 90) {
+        firstBoxReach = false;
+    } else if (mirrorCount >= 90 && firstBoxReach == false) {
+        firstBoxReach = true;
         document.getElementById("btn-guarantee").style.display = "block";
     }
 }

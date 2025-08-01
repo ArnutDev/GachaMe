@@ -237,12 +237,15 @@ async function rateUp2() {
         document.getElementById("u-gear-5").innerHTML = u5;
         document.getElementById("u-gear-6").innerHTML = u6;
     }, 300);
+
     count += 5;
     mirrorCount += 5;
     if (mirrorCount >= 150) {
         document.getElementById("btn-guarantee1").style.display = "block";
         mirrorCount = 0;
-    } else if (mirrorCount >= 90) {
+        firstBoxReach = false;
+    } else if (mirrorCount >= 90 && firstBoxReach == false) {
+        firstBoxReach = true;
         document.getElementById("btn-guarantee").style.display = "block";
     }
 }
