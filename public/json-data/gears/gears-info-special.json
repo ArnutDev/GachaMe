@@ -1,47 +1,52 @@
 [
   {
-    "Name": "Sea Fishing Rod",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2507_wpn_08_icon.png",
-    "ItemCode": "eq_2507_wpn_08"
+    "Name": "Moonlight Guard Gloves",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2509_acc_08_icon.png",
+    "ItemCode": "eq_2509_acc_08"
   },
   {
-    "Name": "Beach Ball",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_118_icon.png",
-    "ItemCode": "eq_wpn_evt_118"
+    "Name": "Moonlit Dagger",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2409_wpn_08_icon.png",
+    "ItemCode": "eq_2409_wpn_08"
   },
   {
-    "Name": "Life Jacket",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_118_icon.png",
-    "ItemCode": "eq_amr_evt_118"
+    "Name": "Moonlight Shining Shield",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2309_amr_18_icon.png",
+    "ItemCode": "eq_2309_amr_18"
   },
   {
-    "Name": "WingStar Specs",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2407_acc_08_icon.png",
-    "ItemCode": "eq_2407_acc_08"
+    "Name": "Moonlight Shining Belt",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2309_acc_08_icon.png",
+    "ItemCode": "eq_2309_acc_08"
   },
   {
-    "Name": "Beach Sandals",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_118_icon.png",
-    "ItemCode": "eq_acc_evt_118"
+    "Name": "Moonlight Shining Axe",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2309_wpn_08_icon.png",
+    "ItemCode": "eq_2309_wpn_08"
   },
   {
-    "Name": "Summer Water Gun",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_117_icon.png",
-    "ItemCode": "eq_wpn_evt_117"
+    "Name": "Moonbrella",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_wpn_evt_057_icon.png",
+    "ItemCode": "eq_wpn_evt_057"
   },
   {
-    "Name": "Summer Swim Ring",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_117_icon.png",
-    "ItemCode": "eq_amr_evt_117"
+    "Name": "Magic Moon Wand",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_2209_wpn_07_icon.png",
+    "ItemCode": "eq_2209_wpn_07"
   },
   {
-    "Name": "Summer Scuba Mask",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_117_icon.png",
-    "ItemCode": "eq_acc_evt_117"
+    "Name": "Moon Shield",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_057_icon.png",
+    "ItemCode": "eq_amr_evt_057"
   },
   {
-    "Name": "Queen Sally's Glove",
-    "Image": "https://rangers.lerico.net/res/gear_icon/eq_amr_evt_016_icon.png",
-    "ItemCode": "eq_amr_evt_016"
+    "Name": "Moon Necklace",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_067_icon.png",
+    "ItemCode": "eq_acc_evt_067"
+  },
+  {
+    "Name": "Moon Dumplings",
+    "Image": "https://rangers.lerico.net/res/gear_icon/eq_acc_evt_057_icon.png",
+    "ItemCode": "eq_acc_evt_057"
   }
 ]

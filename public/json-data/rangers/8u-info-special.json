@@ -1,12 +1,12 @@
 [
   {
-    "Name": "Power Kayak Sally",
-    "Image": "https://rangers.lerico.net/res/u1515u-sally/u1515u-sally-thum.png",
-    "UnitCode": "u1515u-sally"
+    "Name": "Skilled Farmer Sally",
+    "Image": "https://rangers.lerico.net/res/u1532u-sally/u1532u-sally-thum.png",
+    "UnitCode": "u1532u-sally"
   },
   {
-    "Name": "Sand Beach Volleyball Moon",
-    "Image": "https://rangers.lerico.net/res/u1513u-moon/u1513u-moon-thum.png",
-    "UnitCode": "u1513u-moon"
+    "Name": "Green Onion Field Moon",
+    "Image": "https://rangers.lerico.net/res/u1530u-moon/u1530u-moon-thum.png",
+    "UnitCode": "u1530u-moon"
   }
 ]
