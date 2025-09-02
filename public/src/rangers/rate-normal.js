@@ -1,10 +1,8 @@
 let count = 0;
-let guaranteeCount = 0;
-let maxGuarantee = 7;
+let freeBoxCount = 1;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
-let u4 = 0;
 
 async function loadJSON(filePath) {
     try {
@@ -75,13 +73,6 @@ function generateRandomRange(min, max, eachRate, amount) {
         arr[5] = pair3[1];
         countArr++;
     }
-    if (countArr < amount) {
-        //  random value of arr[6], arr[7]
-        let pair4 = getValidPair();
-        arr[6] = pair4[0];
-        arr[7] = pair4[1];
-        countArr++;
-    }
 
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
@@ -134,40 +125,16 @@ async function normalGacha() {
             let grade;
             let special = false;
             if (chance <= 3) {
-                // rangersJson = await loadJSON('json-data/rangers/8u-info-special.json'); // change this
-                // let amount = rangersJson.length;
-                // let eachRate = 0.12; //change rate
-                // let range = generateRandomRange(0.01, 3.00, eachRate, amount);
-                // let value = getRandomRangers(0.01, 3.00); //x>[0] && x<=[1]
-                // let result = checkValueInRange(value, range);
-                // if (result) {
-                //     rangersJson = await loadJSON('json-data/rangers/8u-info-special.json');
-                //     special = true;
-                // } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/8u-info.json');
-                // }
-                // console.log(rangersJson)
                 special = true
                 grade = "Ultra 8 star";
             } else if (chance <= 8) {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/7u-info.json');
                 grade = "Ultra 7 star";
             } else if (chance <= 30) {
-                // rangersJson = await loadJSON('json-data/rangers/8c-info-special.json'); // change this
-                // let amount = rangersJson.length;
-                // let eachRate = 0.88; //change rate
-                // let range = generateRandomRange(0.01, 22.00, eachRate, amount);
-                // let value = getRandomRangers(0.01, 22.00); //x>[0] && x<=[1]
-                // let result = checkValueInRange(value, range);
-                // if (result) {
-                //     rangersJson = await loadJSON('json-data/rangers/8c-info-special.json');
-                //     special = true;
-                // } else {
                 rangersJson = await loadJSON('json-data/rangers/rate-normal/8c-info.json');
                 specialJson = await loadJSON('json-data/rangers/8c-info-special.json');
                 rangersJson.push(specialJson[0]);
-                // }
-                // console.log(rangersJson)
                 special = true
                 grade = "8 star";
             } else {
@@ -201,25 +168,15 @@ async function normalGacha() {
 
         }
         // update totall amount
-        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 300}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count/6 * 300}`;
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        // document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
-    count++;
-    if (guaranteeCount < 15) {
-        guaranteeCount++;
-    }
-
-    if (guaranteeCount == 7) {
-        maxGuarantee = 15;
-    }
-
-    if (count * 300 == 2100) {
+    count += 6;
+    if (count / 100 >= freeBoxCount) {
+        freeBoxCount++;
         document.getElementById("btn-guarantee").style.display = "block";
-    } else if (count * 300 == 4500) {
-        document.getElementById("btn-guarantee1").style.display = "block";
     }
 }
 async function guarantee(type) {
@@ -264,8 +221,6 @@ async function guarantee(type) {
     }, 300);
     if (type == 1) {
         document.getElementById("btn-guarantee").style.display = "none";
-    } else if (type == 2) {
-        document.getElementById("btn-guarantee1").style.display = "none";
     }
     document.getElementById("randomButton").style.display = "none";
 }
