@@ -127,67 +127,61 @@ async function rateUp2() {
             let special = false;
             if (chance <= 1) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 1;
-                let eachRate = 0.60; //already changed
+                let amount = 2;
+                let eachRate = 0.35; //already changed
                 let range = generateRandomRange(0.01, 1.00, eachRate, amount); // 1 cuz rate-up 8 star special only have 1 of them
                 let value = getRandomGears(0.01, 1.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 1 is 8 special have 3 of them
-                    for (let j = 1, k = 0; j < 2; j++, k++) {
-                        gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
-                    }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
+                    // for (let j = 1; j < 2; j++) {
+                    //     gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     // }
+                    //rate-up 2 pieces of 8 star
+                    gearsJson.push(specialJson[0]);
+                    gearsJson.push(specialJson[1]);
+                    // printItem(gearsJson)
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
                     //j= 1 to 2 is 2 of them that not rate-up now then move to none special
-                    for (let j = 0; j < 6; j++) {
-                        if (j == 1) { //skip rate-up
-                            continue;
+                    for (let j = 0; j < 5; j++) {
+                        if (j == 0 || j == 1) {
+                            continue; //skip rate-up
                         }
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem(gearsJson)
                 }
                 special = true;
                 grade = "8 star";
             } else if (chance <= 3) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
                 let amount = 1;
-                let eachRate = 1.28; //already changed
+                let eachRate = 1.00; //already changed
                 let range = generateRandomRange(0.01, 2.00, eachRate, amount); // 1 cuz 7 star special only have rate-up 1 of them
                 let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
                     //j= 4 is 7 special have rate-up 1 of them
-                    for (let j = 6, k = 0; j < 7; j++, k++) {
-                        gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
-                    }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
+                    // for (let j = 6; j < 7; j++) {
+                    //     gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                     // }
+                    gearsJson.push(specialJson[5]);
+                    // printItem(gearsJson)
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
                     //j= 3 is 1 of them that not rate-up now then move to none special
-                    for (let j = 5; j < 8; j++) {
-                        if (j == 6) { //skip rate-up
+                    for (let j = 5; j < 10; j++) {
+                        if (j == 5) { //skip rate-up
                             continue;
                         }
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
                         // alert(gearsJson[gearsJson.length - 1].Name); //last position of gearsJson
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem(gearsJson)
                 }
                 special = true;
                 grade = "7 star";
@@ -229,26 +223,27 @@ async function rateUp2() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count2").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 200}`;
+        document.getElementById("normal-count2").innerHTML = ` ${count}, Ruby used: ${count/5 * 200}`;
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
         document.getElementById("u-gear-4").innerHTML = u4;
         document.getElementById("u-gear-5").innerHTML = u5;
         document.getElementById("u-gear-6").innerHTML = u6;
+        document.getElementById("u-gear-7").innerHTML = u7;
+        document.getElementById("u-gear-8").innerHTML = u8;
+        document.getElementById("u-gear-9").innerHTML = u9;
+        document.getElementById("u-gear-10").innerHTML = u10;
     }, 300);
-    count++;
-    if (guaranteeCount < 25) {
-        guaranteeCount++;
-    }
-
-    if (guaranteeCount == 15) {
-        maxGuarantee = 25;
-    }
-    if (count * 200 == 3000) {
-        document.getElementById("btn-guarantee").style.display = "block";
-    } else if (count * 200 == 5000) {
+    count += 5;
+    mirrorCount += 5;
+    if (mirrorCount >= 150) {
         document.getElementById("btn-guarantee1").style.display = "block";
+        mirrorCount = 0;
+        firstBoxReach = false;
+    } else if (mirrorCount >= 90 && firstBoxReach == false) {
+        firstBoxReach = true;
+        document.getElementById("btn-guarantee").style.display = "block";
     }
 }
 

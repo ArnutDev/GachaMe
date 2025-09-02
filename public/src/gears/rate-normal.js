@@ -1,12 +1,16 @@
 let count = 0;
-let guaranteeCount = 0;
-let maxGuarantee = 15;
+let mirrorCount = 0;
+let firstBoxReach = false;
 let u1 = 0;
 let u2 = 0;
 let u3 = 0;
 let u4 = 0;
 let u5 = 0;
 let u6 = 0;
+let u7 = 0;
+let u8 = 0;
+let u9 = 0;
+let u10 = 0;
 
 async function loadJSON(filePath) {
     try {
@@ -124,12 +128,15 @@ function checkValueInRange(value, arr) {
     return false; // คืนค่าเท็จเมื่อค่าไม่อยู่ในช่วง
 }
 
-
-
 function getRandomPickGear(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function printItem(gearsJson) {
+    for (let a = 0; a < gearsJson.length; a++) {
+        console.log(gearsJson[a].Name);
+    }
+}
 async function normalGacha() {
     document.getElementById("randomButton").style.display = "block";
     const divSlots = document.querySelectorAll('.content-display'); // select 7 div
@@ -152,14 +159,11 @@ async function normalGacha() {
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    //j= 0 to 2 is 8 special have 3 of them
-                    for (let j = 0, k = j; j < 5; j++, k++) {
+                    //j= 0 to 4 is 8 star special have 5 of them
+                    for (let j = 0; j < 5; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem(gearsJson)
                     special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/8c-info.json');
@@ -167,21 +171,18 @@ async function normalGacha() {
                 grade = "8 star";
             } else if (chance <= 3) {
                 specialJson = await loadJSON('json-data/gears/gears-info-special.json');
-                let amount = 3;
-                let eachRate = 0.17; //already changed
+                let amount = 5;
+                let eachRate = 0.14; //already changed
                 let range = generateRandomRange(0.01, 2.00, eachRate, amount); // 2 cuz 7 star special only have 2 of them
                 let value = getRandomGears(0.01, 2.00); //x>[0] && x<=[1]
                 // console.log('c: ' + value);
                 let result = checkValueInRange(value, range);
                 if (result) {
-                    //j= 3 to 4 is 7 special have 2 of them
-                    for (let j = 5, k = 0; j < 8; j++, k++) {
+                    //j= 5 to 9 is 7 star special have 5 of them
+                    for (let j = 5; j < 10; j++) {
                         gearsJson.push(specialJson[j]); //ใช้ตำแหน่งอาเรย์ในการบอกเรนเจอร์พิเศษ จะได้ใช้pathเดียวกันเลย ไม่ต้องก็อปวางหลายๆอัน
-                        // alert('sp> ' + gearsJson[k].Name);
                     }
-                    // for (let a = 0; a < gearsJson.length; a++) {
-                    //     console.log(gearsJson[a].Name);
-                    // }
+                    // printItem(gearsJson)
                     special = true;
                 } else {
                     gearsJson = await loadJSON('json-data/gears/rate-normal/7c-info.json');
@@ -221,26 +222,27 @@ async function normalGacha() {
 
         }
         // อัปเดตจำนวนรวม
-        document.getElementById("normal-count").innerHTML = ` ${count}, Free box: ${guaranteeCount}/${maxGuarantee}, Ruby used: ${count * 200}`;
+        document.getElementById("normal-count").innerHTML = ` ${count}, Ruby used: ${count/5 * 200}`;
         document.getElementById("u-gear-1").innerHTML = u1;
         document.getElementById("u-gear-2").innerHTML = u2;
         document.getElementById("u-gear-3").innerHTML = u3;
         document.getElementById("u-gear-4").innerHTML = u4;
         document.getElementById("u-gear-5").innerHTML = u5;
         document.getElementById("u-gear-6").innerHTML = u6;
+        document.getElementById("u-gear-7").innerHTML = u7;
+        document.getElementById("u-gear-8").innerHTML = u8;
+        document.getElementById("u-gear-9").innerHTML = u9;
+        document.getElementById("u-gear-10").innerHTML = u10;
     }, 300);
-    count++;
-    if (guaranteeCount < 25) {
-        guaranteeCount++;
-    }
-
-    if (guaranteeCount == 15) {
-        maxGuarantee = 25;
-    }
-    if (count * 200 == 3000) {
-        document.getElementById("btn-guarantee").style.display = "block";
-    } else if (count * 200 == 5000) {
+    count += 5;
+    mirrorCount += 5;
+    if (mirrorCount >= 150) {
         document.getElementById("btn-guarantee1").style.display = "block";
+        mirrorCount = 0;
+        firstBoxReach = false;
+    } else if (mirrorCount >= 90 && firstBoxReach == false) {
+        firstBoxReach = true;
+        document.getElementById("btn-guarantee").style.display = "block";
     }
 }
 async function guarantee(type) {
@@ -258,9 +260,9 @@ async function guarantee(type) {
         const randomIndex = getRandomPickGear(0, specialJson.length - 1);
 
         //check amount of gears every month
-        if (randomIndex < 6) {
+        if (randomIndex < 5) {
             grade = "8 star";
-        } else if (randomIndex < 9) {
+        } else if (randomIndex < 10) {
             grade = "7 star";
         } else {
             grade = "6 star";
@@ -293,6 +295,10 @@ async function guarantee(type) {
         document.getElementById("u-gear-4").innerHTML = u4;
         document.getElementById("u-gear-5").innerHTML = u5;
         document.getElementById("u-gear-6").innerHTML = u6;
+        document.getElementById("u-gear-7").innerHTML = u7;
+        document.getElementById("u-gear-8").innerHTML = u8;
+        document.getElementById("u-gear-9").innerHTML = u9;
+        document.getElementById("u-gear-10").innerHTML = u10;
     }, 300);
     if (type == 1) {
         document.getElementById("btn-guarantee").style.display = "none";
@@ -320,10 +326,22 @@ async function getStat(data) {
         u1++;
     } else if (result == 1) { // 8
         u2++;
-    } else if (result == 3) { // 8
+    } else if (result == 2) { // 8
         u3++;
-    } else if (result == 6) { // 7
+    } else if (result == 3) { // 8
         u4++;
+    } else if (result == 4) { // 8
+        u5++;
+    } else if (result == 5) { // 7
+        u6++;
+    } else if (result == 6) { // 7
+        u7++;
+    } else if (result == 7) { // 7
+        u8++;
+    } else if (result == 8) { // 7
+        u9++;
+    } else if (result == 9) { // 7
+        u10++;
     } else {
         return false;
     }
