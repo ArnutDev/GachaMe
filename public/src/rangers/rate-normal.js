@@ -73,6 +73,13 @@ function generateRandomRange(min, max, eachRate, amount) {
         arr[5] = pair3[1];
         countArr++;
     }
+    if (countArr < amount) {
+        // สุ่มค่าของ arr[6], arr[7]
+        let pair4 = getValidPair();
+        arr[6] = pair4[0];
+        arr[7] = pair4[1];
+        countArr++;
+    }
 
     for (let i = 0; i < arr.length; i += 2) {
         for (let j = i + 2; j < arr.length; j += 2) {
