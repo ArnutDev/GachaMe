@@ -1,22 +1,17 @@
 [
   {
-    "Name": "Denji",
-    "Image": "https://rangers.lerico.net/res/u1519e-de/u1519e-de-thum.png",
-    "UnitCode": "u1519e-de"
+    "Name": "Radish Brown",
+    "Image": "https://rangers.lerico.net/res/u1534e-brown/u1534e-brown-thum.png",
+    "UnitCode": "u1534e-brown"
   },
   {
-    "Name": "Power",
-    "Image": "https://rangers.lerico.net/res/u1521e-po/u1521e-po-thum.png",
-    "UnitCode": "u1521e-po"
+    "Name": "Farmer Sally",
+    "Image": "https://rangers.lerico.net/res/u1532e-sally/u1532e-sally-thum.png",
+    "UnitCode": "u1532e-sally"
   },
   {
-    "Name": "Aki",
-    "Image": "https://rangers.lerico.net/res/u1523e-ak/u1523e-ak-thum.png",
-    "UnitCode": "u1523e-ak"
-  },
-  {
-    "Name": "Kobeni",
-    "Image": "https://rangers.lerico.net/res/u1525e-ko/u1525e-ko-thum.png",
-    "UnitCode": "u1525e-ko"
+    "Name": "Field Moon",
+    "Image": "https://rangers.lerico.net/res/u1530e-moon/u1530e-moon-thum.png",
+    "UnitCode": "u1530e-moon"
   }
 ]

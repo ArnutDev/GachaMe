@@ -1,15 +1,10 @@
 const targetNames = [
-    "PS D-EXT SpDiv4 Denji",
-    "PS D-EXT SpDiv4 Power",
-    "PS D-EXT SpDiv4 Aki",
-    "PS D-EXT SpDiv4 Kobeni"
+    "Skilled Farmer Sally",
+    "Green Onion Field Moon"
 ];
-/*
- "PS D-EXT SpDiv4 Denji",
- "PS D-EXT SpDiv4 Power",
- "PS D-EXT SpDiv4 Aki",
- "PS D-EXT SpDiv4 Kobeni"
-*/
+//Skilled Farmer Sally
+//Green Onion Field Moon
+
 const data = [];
 
 function searchAndStoreData(queries) {
