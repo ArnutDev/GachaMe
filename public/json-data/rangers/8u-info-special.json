@@ -1,22 +1,12 @@
 [
   {
-    "Name": "PS D-EXT SpDiv4 Denji",
-    "Image": "https://rangers.lerico.net/res/u1519u-de/u1519u-de-thum.png",
-    "UnitCode": "u1519u-de"
+    "Name": "Skilled Farmer Sally",
+    "Image": "https://rangers.lerico.net/res/u1532u-sally/u1532u-sally-thum.png",
+    "UnitCode": "u1532u-sally"
   },
   {
-    "Name": "PS D-EXT SpDiv4 Power",
-    "Image": "https://rangers.lerico.net/res/u1521u-po/u1521u-po-thum.png",
-    "UnitCode": "u1521u-po"
-  },
-  {
-    "Name": "PS D-EXT SpDiv4 Aki",
-    "Image": "https://rangers.lerico.net/res/u1523u-ak/u1523u-ak-thum.png",
-    "UnitCode": "u1523u-ak"
-  },
-  {
-    "Name": "PS D-EXT SpDiv4 Kobeni",
-    "Image": "https://rangers.lerico.net/res/u1525u-ko/u1525u-ko-thum.png",
-    "UnitCode": "u1525u-ko"
+    "Name": "Green Onion Field Moon",
+    "Image": "https://rangers.lerico.net/res/u1530u-moon/u1530u-moon-thum.png",
+    "UnitCode": "u1530u-moon"
   }
 ]

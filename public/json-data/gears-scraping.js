@@ -1,12 +1,16 @@
 const targetNames = [
-    "Power's Hammer",
-    "Denji’s Axe",
-    "Aki's Sword",
-    "Starter Rope",
-    "Kobeni's Hairpin",
-    "Denji's Shoes"
+    "Moonlight Guard Gloves",
+    "Moonlit Dagger",
+    "Moonlight Shining Shield",
+    "Moonlight Shining Belt",
+    "Moonlight Shining Axe",
+    "Moonbrella",
+    "Magic Moon Wand",
+    "Moon Shield",
+    "Moon Necklace",
+    "Moon Dumplings"
 ];
-
+/**/
 function searchAndStoreData(queries) {
     const data = [];
     const searchInput = document.querySelector("input[type='search']");

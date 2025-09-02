@@ -104,5 +104,13 @@
             "Added August gears gacha",
             "Updated new guarantee system (free box)"
         ]
+    },
+    {
+        "version": "1.10.0",
+        "date": "2025-09-02",
+        "changes": [
+            "Added September rangers gacha",
+            "Added September gears gacha"
+        ]
     }
 ]
