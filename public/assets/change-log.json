@@ -95,5 +95,22 @@
         "changes": [
             "Fixed gacha rate for gears"
         ]
+    },
+    {
+        "version": "1.9.0",
+        "date": "2025-08-01",
+        "changes": [
+            "Added August rangers gacha",
+            "Added August gears gacha",
+            "Updated new guarantee system (free box)"
+        ]
+    },
+    {
+        "version": "1.10.0",
+        "date": "2025-09-02",
+        "changes": [
+            "Added September rangers gacha",
+            "Added September gears gacha"
+        ]
     }
 ]
