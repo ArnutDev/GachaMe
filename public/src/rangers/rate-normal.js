@@ -224,7 +224,6 @@ async function guarantee(type) {
         document.getElementById("u-ranger-1").innerHTML = u1;
         document.getElementById("u-ranger-2").innerHTML = u2;
         document.getElementById("u-ranger-3").innerHTML = u3;
-        // document.getElementById("u-ranger-4").innerHTML = u4;
     }, 300);
     if (type == 1) {
         document.getElementById("btn-guarantee").style.display = "none";
