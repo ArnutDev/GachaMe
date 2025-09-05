@@ -80,7 +80,7 @@ function generateRandomRange(min, max, eachRate, amount) {
             //check for each range not overlap and have space not over eachRate
             if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
                 // if it overlap then random until not overlap
-                return generateRandomRange(min, max, eachRate);
+                return generateRandomRange(min, max, eachRate, amount);
             }
         }
     }
