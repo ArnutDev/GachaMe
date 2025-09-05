@@ -89,7 +89,7 @@ function generateRandomRange(min, max, eachRate, amount) {
         countArr++;
     }
     if (countArr < amount) {
-        //  random value of arr[6], arr[7]
+        //  random value of arr[8], arr[9]
         let pair4 = getValidPair();
         arr[8] = pair4[0];
         arr[9] = pair4[1];
@@ -101,7 +101,7 @@ function generateRandomRange(min, max, eachRate, amount) {
             //check for each range not overlap and have space not over eachRate
             if ((arr[i] >= arr[j] && arr[i] <= arr[j + 1]) || (arr[j] >= arr[i] && arr[j] <= arr[i + 1]) || (arr[i + 1] - arr[i] > eachRate) || (arr[j + 1] - arr[j] > eachRate)) {
                 // if it overlap then random until not overlap
-                return generateRandomRange(min, max, eachRate);
+                return generateRandomRange(min, max, eachRate, amount);
             }
         }
     }

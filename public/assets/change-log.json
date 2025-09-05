@@ -112,5 +112,12 @@
             "Added September rangers gacha",
             "Added September gears gacha"
         ]
+    },
+    {
+        "version": "1.10.1",
+        "date": "2025-09-05",
+        "changes": [
+            "Fixed missing variable"
+        ]
     }
 ]
